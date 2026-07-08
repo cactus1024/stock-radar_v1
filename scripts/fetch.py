@@ -1,105 +1,124 @@
-"""
-fetch.py — KRX 전 종목 시세 수집 → data/raw_market.json
-실행: python scripts/fetch.py
-의존성: pykrx, pandas
-"""
-import json
-import sys
-import time
+# fetch.py — 네이버 증권(1순위) + pykrx(예비)로 당일 상승 종목 수집 → data/raw_market.json
+import json, sys, time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from pathlib import Path
+import requests
 
-# 프로젝트 루트 기준 경로
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
-DATA_DIR.mkdir(exist_ok=True)
 OUTPUT = DATA_DIR / "raw_market.json"
-
 KST = ZoneInfo("Asia/Seoul")
-MAX_RETRIES = 3
-RETRY_DELAY = 10  # 초
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
+    "Accept": "application/json",
+    "Referer": "https://m.stock.naver.com/",
+}
 
-def fetch_with_retry(func, *args, retries=MAX_RETRIES, **kwargs):
-    """네트워크 오류 시 재시도"""
-    for attempt in range(1, retries + 1):
-        try:
-            return func(*args, **kwargs)
-        except Exception as e:
-            print(f"  [시도 {attempt}/{retries}] 오류: {e}", file=sys.stderr)
-            if attempt < retries:
-                time.sleep(RETRY_DELAY)
+def _num(v):
+    """'71,200' 같은 문자열 숫자를 안전하게 변환"""
+    if v is None: return 0
+    if isinstance(v, (int, float)): return v
+    s = str(v).replace(",", "").replace("+", "").strip()
+    try:
+        return float(s) if "." in s else int(s)
+    except ValueError:
+        return 0
+
+def _pick(d, *keys):
+    for k in keys:
+        if k in d and d[k] not in (None, ""):
+            return d[k]
     return None
 
+def fetch_naver(market):
+    """네이버 모바일 증권 API: 당일 상승률 상위 종목"""
+    stocks = []
+    for page in (1, 2):
+        url = f"https://m.stock.naver.com/api/stocks/up/{market}?page={page}&pageSize=60"
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            r.raise_for_status()
+            data = r.json()
+        except Exception as e:
+            print(f"  [WARN] 네이버 {market} p{page} 요청 실패: {e}")
+            return stocks
+        items = data.get("stocks") if isinstance(data, dict) else None
+        if items is None and isinstance(data, dict):
+            for v in data.values():
+                if isinstance(v, list) and v and isinstance(v[0], dict):
+                    items = v
+                    break
+        if not items:
+            print(f"  [WARN] {market} 응답 구조 인식 실패. 원문 일부: {str(data)[:300]}")
+            return stocks
+        for it in items:
+            name = _pick(it, "stockName", "itemName", "name")
+            code = _pick(it, "itemCode", "stockCode", "code")
+            close = _num(_pick(it, "closePrice", "currentPrice", "now"))
+            if not name or not code or close == 0 or "스팩" in str(name):
+                continue
+            stocks.append({
+                "ticker": str(code), "name": str(name), "market": market,
+                "open": _num(_pick(it, "openPrice", "open")),
+                "high": _num(_pick(it, "highPrice", "high")),
+                "low": _num(_pick(it, "lowPrice", "low")),
+                "close": close,
+                "change": _num(_pick(it, "compareToPreviousClosePrice", "change")),
+                "change_pct": float(_num(_pick(it, "fluctuationsRatio", "changeRate"))),
+                "volume": _num(_pick(it, "accumulatedTradingVolume", "volume")),
+            })
+        time.sleep(0.5)
+    return stocks
 
-def get_ticker_name_map(date_str, market):
-    """종목코드 → 종목명 매핑"""
-    from pykrx import stock
-    tickers = stock.get_market_ticker_list(date_str, market=market)
-    return {t: stock.get_market_ticker_name(t) for t in tickers}
-
+def fetch_pykrx_backup(date_str):
+    """예비: pykrx (KRX 서버 상태에 따라 실패 가능)"""
+    try:
+        from pykrx import stock
+        recs = []
+        for market in ("KOSPI", "KOSDAQ"):
+            df = stock.get_market_ohlcv(date_str, market=market)
+            if df is None or df.empty:
+                continue
+            for t, row in df.iterrows():
+                close = int(row.get("종가", 0))
+                if close == 0:
+                    continue
+                change = int(row.get("등락폭", 0))
+                prev = close - change if close - change > 0 else close
+                recs.append({
+                    "ticker": str(t), "name": str(t), "market": market,
+                    "open": int(row.get("시가", 0)), "high": int(row.get("고가", 0)),
+                    "low": int(row.get("저가", 0)), "close": close, "change": change,
+                    "change_pct": round(change / prev * 100, 2) if prev else 0.0,
+                    "volume": int(row.get("거래량", 0)),
+                })
+        return recs
+    except Exception as e:
+        print(f"  [WARN] pykrx 예비 수집도 실패: {e}")
+        return []
 
 def main():
-    from pykrx import stock
-
     now = datetime.now(KST)
-    today_str = now.strftime("%Y%m%d")
-    print(f"[fetch] 수집 시작: {now.strftime('%Y-%m-%d %H:%M KST')}")
+    print(f"[fetch] 수집 시작: {now.strftime('%Y-%m-%d %H:%M')} KST")
 
-    # KOSPI 수집
-    print("  KOSPI 수집 중...")
-    df_kospi = fetch_with_retry(stock.get_market_ohlcv, today_str, market="KOSPI")
-    if df_kospi is None or df_kospi.empty:
-        # KOSDAQ도 시도해서 둘 다 비면 휴장일
-        df_kosdaq = fetch_with_retry(stock.get_market_ohlcv, today_str, market="KOSDAQ")
-        if df_kosdaq is None or df_kosdaq.empty:
-            print("[SKIP] 데이터 없음 — 휴장일 가능성. 정상 종료.")
-            sys.exit(0)
-    else:
-        print("  KOSDAQ 수집 중...")
-        df_kosdaq = fetch_with_retry(stock.get_market_ohlcv, today_str, market="KOSDAQ")
-
-    # 종목명 매핑
-    print("  종목명 매핑 중...")
-    names_kospi = fetch_with_retry(get_ticker_name_map, today_str, "KOSPI") or {}
-    names_kosdaq = fetch_with_retry(get_ticker_name_map, today_str, "KOSDAQ") or {}
-    all_names = {**names_kospi, **names_kosdaq}
-
-    # 데이터 합치기
     records = []
-    for market_name, df in [("KOSPI", df_kospi), ("KOSDAQ", df_kosdaq)]:
-        if df is None or df.empty:
-            continue
-        for ticker, row in df.iterrows():
-            close = int(row.get("종가", 0))
-            if close == 0:
-                continue  # 거래정지 등 제외
-            change = int(row.get("등락폭", 0))
-            volume = int(row.get("거래량", 0))
-            open_p = int(row.get("시가", 0))
-            high = int(row.get("고가", 0))
-            low = int(row.get("저가", 0))
-            prev_close = close - change if close - change > 0 else close
-            change_pct = round((change / prev_close) * 100, 2) if prev_close > 0 else 0.0
+    for market in ("KOSPI", "KOSDAQ"):
+        print(f"  네이버 {market} 수집 중...")
+        records += fetch_naver(market)
 
-            records.append({
-                "ticker": ticker,
-                "name": all_names.get(ticker, "알수없음"),
-                "market": market_name,
-                "open": open_p,
-                "high": high,
-                "low": low,
-                "close": close,
-                "change": change,
-                "change_pct": change_pct,
-                "volume": volume,
-            })
+    if len(records) < 30:
+        print("  네이버 수집 부족 → pykrx 예비 시도")
+        records = fetch_pykrx_backup(now.strftime("%Y%m%d"))
 
     if not records:
-        print("[SKIP] 유효한 종목 데이터 없음. 정상 종료.")
+        print("[SKIP] 데이터 없음 — 휴장일 또는 소스 장애. 정상 종료.")
+        if OUTPUT.exists():
+            OUTPUT.unlink()
         sys.exit(0)
 
+    DATA_DIR.mkdir(exist_ok=True)
     result = {
         "date": now.strftime("%Y-%m-%d"),
         "time": now.strftime("%H:%M"),
@@ -107,12 +126,9 @@ def main():
         "total_stocks": len(records),
         "stocks": records,
     }
-
     with open(OUTPUT, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-
+        json.dump(result, f, ensure_ascii=False)
     print(f"[OK] {len(records)}개 종목 저장 → {OUTPUT}")
-
 
 if __name__ == "__main__":
     main()
