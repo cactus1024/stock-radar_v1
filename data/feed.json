@@ -1,0 +1,8 @@
+{
+  "date": "2026-07-08",
+  "status": "failed",
+  "reason": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.",
+  "stocks": [],
+  "today_sector_summary": "피드 생성 실패. 시세 데이터는 정상입니다.",
+  "weekly_sector_summary": ""
+}
