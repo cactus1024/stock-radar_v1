@@ -21,13 +21,19 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-  steps:
-       - uses: actions/checkout@v4
-       - uses: actions/configure-pages@v5
-         with:
-            enablement: true
-       - uses: actions/upload-pages-artifact@v3
-         with:
-           path: docs
-       - id: deployment
-       - uses: actions/deploy-pages@v4
+    
+    # 여기서부터 중요: deploy 안으로 들어가도록 4칸 들여쓰기
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      # id와 uses를 하나의 대시(-) 밑으로 묶어주었습니다.
+      - id: deployment
+        uses: actions/deploy-pages@v4
