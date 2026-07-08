@@ -3,49 +3,44 @@
     "date": "2026-07-08",
     "sectors": {
       "기타": {
-        "count": 215,
-        "avg_change_pct": 6.9,
-        "top_gainer": "다스코"
+        "count": 54,
+        "top_gainer": "다스코",
+        "avg_change_pct": 9.82
       },
-      "건설": {
-        "count": 1,
-        "avg_change_pct": 25.0,
-        "top_gainer": "금호건설우"
+      "에너지/원전": {
+        "count": 3,
+        "top_gainer": "흥구석유",
+        "avg_change_pct": 7.41
+      },
+      "로봇/AI": {
+        "count": 2,
+        "top_gainer": "LSK아이로봇",
+        "avg_change_pct": 7.84
+      },
+      "바이오/제약": {
+        "count": 7,
+        "top_gainer": "팜스코",
+        "avg_change_pct": 5.18
       },
       "반도체": {
-        "count": 6,
-        "avg_change_pct": 11.79,
-        "top_gainer": "미래에셋 인버스 2X 반도체 ETN"
+        "count": 1,
+        "top_gainer": "한울반도체",
+        "avg_change_pct": 9.62
       },
-      "IT/소프트웨어": {
-        "count": 6,
-        "avg_change_pct": 5.4,
-        "top_gainer": "소프트캠프"
+      "IT/게임/엔터": {
+        "count": 1,
+        "top_gainer": "카카오게임즈",
+        "avg_change_pct": 5.4
       },
-      "유통/소비재": {
-        "count": 2,
-        "avg_change_pct": 6.05,
-        "top_gainer": "서울식품"
-      },
-      "에너지": {
-        "count": 3,
-        "avg_change_pct": 7.41,
-        "top_gainer": "흥구석유"
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "케이피항공산업",
+        "avg_change_pct": 5.21
       },
       "철강/화학": {
         "count": 1,
-        "avg_change_pct": 4.33,
-        "top_gainer": "효성화학"
-      },
-      "2차전지": {
-        "count": 1,
-        "avg_change_pct": 4.11,
-        "top_gainer": "RISE 2차전지TOP10인버스(합성)"
-      },
-      "바이오/제약": {
-        "count": 5,
-        "avg_change_pct": 3.6,
-        "top_gainer": "인피니트헬스케어"
+        "top_gainer": "효성화학",
+        "avg_change_pct": 4.33
       }
     }
   }

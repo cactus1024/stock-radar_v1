@@ -1,6 +1,6 @@
 {
   "date": "2026-07-08",
-  "time": "20:22",
+  "time": "20:39",
   "timezone": "KST",
   "top30": [
     {
@@ -14,6 +14,7 @@
       "change": 1200,
       "change_pct": 30.0,
       "volume": 30832750,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -28,6 +29,7 @@
       "change": 1370,
       "change_pct": 29.98,
       "volume": 625530,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -42,6 +44,7 @@
       "change": 2910,
       "change_pct": 29.97,
       "volume": 867266,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -56,6 +59,7 @@
       "change": 300,
       "change_pct": 29.94,
       "volume": 47165006,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -70,6 +74,7 @@
       "change": 2080,
       "change_pct": 29.93,
       "volume": 576355,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -84,6 +89,7 @@
       "change": 526,
       "change_pct": 29.9,
       "volume": 6281563,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -98,34 +104,7 @@
       "change": 478,
       "change_pct": 29.74,
       "volume": 532356,
-      "sector": "기타",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "002995",
-      "name": "금호건설우",
-      "market": "KOSPI",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 50000,
-      "change": 10000,
-      "change_pct": 25.0,
-      "volume": 105751,
-      "sector": "건설",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "570127",
-      "name": "한투 인버스2X코스피200선물 ETN",
-      "market": "KOSPI",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 40120,
-      "change": 7260,
-      "change_pct": 22.09,
-      "volume": 44574,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -140,6 +119,7 @@
       "change": 367,
       "change_pct": 20.82,
       "volume": 1369120,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -154,34 +134,7 @@
       "change": 435,
       "change_pct": 20.09,
       "volume": 912933,
-      "sector": "기타",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "760024",
-      "name": "키움 인버스 2X K방산 TOP5 ETN",
-      "market": "KOSPI",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 8815,
-      "change": 1395,
-      "change_pct": 18.8,
-      "volume": 33225,
-      "sector": "기타",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "700035",
-      "name": "하나 인버스 2X K방산TOP10 ETN",
-      "market": "KOSPI",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 9950,
-      "change": 1555,
-      "change_pct": 18.52,
-      "volume": 106394,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -196,20 +149,7 @@
       "change": 2740,
       "change_pct": 18.44,
       "volume": 2418263,
-      "sector": "기타",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "760027",
-      "name": "키움 인버스 2X 전력 TOP5 ETN",
-      "market": "KOSPI",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 8430,
-      "change": 1300,
-      "change_pct": 18.23,
-      "volume": 106613,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -224,20 +164,7 @@
       "change": 615,
       "change_pct": 17.96,
       "volume": 6465004,
-      "sector": "기타",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "365590",
-      "name": "하이딥",
-      "market": "KOSDAQ",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 1030,
-      "change": 138,
-      "change_pct": 15.47,
-      "volume": 314587,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -252,35 +179,8 @@
       "change": 1340,
       "change_pct": 14.73,
       "volume": 10933274,
-      "sector": "에너지",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "309930",
-      "name": "조이웍스앤코",
-      "market": "KOSDAQ",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 947,
-      "change": 121,
-      "change_pct": 14.65,
-      "volume": 492311,
-      "sector": "기타",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "500072",
-      "name": "신한 인버스 2X 코스닥 150 선물 ETN",
-      "market": "KOSPI",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 2485,
-      "change": 310,
-      "change_pct": 14.25,
-      "volume": 27065,
-      "sector": "기타",
+      "stock_type": "domestic",
+      "sector": "에너지/원전",
       "fibonacci": {}
     },
     {
@@ -294,62 +194,7 @@
       "change": 1310,
       "change_pct": 13.52,
       "volume": 191598,
-      "sector": "기타",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "580044",
-      "name": "KB 인버스 2X KOSDAQ 150 선물 ETN",
-      "market": "KOSPI",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 2460,
-      "change": 290,
-      "change_pct": 13.36,
-      "volume": 27846,
-      "sector": "기타",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "700018",
-      "name": "하나 인버스 2X 코스닥150 선물 ETN",
-      "market": "KOSPI",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 2480,
-      "change": 290,
-      "change_pct": 13.24,
-      "volume": 10978,
-      "sector": "기타",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "520099",
-      "name": "미래에셋 인버스 2X 반도체 ETN",
-      "market": "KOSPI",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 6220,
-      "change": 720,
-      "change_pct": 13.09,
-      "volume": 709742,
-      "sector": "반도체",
-      "fibonacci": {}
-    },
-    {
-      "ticker": "510027",
-      "name": "대신 인버스 2X 코스닥 150 선물 ETN",
-      "market": "KOSPI",
-      "open": 0,
-      "high": 0,
-      "low": 0,
-      "close": 2475,
-      "change": 285,
-      "change_pct": 13.01,
-      "volume": 6681,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -364,6 +209,7 @@
       "change": 167,
       "change_pct": 13.01,
       "volume": 511125,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
     },
@@ -378,7 +224,8 @@
       "change": 400,
       "change_pct": 12.97,
       "volume": 1565169,
-      "sector": "기타",
+      "stock_type": "domestic",
+      "sector": "로봇/AI",
       "fibonacci": {}
     },
     {
@@ -392,8 +239,338 @@
       "change": 650,
       "change_pct": 12.92,
       "volume": 6358033,
+      "stock_type": "domestic",
       "sector": "기타",
       "fibonacci": {}
+    },
+    {
+      "ticker": "079650",
+      "name": "서산",
+      "market": "KOSDAQ",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 5380,
+      "change": 605,
+      "change_pct": 12.67,
+      "volume": 26994577,
+      "stock_type": "domestic",
+      "sector": "기타",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "001790",
+      "name": "대한제당",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 2905,
+      "change": 320,
+      "change_pct": 12.38,
+      "volume": 3423126,
+      "stock_type": "domestic",
+      "sector": "기타",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "036580",
+      "name": "팜스코",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 2700,
+      "change": 270,
+      "change_pct": 11.11,
+      "volume": 364439,
+      "stock_type": "domestic",
+      "sector": "바이오/제약",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "477850",
+      "name": "마키나락스",
+      "market": "KOSDAQ",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 27100,
+      "change": 2600,
+      "change_pct": 10.61,
+      "volume": 7858462,
+      "stock_type": "domestic",
+      "sector": "기타",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "029480",
+      "name": "광무",
+      "market": "KOSDAQ",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 1580,
+      "change": 145,
+      "change_pct": 10.1,
+      "volume": 6153997,
+      "stock_type": "domestic",
+      "sector": "기타",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "320000",
+      "name": "한울반도체",
+      "market": "KOSDAQ",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 12420,
+      "change": 1090,
+      "change_pct": 9.62,
+      "volume": 1445677,
+      "stock_type": "domestic",
+      "sector": "반도체",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "377450",
+      "name": "리파인",
+      "market": "KOSDAQ",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 10260,
+      "change": 800,
+      "change_pct": 8.46,
+      "volume": 174205,
+      "stock_type": "domestic",
+      "sector": "기타",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "091590",
+      "name": "남화토건",
+      "market": "KOSDAQ",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 10160,
+      "change": 750,
+      "change_pct": 7.97,
+      "volume": 3900767,
+      "stock_type": "domestic",
+      "sector": "기타",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "036630",
+      "name": "세종텔레콤",
+      "market": "KOSDAQ",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 8810,
+      "change": 610,
+      "change_pct": 7.44,
+      "volume": 1086037,
+      "stock_type": "domestic",
+      "sector": "기타",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "004410",
+      "name": "서울식품",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 1015,
+      "change": 70,
+      "change_pct": 7.41,
+      "volume": 1341503,
+      "stock_type": "domestic",
+      "sector": "기타",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "071200",
+      "name": "인피니트헬스케어",
+      "market": "KOSDAQ",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 7300,
+      "change": 500,
+      "change_pct": 7.35,
+      "volume": 198168,
+      "stock_type": "domestic",
+      "sector": "바이오/제약",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "237880",
+      "name": "클리오",
+      "market": "KOSDAQ",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 12000,
+      "change": 770,
+      "change_pct": 6.86,
+      "volume": 656302,
+      "stock_type": "domestic",
+      "sector": "기타",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "198440",
+      "name": "강동씨앤엘",
+      "market": "KOSDAQ",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 1920,
+      "change": 119,
+      "change_pct": 6.61,
+      "volume": 17316353,
+      "stock_type": "domestic",
+      "sector": "기타",
+      "fibonacci": {}
+    },
+    {
+      "ticker": "010960",
+      "name": "삼호개발",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 4460,
+      "change": 270,
+      "change_pct": 6.44,
+      "volume": 10038401,
+      "stock_type": "domestic",
+      "sector": "기타",
+      "fibonacci": {}
+    }
+  ],
+  "etf_top": [
+    {
+      "ticker": "570127",
+      "name": "한투 인버스2X코스피200선물 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 40120,
+      "change": 7260,
+      "change_pct": 22.09,
+      "volume": 44574,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "760024",
+      "name": "키움 인버스 2X K방산 TOP5 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 8815,
+      "change": 1395,
+      "change_pct": 18.8,
+      "volume": 33225,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "700035",
+      "name": "하나 인버스 2X K방산TOP10 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 9950,
+      "change": 1555,
+      "change_pct": 18.52,
+      "volume": 106394,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "760027",
+      "name": "키움 인버스 2X 전력 TOP5 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 8430,
+      "change": 1300,
+      "change_pct": 18.23,
+      "volume": 106613,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "500072",
+      "name": "신한 인버스 2X 코스닥 150 선물 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 2485,
+      "change": 310,
+      "change_pct": 14.25,
+      "volume": 27065,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "580044",
+      "name": "KB 인버스 2X KOSDAQ 150 선물 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 2460,
+      "change": 290,
+      "change_pct": 13.36,
+      "volume": 27846,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "700018",
+      "name": "하나 인버스 2X 코스닥150 선물 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 2480,
+      "change": 290,
+      "change_pct": 13.24,
+      "volume": 10978,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "520099",
+      "name": "미래에셋 인버스 2X 반도체 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 6220,
+      "change": 720,
+      "change_pct": 13.09,
+      "volume": 709742,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "510027",
+      "name": "대신 인버스 2X 코스닥 150 선물 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 2475,
+      "change": 285,
+      "change_pct": 13.01,
+      "volume": 6681,
+      "stock_type": "domestic"
     },
     {
       "ticker": "700036",
@@ -406,69 +583,131 @@
       "change": 460,
       "change_pct": 12.89,
       "volume": 547637,
-      "sector": "반도체",
-      "fibonacci": {}
+      "stock_type": "domestic"
     },
     {
-      "ticker": "002785",
-      "name": "진흥기업우B",
+      "ticker": "550098",
+      "name": "N2 인버스 2X 코스닥150 선물 ETN",
       "market": "KOSPI",
       "open": 0,
       "high": 0,
       "low": 0,
-      "close": 2095,
-      "change": 236,
-      "change_pct": 12.69,
-      "volume": 87188,
-      "sector": "기타",
-      "fibonacci": {}
+      "close": 8870,
+      "change": 985,
+      "change_pct": 12.49,
+      "volume": 4251,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "520057",
+      "name": "미래에셋 인버스 2X 코스닥150 선물 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 2440,
+      "change": 270,
+      "change_pct": 12.44,
+      "volume": 2145094,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "570082",
+      "name": "한투 인버스2X코스닥150선물 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 2455,
+      "change": 265,
+      "change_pct": 12.1,
+      "volume": 50416,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "0193L0",
+      "name": "PLUS 삼성전자선물단일종목인버스2X",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 15785,
+      "change": 1700,
+      "change_pct": 12.07,
+      "volume": 23248508,
+      "stock_type": "domestic"
+    },
+    {
+      "ticker": "530107",
+      "name": "삼성 인버스 2X 코스닥150 선물 ETN",
+      "market": "KOSPI",
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 2425,
+      "change": 260,
+      "change_pct": 12.01,
+      "volume": 8643457,
+      "stock_type": "domestic"
     }
   ],
+  "foreign_top": [],
+  "indices": {
+    "KOSPI": {
+      "close": 7246.79,
+      "change_pct": -5.35
+    },
+    "KOSDAQ": {
+      "close": 785.0,
+      "change_pct": -5.56
+    }
+  },
+  "fear": {
+    "score": 0,
+    "label": "극단 공포",
+    "detail": "KOSPI -5.35% · KOSDAQ -5.56%"
+  },
   "today_sectors": {
     "기타": {
-      "count": 215,
-      "avg_change_pct": 6.9,
-      "top_gainer": "다스코"
+      "count": 54,
+      "top_gainer": "다스코",
+      "avg_change_pct": 9.82
     },
-    "건설": {
-      "count": 1,
-      "avg_change_pct": 25.0,
-      "top_gainer": "금호건설우"
+    "에너지/원전": {
+      "count": 3,
+      "top_gainer": "흥구석유",
+      "avg_change_pct": 7.41
+    },
+    "로봇/AI": {
+      "count": 2,
+      "top_gainer": "LSK아이로봇",
+      "avg_change_pct": 7.84
+    },
+    "바이오/제약": {
+      "count": 7,
+      "top_gainer": "팜스코",
+      "avg_change_pct": 5.18
     },
     "반도체": {
-      "count": 6,
-      "avg_change_pct": 11.79,
-      "top_gainer": "미래에셋 인버스 2X 반도체 ETN"
+      "count": 1,
+      "top_gainer": "한울반도체",
+      "avg_change_pct": 9.62
     },
-    "IT/소프트웨어": {
-      "count": 6,
-      "avg_change_pct": 5.4,
-      "top_gainer": "소프트캠프"
+    "IT/게임/엔터": {
+      "count": 1,
+      "top_gainer": "카카오게임즈",
+      "avg_change_pct": 5.4
     },
-    "유통/소비재": {
-      "count": 2,
-      "avg_change_pct": 6.05,
-      "top_gainer": "서울식품"
-    },
-    "에너지": {
-      "count": 3,
-      "avg_change_pct": 7.41,
-      "top_gainer": "흥구석유"
+    "건설/기계": {
+      "count": 1,
+      "top_gainer": "케이피항공산업",
+      "avg_change_pct": 5.21
     },
     "철강/화학": {
       "count": 1,
-      "avg_change_pct": 4.33,
-      "top_gainer": "효성화학"
-    },
-    "2차전지": {
-      "count": 1,
-      "avg_change_pct": 4.11,
-      "top_gainer": "RISE 2차전지TOP10인버스(합성)"
-    },
-    "바이오/제약": {
-      "count": 5,
-      "avg_change_pct": 3.6,
-      "top_gainer": "인피니트헬스케어"
+      "top_gainer": "효성화학",
+      "avg_change_pct": 4.33
     }
-  }
+  },
+  "filtered_risky": 88
 }
