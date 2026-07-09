@@ -70,44 +70,55 @@ def main():
     from google.genai import types
     client = genai.Client(api_key=api_key)
 
+    # 자가진단: 이 API 키로 접근 가능한 모델 확인
+    try:
+        avail = [m.name for m in client.models.list()]
+        hits = [n.replace("models/", "") for n in avail if any(k in n for k in ("3.5", "3.1", "3-pro", "2.5-flash"))]
+        print(f"[INFO] 이 키로 접근 가능한 관련 모델: {hits[:15]}")
+    except Exception as e:
+        print(f"[INFO] 모델 목록 조회 실패: {type(e).__name__}: {e}")
+
+    prompt = build_prompt(slim, history)
     raw_text, last_err = None, None
     for model in MODEL_CHAIN:
-        try:
-            print(f"[TRY] 모델: {model}")
-            resp = client.models.generate_content(
-                model=model, contents=build_prompt(slim, history),
-                config=types.GenerateContentConfig(
-                    tools=[types.Tool(google_search=types.GoogleSearch())],
-                ),
-            )
-            raw_text = resp.text
-            if not raw_text or len(raw_text) < 100:
-                raise ValueError("응답이 비정상적으로 짧음")
-            cleaned = raw_text.strip()
-            if cleaned.startswith("```"):
-                cleaned = cleaned.split("\n", 1)[1] if "\n" in cleaned else cleaned[3:]
-            if cleaned.endswith("```"):
-                cleaned = cleaned[:-3]
-            feed = json.loads(cleaned.strip())
-            if not isinstance(feed.get("stocks"), list):
-                raise ValueError("stocks 배열 없음")
+        for use_search, mode in ((True, "검색 그라운딩 ON"), (False, "검색 없이 재시도")):
+            try:
+                print(f"[TRY] 모델: {model} ({mode})")
+                cfg = types.GenerateContentConfig(
+                    tools=[types.Tool(google_search=types.GoogleSearch())]) if use_search else None
+                resp = client.models.generate_content(model=model, contents=prompt, config=cfg)
+                raw_text = resp.text
+                if not raw_text or len(raw_text) < 100:
+                    raise ValueError("응답이 비정상적으로 짧음")
+                cleaned = raw_text.strip()
+                if cleaned.startswith("```"):
+                    cleaned = cleaned.split("\n", 1)[1] if "\n" in cleaned else cleaned[3:]
+                if cleaned.endswith("```"):
+                    cleaned = cleaned[:-3]
+                feed = json.loads(cleaned.strip())
+                if not isinstance(feed.get("stocks"), list):
+                    raise ValueError("stocks 배열 없음")
 
-            # 히스토리 3일 미만이면 요일별 요약은 축적 안내로 강제 교체 (중복 방지)
-            if history_days < 3:
-                feed["weekly_sector_summary"] = (
-                    f"📊 섹터 히스토리 축적 중 (현재 {history_days}일차). "
-                    f"3거래일치가 쌓이는 시점부터 요일별 순환매 흐름 분석이 자동으로 시작됩니다.")
+                if history_days < 3:
+                    feed["weekly_sector_summary"] = (
+                        f"📊 섹터 히스토리 축적 중 (현재 {history_days}일차). "
+                        f"3거래일치가 쌓이는 시점부터 요일별 순환매 흐름 분석이 자동으로 시작됩니다.")
 
-            feed.update({"date": datetime.now(KST).strftime("%Y-%m-%d"), "status": "ok",
-                         "model": model, "generated_at": datetime.now(KST).strftime("%H:%M KST")})
-            json.dump(feed, open(FEED_OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-            print(f"[OK] feed.json — {len(feed['stocks'])}종목, 모델={model}")
-            return
-        except Exception as e:
-            last_err = e
-            print(f"[FAIL] {model}: {type(e).__name__}: {e}", file=sys.stderr)
-            if raw_text:
-                (DATA_DIR / "feed_debug_raw.txt").write_text(raw_text[:5000], encoding="utf-8")
+                if not use_search:
+                    feed["today_sector_summary"] = "(오늘은 뉴스 검색 없이 생성됨)\n" + feed.get("today_sector_summary", "")
+
+                feed.update({"date": datetime.now(KST).strftime("%Y-%m-%d"), "status": "ok",
+                             "model": model + ("" if use_search else " (검색 OFF)"),
+                             "generated_at": datetime.now(KST).strftime("%H:%M KST")})
+                json.dump(feed, open(FEED_OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+                print(f"[OK] feed.json — {len(feed['stocks'])}종목, 모델={model}, {mode}")
+                return
+            except Exception as e:
+                last_err = e
+                print(f"[FAIL] {model} ({mode}) → {type(e).__name__}: {repr(e)[:400]}")
+                if raw_text:
+                    (DATA_DIR / "feed_debug_raw.txt").write_text(raw_text[:5000], encoding="utf-8")
+                    raw_text = None
 
     write_fallback(f"{type(last_err).__name__}: {last_err}")
     sys.exit(0)
