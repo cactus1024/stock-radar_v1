@@ -47,14 +47,16 @@ def is_etf(s):
         return True
     return any(k.lower() in s["name"].lower() for k in ETF_KEYWORDS)
 
-def is_risky(s):
-    t = s.get("ticker", "")
-    if t and t[-1] != "0": return True            # 우선주 계열
-    if s.get("close", 0) < 1000: return True       # 동전주
-    if "스팩" in s.get("name", ""): return True
-    tv = s.get("value", 0) or s.get("close", 0) * s.get("volume", 0)
-    if tv < 500_000_000: return True               # 거래대금 5억 미만
-    return False
+def risky_reason(s):
+    """위험종목 판정 — 데이터가 없으면(0) 함부로 제외하지 않는다"""
+    t = str(s.get("ticker", ""))
+    if len(t) == 6 and t[-1] != "0": return "우선주"
+    close = s.get("close", 0)
+    if 0 < close < 1000: return "동전주"
+    if "스팩" in s.get("name", ""): return "스팩"
+    tv = s.get("value", 0) or (close * s.get("volume", 0))
+    if tv and tv < 500_000_000: return "저유동성"   # tv=0(값 없음)은 통과
+    return None
 
 def calc_fibonacci(high, low):
     if not high or not low or high <= low: return {}
@@ -208,11 +210,31 @@ def main():
 
     date = raw.get("date", datetime.now(KST).strftime("%Y-%m-%d"))
 
-    etfs, pure, filtered_cnt = [], [], 0
+    # 거래대금 단위 자동 감지: value가 '백만원 단위'로 오면 원 단위로 환산
+    fixed_unit = 0
     for s in stocks:
-        if is_etf(s): etfs.append(s)
-        elif is_risky(s): filtered_cnt += 1
-        else: pure.append(s)
+        v, est = s.get("value", 0), s.get("close", 0) * s.get("volume", 0)
+        if v and est and est / v > 10_000:      # 추정치와 1만배 이상 차이 = 백만원 단위
+            s["value"] = int(v * 1_000_000); fixed_unit += 1
+    if fixed_unit:
+        print(f"[unit] 거래대금 단위 보정(백만→원): {fixed_unit}개 종목")
+
+    print(f"[debug] 첫 종목 필드 확인: { {k: stocks[0].get(k) for k in ('ticker','name','close','volume','value','change_pct')} }")
+    etfs, pure, filtered_cnt = [], [], 0
+    reasons = {}
+    for s in stocks:
+        if is_etf(s):
+            etfs.append(s); continue
+        r = risky_reason(s)
+        if r:
+            filtered_cnt += 1; reasons[r] = reasons.get(r, 0) + 1
+        else:
+            pure.append(s)
+    print(f"[filter] 제외 사유별: {reasons} / 순수종목 {len(pure)}개 생존")
+    if not pure and stocks:
+        print("[filter] ⚠️ 순수종목 전멸 — 필터 기준 이상 감지, 안전모드로 완화 (스팩/우선주만 제외)")
+        pure = [s for s in stocks if not is_etf(s) and "스팩" not in s.get("name","")
+                and not (len(str(s.get("ticker","")))==6 and str(s.get("ticker"))[-1]!="0")]
 
     pure.sort(key=lambda x: x.get("change_pct", 0), reverse=True)
     etfs.sort(key=lambda x: x.get("change_pct", 0), reverse=True)
