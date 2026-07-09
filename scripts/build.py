@@ -163,8 +163,8 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
 
 <div id="tab-foreign" class="tab-content">
   <div class="card"><h3>🌐 외국인 매수 상위</h3>
-  {% if foreign_top %}<table><tr><th>#</th><th>이름</th><th class="num">종가</th><th class="num">등락률</th></tr>
-  {% for e in foreign_top %}<tr><td>{{ loop.index }}</td><td>{{ e.name }}</td><td class="num">{{ "{:,}".format(e.close) }}</td><td class="num">{{ "%+.2f"|format(e.change_pct) }}%</td></tr>{% endfor %}</table>
+  {% if foreign_top %}<table><tr><th>#</th><th>이름</th><th class="num">순매수금액</th></tr>
+  {% for e in foreign_top %}<tr><td>{{ loop.index }}</td><td>{{ e.name }}</td><td class="num">{{ "{:,}".format(e.net_buy or e.close or 0) }}</td></tr>{% endfor %}</table>
   {% else %}<div class="empty">외국인 데이터 수집 실패 — 소스 보정 작업 중</div>{% endif %}</div>
 </div>
 
