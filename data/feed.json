@@ -1,9 +1,8 @@
 {
-  "stocks": [],
-  "today_sector_summary": "오늘 시장은 특정 주도 섹터의 강한 부각 없이 조용한 흐름을 보였습니다. 제공된 데이터 상으로는 전반적인 시장의 관망세가 짙은 것으로 풀이됩니다. 어제 활발했던 '기타' 섹터와 '에너지/원전', '로봇/AI' 등의 움직임이 오늘은 다소 소강상태에 접어든 모습입니다. 자금의 쏠림 현상보다는 개별 종목 장세 또는 수급 공백이 펼쳐졌을 가능성도 배제할 수 없습니다. 명확한 대장주 포착이 어려운 상황으로, 무리한 추격보다는 다음 테마를 기다리는 인내심이 필요해 보입니다.",
-  "weekly_sector_summary": "📊 섹터 히스토리 축적 중 (현재 2일차). 3거래일치가 쌓이는 시점부터 요일별 순환매 흐름 분석이 자동으로 시작됩니다.",
   "date": "2026-07-09",
-  "status": "ok",
-  "model": "gemini-2.5-flash",
-  "generated_at": "17:36 KST"
+  "status": "failed",
+  "reason": "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+  "stocks": [],
+  "today_sector_summary": "피드 생성 실패. 시세 데이터는 정상입니다.",
+  "weekly_sector_summary": ""
 }
