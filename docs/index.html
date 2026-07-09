@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>주식레이더 — 2026-07-08</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주식레이더 — 2026-07-09</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-:root{
-  --bg:#F4F6FA; --card:#FFFFFF; --ink:#1B2437; --sub:#69738C; --line:#E4E8F1;
-  --up:#E5484D; --up-bg:#FDF0F0; --down:#2563EB; --accent:#4F46E5; --accent-bg:#EEF0FE;
-  --gold:#B7791F; --gold-bg:#FdF6E9;
-}
+:root{--bg:#F4F6FA;--card:#FFF;--ink:#1B2437;--sub:#69738C;--line:#E4E8F1;
+--up:#E5484D;--down:#2563EB;--accent:#4F46E5;--accent-bg:#EEF0FE;--gold:#B7791F;--gold-bg:#FDF6E9}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,'Noto Sans KR',sans-serif;line-height:1.6}
-.wrap{max-width:860px;margin:0 auto;padding:28px 16px 60px}
-header{text-align:center;margin-bottom:22px}
+.wrap{max-width:880px;margin:0 auto;padding:28px 16px 60px}
+header{text-align:center;margin-bottom:20px}
 h1{font-size:1.7rem;font-weight:800;letter-spacing:-.5px}
-.meta{color:var(--sub);font-size:.9rem;margin-top:6px}
+.meta{color:var(--sub);font-size:.88rem;margin-top:6px}
 .badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
-.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 13px;border-radius:99px;font-size:.83rem;font-weight:600;background:var(--card);border:1px solid var(--line)}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:5px 13px;border-radius:99px;font-size:.82rem;font-weight:600;background:var(--card);border:1px solid var(--line)}
 .chip.warn{background:#FEF2F2;color:#B91C1C;border-color:#FBD5D5}
-.fear-wrap{max-width:420px;margin:16px auto 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+.fear-wrap{max-width:440px;margin:16px auto 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
 .fear-top{display:flex;justify-content:space-between;font-size:.85rem;font-weight:700}
 .fear-bar{height:8px;border-radius:99px;margin-top:8px;background:linear-gradient(90deg,#2563EB,#94A3B8 50%,#E5484D);position:relative}
 .fear-dot{position:absolute;top:-4px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--ink);transform:translateX(-8px)}
-.fear-detail{color:var(--sub);font-size:.78rem;margin-top:8px;text-align:right}
-.tabs{display:flex;gap:6px;overflow-x:auto;margin:24px 0 16px;padding-bottom:2px}
+.fear-detail{color:var(--sub);font-size:.76rem;margin-top:8px;text-align:right}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:22px 0 16px}
 .tab-btn{flex-shrink:0;padding:9px 16px;border:1px solid var(--line);background:var(--card);border-radius:10px;font-size:.9rem;font-weight:600;color:var(--sub);cursor:pointer}
 .tab-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
 .tab-content{display:none}.tab-content.active{display:block}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:12px}
-.s-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.rank{font-weight:800;color:var(--accent);font-size:.95rem;min-width:26px}
+.card.hot{border:2px solid #F59E0B;box-shadow:0 2px 12px rgba(245,158,11,.15)}
+.s-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.rank{font-weight:800;color:var(--accent);font-size:.95rem;min-width:24px}
 .s-name{font-weight:700;font-size:1.05rem}
 .pct{font-weight:800;color:var(--up)}
-.s-sub{color:var(--sub);font-size:.82rem;margin-left:auto}
-.sector-tag{font-size:.72rem;background:var(--accent-bg);color:var(--accent);padding:2px 9px;border-radius:99px;font-weight:600}
-.analysis{margin-top:10px;font-size:.92rem;color:#333C52;background:#F8FAFD;border-radius:10px;padding:12px 14px}
-.src{font-size:.78rem;margin-top:6px}
-.src a{color:var(--accent)}
-.fib{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
-.fib span{font-size:.74rem;background:var(--gold-bg);color:var(--gold);padding:3px 9px;border-radius:8px;font-weight:600}
+.s-sub{color:var(--sub);font-size:.8rem;width:100%;margin-top:2px}
+.tag{font-size:.7rem;padding:2px 9px;border-radius:99px;font-weight:700}
+.t-sector{background:var(--accent-bg);color:var(--accent)}
+.t-money{background:#FFF7E6;color:#B45309;border:1px solid #FDE68A}
+.t-turn{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.t-alert{background:#7F1D1D;color:#fff}
+.t-pattern{background:#ECFDF5;color:#047857;border:1px solid #A7F3D0}
+.t-theme{background:#F1F5F9;color:#475569}
+.headline{margin-top:10px;font-size:.86rem;font-weight:700;color:#334155;background:#F1F5F9;border-left:3px solid var(--accent);padding:8px 12px;border-radius:0 8px 8px 0}
+.analysis{margin-top:8px;font-size:.9rem;color:#333C52;background:#F8FAFD;border-radius:10px;padding:12px 14px;white-space:pre-line}
+.insight{margin-top:8px;font-size:.88rem;background:var(--gold-bg);border:1px solid #F3E3C3;border-radius:10px;padding:11px 14px;color:#7C5A11;white-space:pre-line}
+.insight b{color:#92610A}
+.src{font-size:.76rem;margin-top:6px}.src a{color:var(--accent)}
+.levels{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.levels span{font-size:.72rem;background:#F8FAFD;border:1px solid var(--line);color:var(--sub);padding:3px 9px;border-radius:8px;font-weight:600}
+.levels span.sw{background:var(--gold-bg);color:var(--gold);border-color:#F3E3C3}
 details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:8px;overflow:hidden}
-summary{padding:13px 16px;cursor:pointer;display:flex;align-items:center;gap:10px;font-weight:600;list-style:none}
+details.hot{border:2px solid #F59E0B}
+summary{padding:13px 16px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;list-style:none;flex-wrap:wrap}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"▾";margin-left:auto;color:var(--sub);transition:.2s}
+summary::after{content:"▾";margin-left:auto;color:var(--sub)}
 details[open] summary::after{transform:rotate(180deg)}
-details .analysis{margin:0 16px 14px}
+details .inner{padding:0 16px 14px}
 table{width:100%;border-collapse:collapse;font-size:.9rem}
 th{color:var(--sub);font-weight:600;text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);font-size:.8rem}
 td{padding:10px;border-bottom:1px solid var(--line)}
 tr:last-child td{border-bottom:none}
 .num{text-align:right;font-variant-numeric:tabular-nums}
-.empty{color:var(--sub);text-align:center;padding:30px 10px;font-size:.9rem}
+.empty{color:var(--sub);text-align:center;padding:30px;font-size:.9rem}
 .summary-box{white-space:pre-line;font-size:.93rem}
-.sec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:12px}
-.sec-item{background:#F8FAFD;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.8rem}
-.sec-item b{display:block;font-size:.86rem}
-h3{font-size:1rem;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.sec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-top:12px}
+.sec-item{background:#F8FAFD;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.78rem}
+.sec-item b{display:block;font-size:.85rem}
+h3{font-size:1rem;margin-bottom:10px}
 footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-height:1.9}
-@media (max-width:520px){.wrap{padding:20px 10px 50px}.s-sub{margin-left:0;width:100%}}
+@media(max-width:520px){.wrap{padding:20px 10px 50px}}
 </style>
 </head>
-<body>
-<div class="wrap">
+<body><div class="wrap">
 <header>
   <h1>📡 주식레이더</h1>
-  <div class="meta">데이터 기준: 2026-07-08 20:39 KST (확정 종가) · 위험종목 88개 자동 제외</div>
+  <div class="meta">데이터 기준: 2026-07-09 15:25 KST (확정 종가) · 위험종목 158개 자동 제외</div>
   <div class="badges">
-    <span class="chip">🤖 AI 피드 20:41 KST 생성</span>
-    <span class="chip">KOSPI -5.35%</span><span class="chip">KOSDAQ -5.56%</span>
+    <span class="chip">🤖 gemini-2.5-flash · 15:26 KST</span>
+    <span class="chip">KOSPI +0.73%</span><span class="chip">KOSDAQ +0.98%</span>
   </div>
   
   <div class="fear-wrap">
-    <div class="fear-top"><span>시장 온도계 (자체 간이지표)</span><span>0 · 극단 공포</span></div>
-    <div class="fear-bar"><div class="fear-dot" style="left:0%"></div></div>
-    <div class="fear-detail">KOSPI -5.35% · KOSDAQ -5.56%</div>
+    <div class="fear-top"><span>시장 온도계 (자체 간이지표)</span><span>61 · 탐욕</span></div>
+    <div class="fear-bar"><div class="fear-dot" style="left:61%"></div></div>
+    <div class="fear-detail">KOSPI +0.73% · KOSDAQ +0.98% · 상한가 0개 · 대금1000억+ 0개</div>
   </div>
-  
 </header>
 
 <div class="tabs">
@@ -88,270 +93,44 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
   <button class="tab-btn" onclick="show('sector',this)">🗂 섹터 흐름</button>
 </div>
 
+
+
+
+
+
+
 <div id="tab-top10" class="tab-content active">
-  
-  <div class="card">
-    <div class="s-head">
-      <span class="rank">1</span><span class="s-name">다스코</span>
-      <span class="pct">+30.0%</span><span class="sector-tag">기타</span>
-      <span class="s-sub">5,200원 · 거래량 30,832,750</span>
-    </div>
-    <div class="analysis">다스코는 532억원 규모의 태양광발전사업 공사 계약을 체결했다는 소식에 상한가를 기록했습니다. 이는 지난해 매출액의 19.47%에 해당하는 대규모 수주로, 전남 신안군 일원에 72.98MW 규모의 태양광발전소를 건설하는 프로젝트입니다. 정부의 호남권 AI·반도체 산업 육성을 위한 전력 인프라 확충 정책과 맞물려 투자자들의 관심이 집중된 것으로 보입니다.<div class="src">📎 <a href="비즈트리뷴, 컨슈머타임스(Consumertimes)" target="_blank" rel="noopener">뉴스 출처</a></div></div>
-    
-  </div>
-  
-  <div class="card">
-    <div class="s-head">
-      <span class="rank">2</span><span class="s-name">데이타솔루션</span>
-      <span class="pct">+29.98%</span><span class="sector-tag">기타</span>
-      <span class="s-sub">5,940원 · 거래량 625,530</span>
-    </div>
-    <div class="analysis">데이타솔루션은 데이터 분석 및 AI 플랫폼 사업 확대 기대감이 부각되며 상한가에 진입했습니다. AI 관련주 강세 흐름 속에서 개장 직후 매수세가 집중된 것으로 풀이됩니다.<div class="src">📎 <a href="EBN 데이터센터, CBC뉴스, 핀포인트뉴스" target="_blank" rel="noopener">뉴스 출처</a></div></div>
-    
-  </div>
-  
-  <div class="card">
-    <div class="s-head">
-      <span class="rank">3</span><span class="s-name">씨이랩</span>
-      <span class="pct">+29.97%</span><span class="sector-tag">기타</span>
-      <span class="s-sub">12,620원 · 거래량 867,266</span>
-    </div>
-    <div class="analysis">씨이랩은 삼성SDS와 3151억원 규모의 AI 컴퓨팅자원 활용 기반 강화 사업 공급 계약을 체결했다는 소식에 상한가를 기록했습니다. 이는 최근 매출액의 3067.74%에 달하는 대규모 계약으로, GPU 기반 AI 인프라 및 영상 AI 기술 경쟁력이 재평가받으며 강한 매수세가 유입되었습니다.<div class="src">📎 <a href="조선비즈, 핀포인트뉴스, 서울파이낸스" target="_blank" rel="noopener">뉴스 출처</a></div></div>
-    
-  </div>
-  
-  <div class="card">
-    <div class="s-head">
-      <span class="rank">4</span><span class="s-name">금호전기</span>
-      <span class="pct">+29.94%</span><span class="sector-tag">기타</span>
-      <span class="s-sub">1,302원 · 거래량 47,165,006</span>
-    </div>
-    <div class="analysis">금호전기는 최대주주 특수관계인인 (주)신주피이가 보통주 40만주를 추가 취득하며 지분율을 확대한 소식이 전해졌습니다. 이는 환매조건부주식 매매계약 종료에 따른 것으로, 시장 전반의 하락세 속에서도 개별적인 상승세를 보이며 상한가를 기록했습니다.<div class="src">📎 <a href="중앙이코노미뉴스, EBN 데이터센터, 데이터투자, 톱스타뉴스" target="_blank" rel="noopener">뉴스 출처</a></div></div>
-    
-  </div>
-  
-  <div class="card">
-    <div class="s-head">
-      <span class="rank">5</span><span class="s-name">금호에이치티</span>
-      <span class="pct">+29.93%</span><span class="sector-tag">기타</span>
-      <span class="s-sub">9,030원 · 거래량 576,355</span>
-    </div>
-    <div class="analysis">금호에이치티는 글로벌 전장 시장 영토 확장과 자동차용 LED 모듈 수요 폭발 기대감에 힘입어 상한가를 기록했습니다. 자율주행 및 전기차 시대 가속화에 따른 고성능 LED 조명 수요 급증이 긍정적인 영향을 미친 것으로 풀이됩니다.<div class="src">📎 <a href="핀포인트뉴스, EBN 데이터센터" target="_blank" rel="noopener">뉴스 출처</a></div></div>
-    
-  </div>
-  
-  <div class="card">
-    <div class="s-head">
-      <span class="rank">6</span><span class="s-name">뷰티스킨</span>
-      <span class="pct">+29.9%</span><span class="sector-tag">기타</span>
-      <span class="s-sub">2,285원 · 거래량 6,281,563</span>
-    </div>
-    <div class="analysis">뷰티스킨은 코스닥 시장에서 상한가를 기록하며 강세를 보였습니다. 구체적인 급등 사유는 확인되지 않았으나, 코스닥 시장의 중소형주 중심 순환매와 개별 종목 장세 속에서 매수세가 집중된 것으로 추정됩니다.<div class="src">📎 <a href="EBN 데이터센터, 서울데이터랩" target="_blank" rel="noopener">뉴스 출처</a></div></div>
-    
-  </div>
-  
-  <div class="card">
-    <div class="s-head">
-      <span class="rank">7</span><span class="s-name">에코심플렉스</span>
-      <span class="pct">+29.74%</span><span class="sector-tag">기타</span>
-      <span class="s-sub">2,085원 · 거래량 532,356</span>
-    </div>
-    <div class="analysis">에코심플렉스는 코스닥 시장에서 상한가를 기록했습니다. 구체적인 급등 사유는 확인되지 않았으나, 코스닥 시장의 중소형주 중심 순환매와 개별 재료 보유 종목으로 매수세가 유입된 것으로 추정됩니다.<div class="src">📎 <a href="EBN 데이터센터" target="_blank" rel="noopener">뉴스 출처</a></div></div>
-    
-  </div>
-  
-  <div class="card">
-    <div class="s-head">
-      <span class="rank">8</span><span class="s-name">영흥</span>
-      <span class="pct">+20.82%</span><span class="sector-tag">기타</span>
-      <span class="s-sub">2,130원 · 거래량 1,369,120</span>
-    </div>
-    <div class="analysis">영흥은 코스피 시장에서 20.82% 상승하며 강세를 보였습니다. 구체적인 급등 사유는 확인되지 않았으나, 코스피 시장의 중소형주 중심 순환매와 개별 재료 보유 종목으로 매수세가 집중된 것으로 추정됩니다.<div class="src">📎 <a href="EBN 데이터센터" target="_blank" rel="noopener">뉴스 출처</a></div></div>
-    
-  </div>
-  
-  <div class="card">
-    <div class="s-head">
-      <span class="rank">9</span><span class="s-name">벡트</span>
-      <span class="pct">+20.09%</span><span class="sector-tag">기타</span>
-      <span class="s-sub">2,600원 · 거래량 912,933</span>
-    </div>
-    <div class="analysis">벡트는 코스닥 시장에서 20.09% 상승하며 강세를 나타냈습니다. 구체적인 급등 사유는 확인되지 않았으나, 코스닥 시장의 중소형주 중심 순환매와 개별 재료 보유 종목으로 매수세가 유입된 것으로 추정됩니다.<div class="src">📎 <a href="EBN 데이터센터" target="_blank" rel="noopener">뉴스 출처</a></div></div>
-    
-  </div>
-  
-  <div class="card">
-    <div class="s-head">
-      <span class="rank">10</span><span class="s-name">마녀공장</span>
-      <span class="pct">+18.44%</span><span class="sector-tag">기타</span>
-      <span class="s-sub">17,600원 · 거래량 2,418,263</span>
-    </div>
-    <div class="analysis">마녀공장은 장 초반 급등세를 보이며 변동성완화장치(VI)가 발동되었습니다. 국내 화장품 수출액이 역대 상반기 최대치를 기록하는 등 K-뷰티 수출 훈풍의 중심에 있다는 분석이 나오며 투자심리를 자극한 것으로 보입니다. 다만, 애프터마켓에서는 10%대 급락을 기록했습니다.<div class="src">📎 <a href="CBC뉴스, 금강일보, YouTube, 연합뉴스" target="_blank" rel="noopener">뉴스 출처</a></div></div>
-    
-  </div>
-  
+  <div class="empty">데이터 없음</div>
 </div>
 
 <div id="tab-rest" class="tab-content">
-  
-  <details>
-    <summary><span class="rank">11</span><span>동양파일</span><span class="pct">+17.96%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">동양파일은 코스닥 시장에서 17.96% 상승하며 강세를 보였습니다. 구체적인 급등 사유는 확인되지 않았으나, 코스닥 시장의 중소형주 중심 순환매와 개별 재료 보유 종목으로 매수세가 집중된 것으로 추정됩니다.<div class="src">📎 <a href="EBN 데이터센터, 서울데이터랩" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">12</span><span>흥구석유</span><span class="pct">+14.73%</span><span class="sector-tag">에너지/원전</span></summary>
-    <div class="analysis">흥구석유는 중동 지역의 지정학적 긴장 고조로 국제유가가 급등하면서 강세를 보였습니다. 호르무즈 해협 선박 피격 소식 등으로 원유 공급 차질 우려가 커지며 정유·석유 유통 관련 종목에 매수세가 유입된 것으로 풀이됩니다.<div class="src">📎 <a href="중앙이코노미뉴스, 이코노뉴스, 뉴스1, CBC뉴스" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">13</span><span>잇츠한불</span><span class="pct">+13.52%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">잇츠한불은 코스피 시장에서 13.52% 상승하며 강세를 보였습니다. 구체적인 급등 사유는 확인되지 않았으나, 코스피 시장의 중소형주 중심 순환매와 개별 재료 보유 종목으로 매수세가 집중된 것으로 추정됩니다.<div class="src">📎 <a href="EBN 데이터센터" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">14</span><span>NE능률</span><span class="pct">+13.01%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">NE능률은 금일 13.01% 상승했습니다. 사유 미확인(수급 추정)
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">15</span><span>LSK아이로봇</span><span class="pct">+12.97%</span><span class="sector-tag">로봇/AI</span></summary>
-    <div class="analysis">LSK아이로봇은 30억원 규모의 제11회차 전환사채(CB)를 전액 상환했다는 소식에 강세를 보였습니다. 비핵심 자산 매각으로 확보한 현금 유동성을 활용한 상환으로, 부채 축소 및 재무 안정성 강화, 주식가치 희석 우려 해소에 대한 기대감이 반영된 것으로 풀이됩니다. 또한 AI 및 로봇 비전 신사업에 대한 기대감도 작용한 것으로 보입니다.<div class="src">📎 <a href="마켓인, 머니투데이, Daum, 더스탁(The Stock)" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">16</span><span>PS일렉트로닉스</span><span class="pct">+12.92%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">PS일렉트로닉스는 금일 12.92% 상승했습니다. 사유 미확인(수급 추정)
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">17</span><span>서산</span><span class="pct">+12.67%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">서산은 오후 급등세를 보이며 장중 변동성완화장치(VI)가 발동되었습니다. 호남권 반도체 산단 조성 결정 소식 등에 일부 시멘트/레미콘 테마 상승 속에서 강세를 보인 것으로 추정됩니다.<div class="src">📎 <a href="CBC뉴스, 주식뉴스!, 서울데이터랩" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">18</span><span>대한제당</span><span class="pct">+12.38%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">대한제당은 코스피 시장에서 12.38% 상승하며 강세를 보였습니다. 구체적인 급등 사유는 확인되지 않았으나, 코스피 시장의 중소형주 중심 순환매와 개별 재료 보유 종목으로 매수세가 집중된 것으로 추정됩니다.<div class="src">📎 <a href="EBN 데이터센터" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">19</span><span>팜스코</span><span class="pct">+11.11%</span><span class="sector-tag">바이오/제약</span></summary>
-    <div class="analysis">팜스코는 코스피 시장에서 11.11% 상승하며 강세를 보였습니다. 구체적인 급등 사유는 확인되지 않았으나, 코스피 시장의 중소형주 중심 순환매와 개별 재료 보유 종목으로 매수세가 집중된 것으로 추정됩니다.<div class="src">📎 <a href="EBN 데이터센터" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">20</span><span>마키나락스</span><span class="pct">+10.61%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">마키나락스는 코스닥 시장에서 10.61% 상승하며 강세를 보였습니다. 구체적인 급등 사유는 확인되지 않았으나, 코스닥 시장의 중소형주 중심 순환매와 개별 재료 보유 종목으로 매수세가 집중된 것으로 추정됩니다.<div class="src">📎 <a href="서울데이터랩" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">21</span><span>광무</span><span class="pct">+10.1%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">광무는 보유 중인 약 1143억원 규모의 삼성전자 주식을 장내에서 분할 매도하기로 결정했다는 소식에 급등했습니다. 회사는 이번 매각을 통해 투자수익을 실현하고, 확보한 자금을 인수합병(M&A), 자사주 매입, 운영자금 등 성장 재원으로 활용할 계획입니다.<div class="src">📎 <a href="금강일보, 서울데이터랩" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">22</span><span>한울반도체</span><span class="pct">+9.62%</span><span class="sector-tag">반도체</span></summary>
-    <div class="analysis">한울반도체는 금일 9.62% 상승했습니다. 사유 미확인(수급 추정)
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">23</span><span>리파인</span><span class="pct">+8.46%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">리파인은 금일 8.46% 상승했습니다. 사유 미확인(수급 추정)
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">24</span><span>남화토건</span><span class="pct">+7.97%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">남화토건은 금일 7.97% 상승했습니다. 사유 미확인(수급 추정)
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">25</span><span>세종텔레콤</span><span class="pct">+7.44%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">세종텔레콤은 최대주주로부터 280억원 규모의 자금을 조달한다는 소식에 힘입어 2거래일 연속 장중 상한가를 기록했습니다. 이번 유상증자를 통해 조달한 자금은 본업 운영 및 시설 자금으로 사용될 예정입니다.<div class="src">📎 <a href="메트로신문, 주식뉴스!" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">26</span><span>서울식품</span><span class="pct">+7.41%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">서울식품은 코스피 시장에서 7.41% 상승하며 강세를 보였습니다. 구체적인 급등 사유는 확인되지 않았으나, 코스피 시장의 중소형주 중심 순환매와 개별 재료 보유 종목으로 매수세가 집중된 것으로 추정됩니다.<div class="src">📎 <a href="EBN 데이터센터" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">27</span><span>인피니트헬스케어</span><span class="pct">+7.35%</span><span class="sector-tag">바이오/제약</span></summary>
-    <div class="analysis">인피니트헬스케어는 금일 7.35% 상승했습니다. 사유 미확인(수급 추정)
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">28</span><span>클리오</span><span class="pct">+6.86%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">클리오는 2분기 예상치를 상회하는 실적을 달성할 것이라는 기대감에 상승세를 보였습니다. 유안타증권에 따르면 클리오의 2분기 예상 매출액과 영업이익은 전년 동기 대비 각각 6%, 82% 성장할 것으로 전망됩니다.<div class="src">📎 <a href="이투데이, 주식뉴스!" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">29</span><span>강동씨앤엘</span><span class="pct">+6.61%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">강동씨앤엘은 금일 6.61% 상승했습니다. 호남권 반도체 산단 조성 결정 소식 등에 일부 시멘트/레미콘 테마 상승 속에서 강세를 보인 것으로 추정됩니다.<div class="src">📎 <a href="주식뉴스!, 서울데이터랩" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
-  <details>
-    <summary><span class="rank">30</span><span>삼호개발</span><span class="pct">+6.44%</span><span class="sector-tag">기타</span></summary>
-    <div class="analysis">삼호개발은 코스피 시장에서 6.44% 상승하며 강세를 보였습니다. 구체적인 급등 사유는 확인되지 않았으나, 코스피 시장의 중소형주 중심 순환매와 개별 재료 보유 종목으로 매수세가 집중된 것으로 추정됩니다.<div class="src">📎 <a href="EBN 데이터센터" target="_blank" rel="noopener">뉴스 출처</a></div>
-    </div>
-  </details>
-  
+  <div class="empty">데이터 없음</div>
 </div>
 
 <div id="tab-etf" class="tab-content">
-  <div class="card">
-    <h3>📦 오늘 상승 ETF/ETN Top 15</h3>
-    
-    <table><tr><th>#</th><th>이름</th><th class="num">종가</th><th class="num">등락률</th></tr>
-    <tr><td>1</td><td>한투 인버스2X코스피200선물 ETN</td><td class="num">40,120</td><td class="num pct">+22.09%</td></tr><tr><td>2</td><td>키움 인버스 2X K방산 TOP5 ETN</td><td class="num">8,815</td><td class="num pct">+18.8%</td></tr><tr><td>3</td><td>하나 인버스 2X K방산TOP10 ETN</td><td class="num">9,950</td><td class="num pct">+18.52%</td></tr><tr><td>4</td><td>키움 인버스 2X 전력 TOP5 ETN</td><td class="num">8,430</td><td class="num pct">+18.23%</td></tr><tr><td>5</td><td>신한 인버스 2X 코스닥 150 선물 ETN</td><td class="num">2,485</td><td class="num pct">+14.25%</td></tr><tr><td>6</td><td>KB 인버스 2X KOSDAQ 150 선물 ETN</td><td class="num">2,460</td><td class="num pct">+13.36%</td></tr><tr><td>7</td><td>하나 인버스 2X 코스닥150 선물 ETN</td><td class="num">2,480</td><td class="num pct">+13.24%</td></tr><tr><td>8</td><td>미래에셋 인버스 2X 반도체 ETN</td><td class="num">6,220</td><td class="num pct">+13.09%</td></tr><tr><td>9</td><td>대신 인버스 2X 코스닥 150 선물 ETN</td><td class="num">2,475</td><td class="num pct">+13.01%</td></tr><tr><td>10</td><td>하나 인버스 2X 반도체 ETN</td><td class="num">4,030</td><td class="num pct">+12.89%</td></tr><tr><td>11</td><td>N2 인버스 2X 코스닥150 선물 ETN</td><td class="num">8,870</td><td class="num pct">+12.49%</td></tr><tr><td>12</td><td>미래에셋 인버스 2X 코스닥150 선물 ETN</td><td class="num">2,440</td><td class="num pct">+12.44%</td></tr><tr><td>13</td><td>한투 인버스2X코스닥150선물 ETN</td><td class="num">2,455</td><td class="num pct">+12.1%</td></tr><tr><td>14</td><td>PLUS 삼성전자선물단일종목인버스2X</td><td class="num">15,785</td><td class="num pct">+12.07%</td></tr><tr><td>15</td><td>삼성 인버스 2X 코스닥150 선물 ETN</td><td class="num">2,425</td><td class="num pct">+12.01%</td></tr>
-    </table>
-    
+  <div class="card"><h3>📦 오늘 상승 ETF/ETN Top 15</h3>
+  <table><tr><th>#</th><th>이름</th><th class="num">종가</th><th class="num">등락률</th></tr>
+  <tr><td>1</td><td>KIWOOM SK하이닉스선물단일종목레버리지</td><td class="num">18,070</td><td class="num pct">+13.36%</td></tr><tr><td>2</td><td>RISE SK하이닉스단일종목레버리지</td><td class="num">18,755</td><td class="num pct">+13.32%</td></tr><tr><td>3</td><td>하나 레버리지 반도체 ETN</td><td class="num">267,890</td><td class="num pct">+12.86%</td></tr><tr><td>4</td><td>1Q SK하이닉스선물단일종목레버리지</td><td class="num">19,500</td><td class="num pct">+12.72%</td></tr><tr><td>5</td><td>ACE SK하이닉스단일종목레버리지</td><td class="num">18,535</td><td class="num pct">+12.33%</td></tr><tr><td>6</td><td>KODEX SK하이닉스단일종목레버리지</td><td class="num">22,050</td><td class="num pct">+12.3%</td></tr><tr><td>7</td><td>TIGER SK하이닉스단일종목레버리지</td><td class="num">18,665</td><td class="num pct">+12.27%</td></tr><tr><td>8</td><td>SOL SK하이닉스단일종목레버리지</td><td class="num">18,380</td><td class="num pct">+12.21%</td></tr><tr><td>9</td><td>미래에셋 레버리지 SK하이닉스 단일종목ETN</td><td class="num">21,720</td><td class="num pct">+11.96%</td></tr><tr><td>10</td><td>TIGER 미국필라델피아반도체레버리지(합성)</td><td class="num">121,640</td><td class="num pct">+9.68%</td></tr><tr><td>11</td><td>신한 레버리지 코스피 200 선물 ETN</td><td class="num">257,180</td><td class="num pct">+8.89%</td></tr><tr><td>12</td><td>TIGER 미국AI데이터센터TOP4Plus</td><td class="num">11,605</td><td class="num pct">+8.86%</td></tr><tr><td>13</td><td>KB 인버스 2X 은 선물 ETN</td><td class="num">57,900</td><td class="num pct">+8.47%</td></tr><tr><td>14</td><td>KODEX 반도체레버리지</td><td class="num">111,775</td><td class="num pct">+8.36%</td></tr><tr><td>15</td><td>TIGER 반도체TOP10레버리지</td><td class="num">50,400</td><td class="num pct">+7.92%</td></tr></table>
   </div>
 </div>
 
 <div id="tab-foreign" class="tab-content">
-  <div class="card">
-    <h3>🌐 외국인 매수 상위</h3>
-    <div class="empty">외국인 데이터 수집 실패 — 다음 업데이트에서 재시도합니다</div>
-  </div>
+  <div class="card"><h3>🌐 외국인 매수 상위</h3>
+  <div class="empty">외국인 데이터 수집 실패 — 소스 보정 작업 중</div></div>
 </div>
 
 <div id="tab-sector" class="tab-content">
-  <div class="card"><h3>📌 오늘의 섹터 흐름</h3><div class="summary-box">오늘 한국 증시는 코스피와 코스닥 시장 모두에서 중소형주 중심의 강한 순환매가 전개되며 상한가 종목이 다수 출현했습니다. 특히 '기타' 섹터가 54개 종목으로 가장 많은 상승 종목 수를 기록하며 평균 9.82%의 높은 상승률을 보였습니다. 에너지/원전 섹터는 흥구석유를 필두로 중동 지정학적 리스크에 따른 유가 급등의 영향을 받아 평균 7.41% 상승했습니다. 로봇/AI 섹터는 LSK아이로봇의 전환사채 상환 및 신사업 기대감, 씨이랩과 데이타솔루션의 AI 관련 계약 및 사업 확대 소식에 힘입어 강세를 나타냈습니다. 반도체 섹터는 한울반도체가 9.62% 상승하며 긍정적인 흐름을 보였습니다.</div>
-    <div class="sec-grid">
-    <div class="sec-item"><b>기타</b>54종목 · 평균 +9.82%<br>대장: 다스코</div><div class="sec-item"><b>에너지/원전</b>3종목 · 평균 +7.41%<br>대장: 흥구석유</div><div class="sec-item"><b>로봇/AI</b>2종목 · 평균 +7.84%<br>대장: LSK아이로봇</div><div class="sec-item"><b>바이오/제약</b>7종목 · 평균 +5.18%<br>대장: 팜스코</div><div class="sec-item"><b>반도체</b>1종목 · 평균 +9.62%<br>대장: 한울반도체</div><div class="sec-item"><b>IT/게임/엔터</b>1종목 · 평균 +5.4%<br>대장: 카카오게임즈</div><div class="sec-item"><b>건설/기계</b>1종목 · 평균 +5.21%<br>대장: 케이피항공산업</div><div class="sec-item"><b>철강/화학</b>1종목 · 평균 +4.33%<br>대장: 효성화학</div>
-    </div>
+  <div class="card"><h3>📌 오늘의 섹터 흐름</h3><div class="summary-box">오늘(2026-07-09) 국내 증시는 미국 반도체주의 반등에 힘입어 코스피가 3%대, 코스닥이 1%대 상승하며 전반적인 회복세를 보였습니다. 특히 반도체 및 소부장(소재·부품·장비) 관련 종목들이 일제히 강세를 보이며 시장의 주도 섹터로 부각되었습니다. 국제유가 강세로 에너지 관련주도 강세를 나타냈습니다. 입력된 오늘자 섹터 데이터는 없으나, 검색 결과로 미루어 볼 때 반도체와 에너지 섹터로 자금 유입이 활발했던 것으로 추정됩니다.</div>
+    
   </div>
-  <div class="card"><h3>📅 요일별 섹터 흐름</h3><div class="summary-box">최근 거래일(2026년 7월 8일) 기준, 한국 증시에서는 '기타' 섹터가 54개 종목의 상승과 함께 평균 9.82%의 높은 상승률을 기록하며 시장을 주도했습니다. 에너지/원전 섹터는 흥구석유를 중심으로 평균 7.41%의 상승률을 보였고, 로봇/AI 섹터는 LSK아이로봇이 상위권에 이름을 올리며 평균 7.84% 상승했습니다. 바이오/제약 섹터는 팜스코가 상위 종목으로 포함되며 평균 5.18% 상승했으며, 반도체 섹터는 한울반도체가 9.62% 상승하며 강세를 나타냈습니다. 전반적으로 중소형주와 개별 재료를 보유한 종목들로 매수세가 집중되는 순환매 장세가 펼쳐졌습니다.</div></div>
+  <div class="card"><h3>📅 요일별 섹터 흐름</h3><div class="summary-box">📊 섹터 히스토리 축적 중 (현재 2일차). 3거래일치가 쌓이는 시점부터 요일별 순환매 흐름 분석이 자동으로 시작됩니다.</div></div>
 </div>
 
-<footer>주식레이더 · 자동 생성 페이지 · 투자 참고용 (매매 추천 아님)<br>마지막 빌드: 2026-07-08 20:41 KST</footer>
+<footer>주식레이더 · 자동 생성 페이지 · 투자 참고용 (매매 추천 아님)<br>마지막 빌드: 2026-07-09 15:26 KST</footer>
 </div>
 <script>
-function show(id, btn){
-  document.querySelectorAll('.tab-content').forEach(e=>e.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(e=>e.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
-  btn.classList.add('active');
-}
+function show(id,btn){document.querySelectorAll('.tab-content').forEach(e=>e.classList.remove('active'));
+document.querySelectorAll('.tab-btn').forEach(e=>e.classList.remove('active'));
+document.getElementById('tab-'+id).classList.add('active');btn.classList.add('active');}
 </script>
-</body>
-</html>
+</body></html>
