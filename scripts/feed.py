@@ -78,7 +78,6 @@ def main():
                 model=model, contents=build_prompt(slim, history),
                 config=types.GenerateContentConfig(
                     tools=[types.Tool(google_search=types.GoogleSearch())],
-                    temperature=0.3,
                 ),
             )
             raw_text = resp.text
