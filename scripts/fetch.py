@@ -1,5 +1,5 @@
-# fetch.py — 네이버 증권 API 수집: 상승종목 + 지수 + 외국인 순매수 → data/raw_market.json
-import json, sys, time
+# fetch.py — 네이버 수집: 상승종목 + 지수 + 인기(거래량상위) + 외국인 순매수 → data/raw_market.json
+import io, json, re, sys, time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -12,14 +12,16 @@ KST = ZoneInfo("Asia/Seoul")
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
-    "Accept": "application/json",
-    "Referer": "https://m.stock.naver.com/",
+    "Accept": "application/json, text/html;q=0.9",
+    "Referer": "https://finance.naver.com/",
 }
 
 def _num(v):
     if v is None: return 0
     if isinstance(v, (int, float)): return v
-    s = str(v).replace(",", "").replace("+", "").strip()
+    s = re.sub(r"[,%+\s원]", "", str(v))
+    if s.startswith("상승") or s.startswith("하락"):
+        s = s[2:]
     try:
         return float(s) if "." in s else int(s)
     except ValueError:
@@ -37,7 +39,6 @@ def _get_json(url):
     return r.json()
 
 def _find_list(data):
-    """응답에서 종목 리스트를 방어적으로 탐색"""
     if isinstance(data, list) and data and isinstance(data[0], dict):
         return data
     if isinstance(data, dict):
@@ -65,6 +66,7 @@ def _parse_stock(it, market):
         "change": _num(_pick(it, "compareToPreviousClosePrice", "change")),
         "change_pct": float(_num(_pick(it, "fluctuationsRatio", "changeRate", "fluctuationRatio"))),
         "volume": _num(_pick(it, "accumulatedTradingVolume", "volume", "tradingVolume")),
+        "value": _num(_pick(it, "accumulatedTradingValue", "tradingValue", "accTradingValue")),
         "stock_type": str(_pick(it, "stockType", "stockTypeCode") or ""),
     }
 
@@ -78,7 +80,7 @@ def fetch_risers(market):
             break
         items = _find_list(data)
         if not items:
-            print(f"  [WARN] {market} 응답 구조 인식 실패. 원문: {str(data)[:300]}")
+            print(f"  [WARN] {market} 응답 구조 인식 실패: {str(data)[:200]}")
             break
         for it in items:
             s = _parse_stock(it, market)
@@ -88,39 +90,87 @@ def fetch_risers(market):
     return stocks
 
 def fetch_indices():
-    """코스피/코스닥 지수 (간이 공포지수 계산용)"""
     out = {}
     for code in ("KOSPI", "KOSDAQ"):
         try:
             data = _get_json(f"https://m.stock.naver.com/api/index/{code}/basic")
             if isinstance(data, dict):
-                out[code] = {
-                    "close": _num(_pick(data, "closePrice", "currentPrice", "now")),
-                    "change_pct": float(_num(_pick(data, "fluctuationsRatio", "changeRate"))),
-                }
+                pct = float(_num(_pick(data, "fluctuationsRatio", "changeRate")))
+                if abs(pct) > 15:   # 비정상 값 방어
+                    pct = 0.0
+                out[code] = {"close": _num(_pick(data, "closePrice", "currentPrice", "now")),
+                             "change_pct": pct}
         except Exception as e:
-            print(f"  [WARN] {code} 지수 수집 실패: {e}")
+            print(f"  [WARN] {code} 지수 실패: {e}")
     return out
 
-def fetch_foreign():
-    """외국인 순매수 상위 — 엔드포인트 후보를 순차 시도 (실패해도 파이프라인 계속)"""
+def _read_tables(url):
+    """네이버 데스크톱 HTML(euc-kr) 표 파싱"""
+    import pandas as pd
+    r = requests.get(url, headers=HEADERS, timeout=15)
+    r.raise_for_status()
+    r.encoding = "euc-kr"
+    return pd.read_html(io.StringIO(r.text))
+
+def fetch_popular(sosok, market_name, top_n=40):
+    """인기 = 거래량 상위 (finance.naver.com 고전 페이지, 안정적)"""
+    try:
+        tables = _read_tables(f"https://finance.naver.com/sise/sise_quant.naver?sosok={sosok}")
+        for t in tables:
+            cols = [str(c) for c in t.columns]
+            if "종목명" in cols:
+                t = t.dropna(subset=["종목명"])
+                out = []
+                for _, row in t.head(top_n).iterrows():
+                    out.append({
+                        "name": str(row["종목명"]),
+                        "close": _num(row.get("현재가")),
+                        "change_pct": float(_num(row.get("등락률"))),
+                        "volume": _num(row.get("거래량")),
+                        "value": _num(row.get("거래대금")),
+                    })
+                print(f"  [OK] 인기({market_name}) {len(out)}종목")
+                return out
+        print(f"  [WARN] 인기({market_name}) 표에 종목명 없음. 표 헤더들: {[list(map(str,t.columns))[:8] for t in tables[:4]]}")
+    except Exception as e:
+        print(f"  [WARN] 인기({market_name}) 실패: {e}")
+    return []
+
+def fetch_foreign(top_n=15):
+    """외국인 순매수 상위 — 고전 페이지 후보 순차 시도"""
     candidates = [
-        "https://m.stock.naver.com/api/stocks/foreign/KOSPI?page=1&pageSize=15",
-        "https://m.stock.naver.com/api/stocks/foreigner/KOSPI?page=1&pageSize=15",
-        "https://m.stock.naver.com/api/stocks/investorTrend/foreign?page=1&pageSize=15",
+        "https://finance.naver.com/sise/sise_deal_rank.naver",
+        "https://finance.naver.com/sise/sise_deal_rank.naver?investor_gubun=9000",
+        "https://finance.naver.com/sise/sise_foreign.naver",
     ]
     for url in candidates:
         try:
-            data = _get_json(url)
-            items = _find_list(data)
-            if items:
-                parsed = [s for s in (_parse_stock(it, "KOSPI") for it in items) if s]
-                if parsed:
-                    print(f"  [OK] 외국인 데이터 확보 ({url.split('/api/')[1].split('?')[0]})")
-                    return parsed[:15]
-            print(f"  [WARN] 외국인 후보 구조 불일치: {str(data)[:200]}")
+            tables = _read_tables(url)
+            for t in tables:
+                cols = [str(c) for c in t.columns]
+                flat = " ".join(cols)
+                if "종목명" in flat:
+                    if isinstance(t.columns, __import__("pandas").MultiIndex):
+                        t.columns = ["_".join(map(str, c)) for c in t.columns]
+                    name_col = next(c for c in t.columns if "종목명" in str(c))
+                    t = t.dropna(subset=[name_col])
+                    out = []
+                    for _, row in t.head(top_n).iterrows():
+                        price_col = next((c for c in t.columns if "현재가" in str(c)), None)
+                        pct_col = next((c for c in t.columns if "등락률" in str(c)), None)
+                        amt_col = next((c for c in t.columns if "순매수" in str(c) or "금액" in str(c)), None)
+                        out.append({
+                            "name": str(row[name_col]),
+                            "close": _num(row[price_col]) if price_col else 0,
+                            "change_pct": float(_num(row[pct_col])) if pct_col else 0.0,
+                            "net_buy": _num(row[amt_col]) if amt_col else 0,
+                        })
+                    if out:
+                        print(f"  [OK] 외국인 {len(out)}종목 ({url.split('/')[-1]})")
+                        return out
+            print(f"  [WARN] 외국인 후보 표 불일치({url.split('/')[-1]}). 헤더: {[list(map(str,t.columns))[:6] for t in tables[:5]]}")
         except Exception as e:
-            print(f"  [WARN] 외국인 후보 실패({url.split('?')[0][-30:]}): {e}")
+            print(f"  [WARN] 외국인 후보 실패({url.split('/')[-1]}): {e}")
     return []
 
 def main():
@@ -138,22 +188,21 @@ def main():
             OUTPUT.unlink()
         sys.exit(0)
 
-    indices = fetch_indices()
-    foreign = fetch_foreign()
-
-    DATA_DIR.mkdir(exist_ok=True)
     result = {
-        "date": now.strftime("%Y-%m-%d"),
-        "time": now.strftime("%H:%M"),
-        "timezone": "KST",
-        "total_stocks": len(records),
-        "stocks": records,
-        "indices": indices,
-        "foreign_top": foreign,
+        "date": now.strftime("%Y-%m-%d"), "time": now.strftime("%H:%M"), "timezone": "KST",
+        "total_stocks": len(records), "stocks": records,
+        "indices": fetch_indices(),
+        "foreign_top": fetch_foreign(),
+        "popular": {
+            "KOSPI": fetch_popular(0, "KOSPI"),
+            "KOSDAQ": fetch_popular(1, "KOSDAQ"),
+        },
     }
+    DATA_DIR.mkdir(exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False)
-    print(f"[OK] 종목 {len(records)}개 / 지수 {len(indices)}개 / 외국인 {len(foreign)}개 저장")
+    print(f"[OK] 종목 {len(records)} / 외국인 {len(result['foreign_top'])} / "
+          f"인기 KOSPI {len(result['popular']['KOSPI'])}·KOSDAQ {len(result['popular']['KOSDAQ'])}")
 
 if __name__ == "__main__":
     main()
