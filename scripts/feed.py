@@ -96,7 +96,7 @@ def main():
                 if cleaned.endswith("```"):
                     cleaned = cleaned[:-3]
                 feed = json.loads(cleaned.strip())
-                if not isinstance(feed.get("stocks"), list):
+                if not isinstance(feed.get("stocks"), list) or len(feed["stocks"]) < 10:
                     raise ValueError("stocks 배열 없음")
 
                 if history_days < 3:
