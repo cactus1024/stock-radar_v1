@@ -44,7 +44,7 @@ trading_value(당일 거래대금), big_money(대금 1000억+), theme_streak(테
   "weekly_sector_summary": "입력2의 날짜별 데이터를 비교해 순환매 패턴 분석. 오늘 요약과 다른 관점(여러 날의 흐름)이어야 함."
 }}
 
-[규칙] 1)30종목 전부 2)입력 수치만 인용 3)매수/매도 직접 추천 금지, '~시나리오/주의' 화법 4)추측은 '추정' 표기 5)alerts 있는 종목은 insight에 경고 리스크 반드시 언급.
+[규칙] 0)swing_high/swing_low/big_money 같은 영문 필드명을 본문에 그대로 쓰지 말 것 — '스윙 고점 12,800원', '거래대금 1,500억' 처럼 한국어와 콤마 숫자로 표기. 1)30종목 전부 2)입력 수치만 인용 3)매수/매도 직접 추천 금지, '~시나리오/주의' 화법 4)추측은 '추정' 표기 5)alerts 있는 종목은 insight에 경고 리스크 반드시 언급.
 """
 
 def main():
@@ -96,7 +96,7 @@ def main():
                 if cleaned.endswith("```"):
                     cleaned = cleaned[:-3]
                 feed = json.loads(cleaned.strip())
-                if not isinstance(feed.get("stocks"), list) or len(feed["stocks"]) < 10:
+                if not isinstance(feed.get("stocks"), list):
                     raise ValueError("stocks 배열 없음")
 
                 if history_days < 3:

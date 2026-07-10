@@ -136,43 +136,6 @@ def fetch_popular(sosok, market_name, top_n=40):
         print(f"  [WARN] 인기({market_name}) 실패: {e}")
     return []
 
-def fetch_foreign(top_n=15):
-    """외국인 순매수 상위 — 고전 페이지 후보 순차 시도"""
-    candidates = [
-        "https://finance.naver.com/sise/sise_deal_rank.naver",
-        "https://finance.naver.com/sise/sise_deal_rank.naver?investor_gubun=9000",
-        "https://finance.naver.com/sise/sise_foreign.naver",
-    ]
-    for url in candidates:
-        try:
-            tables = _read_tables(url)
-            for t in tables:
-                cols = [str(c) for c in t.columns]
-                flat = " ".join(cols)
-                if "종목명" in flat:
-                    if isinstance(t.columns, __import__("pandas").MultiIndex):
-                        t.columns = ["_".join(map(str, c)) for c in t.columns]
-                    name_col = next(c for c in t.columns if "종목명" in str(c))
-                    t = t.dropna(subset=[name_col])
-                    out = []
-                    for _, row in t.head(top_n).iterrows():
-                        price_col = next((c for c in t.columns if "현재가" in str(c)), None)
-                        pct_col = next((c for c in t.columns if "등락률" in str(c)), None)
-                        amt_col = next((c for c in t.columns if "순매수" in str(c) or "금액" in str(c)), None)
-                        out.append({
-                            "name": str(row[name_col]),
-                            "close": _num(row[price_col]) if price_col else 0,
-                            "change_pct": float(_num(row[pct_col])) if pct_col else 0.0,
-                            "net_buy": _num(row[amt_col]) if amt_col else 0,
-                        })
-                    if out:
-                        print(f"  [OK] 외국인 {len(out)}종목 ({url.split('/')[-1]})")
-                        return out
-            print(f"  [WARN] 외국인 후보 표 불일치({url.split('/')[-1]}). 헤더: {[list(map(str,t.columns))[:6] for t in tables[:5]]}")
-        except Exception as e:
-            print(f"  [WARN] 외국인 후보 실패({url.split('/')[-1]}): {e}")
-    return []
-
 def main():
     now = datetime.now(KST)
     print(f"[fetch] 수집 시작: {now.strftime('%Y-%m-%d %H:%M')} KST")
@@ -192,7 +155,6 @@ def main():
         "date": now.strftime("%Y-%m-%d"), "time": now.strftime("%H:%M"), "timezone": "KST",
         "total_stocks": len(records), "stocks": records,
         "indices": fetch_indices(),
-        "foreign_top": fetch_foreign(),
         "popular": {
             "KOSPI": fetch_popular(0, "KOSPI"),
             "KOSDAQ": fetch_popular(1, "KOSDAQ"),
@@ -201,8 +163,7 @@ def main():
     DATA_DIR.mkdir(exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False)
-    print(f"[OK] 종목 {len(records)} / 외국인 {len(result['foreign_top'])} / "
-          f"인기 KOSPI {len(result['popular']['KOSPI'])}·KOSDAQ {len(result['popular']['KOSDAQ'])}")
+    print(f"[OK] 종목 {len(records)} / 인기 KOSPI {len(result['popular']['KOSPI'])}·KOSDAQ {len(result['popular']['KOSDAQ'])}")
 
 if __name__ == "__main__":
     main()

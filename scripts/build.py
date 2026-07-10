@@ -102,7 +102,7 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
   <button class="tab-btn active" onclick="show('top10',this)">🏆 Top 10</button>
   <button class="tab-btn" onclick="show('rest',this)">📋 11~30위</button>
   <button class="tab-btn" onclick="show('etf',this)">📦 ETF</button>
-  <button class="tab-btn" onclick="show('foreign',this)">🌐 외국인</button>
+  <button class="tab-btn" onclick="show('watch',this)">⭐ 내 종목</button>
   <button class="tab-btn" onclick="show('sector',this)">🗂 섹터 흐름</button>
 </div>
 
@@ -133,6 +133,13 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
 {% endmacro %}
 
 <div id="tab-top10" class="tab-content active">
+  {% if scoreboard %}
+  <div class="card" style="background:linear-gradient(135deg,#EEF0FE,#FFF);border-color:#C7CCF5">
+    <b>📈 전일({{ scoreboard.prev_date }}) Top30 오늘 성적</b><br>
+    평균 <b {% if scoreboard.avg < 0 %}style="color:var(--down)"{% else %}style="color:var(--up)"{% endif %}>{{ "%+.2f"|format(scoreboard.avg) }}%</b>
+    · 상승 유지 {{ scoreboard.up }}/{{ scoreboard.n }} → <b>{{ scoreboard.verdict }}</b>
+  </div>
+  {% endif %}
   {% for s in top10 %}
   <div class="card{% if s.big_money %} hot{% endif %}">
     <div class="s-head">
@@ -161,11 +168,23 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
   {% else %}<div class="empty">오늘 상승 ETF 데이터 없음</div>{% endif %}</div>
 </div>
 
-<div id="tab-foreign" class="tab-content">
-  <div class="card"><h3>🌐 외국인 매수 상위</h3>
-  {% if foreign_top %}<table><tr><th>#</th><th>이름</th><th class="num">순매수금액</th></tr>
-  {% for e in foreign_top %}<tr><td>{{ loop.index }}</td><td>{{ e.name }}</td><td class="num">{{ "{:,}".format(e.net_buy or e.close or 0) }}</td></tr>{% endfor %}</table>
-  {% else %}<div class="empty">외국인 데이터 수집 실패 — 소스 보정 작업 중</div>{% endif %}</div>
+<div id="tab-watch" class="tab-content">
+  {% for s in watchlist %}
+  <div class="card">
+    <div class="s-head">
+      <span class="s-name">{{ s.name }}</span>
+      <span class="pct" {% if s.change_pct < 0 %}style="color:var(--down)"{% endif %}>{{ "%+.2f"|format(s.change_pct) }}%</span>
+      {{ tags(s) }}
+      <span class="s-sub">종가 {{ "{:,}".format(s.close) }}원 · 거래량 {{ "{:,}".format(s.volume) }} (기준일 {{ s.quote_date }})</span>
+    </div>
+    {{ levels(s) }}
+  </div>
+  {% else %}
+  <div class="card"><div class="empty">워치리스트가 비어 있습니다.<br><br>
+  저장소 루트에 <b>watchlist.txt</b> 파일을 만들고 한 줄에 하나씩:<br>
+  <code>005930 삼성전자</code><br><code>247540 에코프로비엠</code><br><br>
+  형식으로 넣으면 다음 업데이트부터 여기에 스윙·패턴·경고 분석이 자동 표시됩니다.</div></div>
+  {% endfor %}
 </div>
 
 <div id="tab-sector" class="tab-content">
@@ -209,7 +228,8 @@ def main():
     html = TPL.render(
         date=data.get("date", ""), time=data.get("time", ""),
         top10=merged[:10], rest=merged[10:30],
-        etf_top=data.get("etf_top", []), foreign_top=data.get("foreign_top", []),
+        etf_top=data.get("etf_top", []),
+        watchlist=data.get("watchlist", []), scoreboard=data.get("scoreboard"),
         indices=data.get("indices", {}), fear=data.get("fear"),
         filtered_risky=data.get("filtered_risky", 0),
         today_sectors=data.get("today_sectors", {}),

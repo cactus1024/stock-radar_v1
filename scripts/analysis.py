@@ -85,14 +85,19 @@ def fetch_history(ticker, days=90):
     return out
 
 def analyze_history(s, hist):
-    """스윙 고/저점, 양음양·트랩 패턴"""
+    """스윙 고/저점 + 스윙 기반 피보나치, 양음양·트랩 패턴, 당일 OHLC 백필"""
     today_str = datetime.now(KST).strftime("%Y%m%d")
+    today_rows = [h for h in hist if h["date"] == today_str]
+    if today_rows and not s.get("high"):        # 상승종목 API가 OHLC를 안 준 경우 백필
+        t = today_rows[-1]
+        s["open"], s["high"], s["low"] = round(t["open"]), round(t["high"]), round(t["low"])
     completed = [h for h in hist if h["date"] != today_str]
     if len(completed) < 5:
         return
     recent = completed[-20:]
     s["swing_high"] = round(max(h["high"] for h in recent))
     s["swing_low"] = round(min(h["low"] for h in recent))
+    s["fibonacci"] = calc_fibonacci(s["swing_high"], s["swing_low"])   # 스윙 기반 피보 (실전 기준)
     prev = completed[-1]
     o, c, lo = s.get("open", 0), s.get("close", 0), s.get("low", 0)
     patterns = []
@@ -161,6 +166,98 @@ def enrich_top30(top30):
             s["turnover_pct"] = round(s.get("volume", 0) / shares * 100, 1)
             s["high_turnover"] = s["turnover_pct"] >= 100
         time.sleep(0.3)
+
+# ---------- 워치리스트 & 전일 Top30 성적표 ----------
+
+WATCHLIST_FILE = ROOT / "watchlist.txt"
+TOP30_HISTORY = DATA_DIR / "top30_history.json"
+
+def load_watchlist():
+    """저장소 루트 watchlist.txt: 한 줄에 '005930 삼성전자' (이름 생략 가능, # 주석)"""
+    if not WATCHLIST_FILE.exists():
+        return []
+    out = []
+    for line in open(WATCHLIST_FILE, encoding="utf-8"):
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = line.split()
+        code = parts[0]
+        if code.isdigit() and len(code) == 6:
+            out.append({"ticker": code, "name": " ".join(parts[1:]) or code})
+    return out[:20]
+
+def build_watch_entries(items):
+    """워치리스트 종목의 당일 시세 + 스윙/패턴/피보/경고 분석"""
+    entries = []
+    for it in items:
+        try:
+            hist = fetch_history(it["ticker"])
+            if len(hist) < 2:
+                continue
+            last, prev = hist[-1], hist[-2]
+            s = {"ticker": it["ticker"], "name": it["name"], "market": "",
+                 "open": round(last["open"]), "high": round(last["high"]),
+                 "low": round(last["low"]), "close": round(last["close"]),
+                 "volume": int(last["volume"]),
+                 "change_pct": round((last["close"] - prev["close"]) / prev["close"] * 100, 2) if prev["close"] else 0.0,
+                 "quote_date": last["date"]}
+            s["sector"] = classify_sector(s["name"])
+            analyze_history(s, hist)
+            tags, shares = fetch_alerts_and_shares(it["ticker"])
+            if tags: s["alerts"] = tags
+            entries.append(s)
+            time.sleep(0.3)
+        except Exception as e:
+            print(f"  [WARN] 워치리스트 {it['ticker']} 실패: {e}")
+    return entries
+
+def build_scoreboard(date):
+    """전일 Top30이 오늘 어떻게 됐나 → 장의 연속성 판정"""
+    if not TOP30_HISTORY.exists():
+        return None
+    try:
+        hist = json.load(open(TOP30_HISTORY, encoding="utf-8"))
+    except Exception:
+        return None
+    if not isinstance(hist, list):
+        return None
+    prev_days = [h for h in hist if isinstance(h, dict) and h.get("date") != date]
+    if not prev_days:
+        return None
+    prev = prev_days[-1]
+    rets = []
+    for item in prev.get("items", [])[:30]:
+        try:
+            h = fetch_history(item["ticker"], days=10)
+            if len(h) < 2:
+                continue
+            rets.append((h[-1]["close"] - h[-2]["close"]) / h[-2]["close"] * 100)
+            time.sleep(0.2)
+        except Exception:
+            continue
+    if len(rets) < 10:
+        return None
+    avg = round(sum(rets) / len(rets), 2)
+    up = sum(1 for r in rets if r > 0)
+    if avg >= 0 and up >= len(rets) * 0.5:
+        verdict = "연속성 장 — 주도주 눌림 공략 유효"
+    elif avg <= -3:
+        verdict = "하루살이 장 — 전일 급등주 추격 금지"
+    else:
+        verdict = "혼조 — 종목별 선별 대응"
+    return {"prev_date": prev.get("date", ""), "avg": avg, "up": up, "n": len(rets), "verdict": verdict}
+
+def save_top30_history(date, top30):
+    hist = []
+    if TOP30_HISTORY.exists():
+        try: hist = json.load(open(TOP30_HISTORY, encoding="utf-8"))
+        except Exception: hist = []
+    if not isinstance(hist, list): hist = []
+    hist = [h for h in hist if isinstance(h, dict) and h.get("date") != date]
+    hist.append({"date": date, "items": [{"ticker": s["ticker"], "name": s["name"],
+                                          "close": s["close"], "change_pct": s["change_pct"]} for s in top30]})
+    json.dump(hist[-10:], open(TOP30_HISTORY, "w", encoding="utf-8"), ensure_ascii=False)
 
 # ---------- 시장 온도계 v2 (다요인) ----------
 
@@ -236,6 +333,7 @@ def main():
         pure = [s for s in stocks if not is_etf(s) and "스팩" not in s.get("name","")
                 and not (len(str(s.get("ticker","")))==6 and str(s.get("ticker"))[-1]!="0")]
 
+    etfs = [e for e in etfs if "레버리지" not in e.get("name", "")]   # 레버리지 상품 제외
     pure.sort(key=lambda x: x.get("change_pct", 0), reverse=True)
     etfs.sort(key=lambda x: x.get("change_pct", 0), reverse=True)
     top30, etf_top = pure[:30], etfs[:15]
@@ -256,7 +354,7 @@ def main():
             leaders[sec] = (s["name"], tv)
     for sec, d in today_sectors.items():
         d["avg_change_pct"] = round(d.pop("sum") / d["count"], 2); d.pop("tp", None)
-        d["leader"] = leaders.get(sec, ("", 0))[0]
+        d["leader"] = "" if sec == "기타" else leaders.get(sec, ("", 0))[0]
 
     # 히스토리 로드 → 테마 지속일
     history = []
@@ -269,17 +367,30 @@ def main():
         d["streak_days"] = streaks.get(sec, 1)
     for s in top30:
         sec = s["sector"]
-        s["theme_streak"] = streaks.get(sec, 1)
-        s["theme_leader"] = leaders.get(sec, ("", 0))[0]
+        if sec == "기타":                       # 기타는 테마가 아님 → 대장주/D+n 무의미
+            s["theme_streak"], s["theme_leader"] = 1, ""
+        else:
+            s["theme_streak"] = streaks.get(sec, 1)
+            s["theme_leader"] = leaders.get(sec, ("", 0))[0]
 
     # 심층 수집 (실패해도 진행)
     enrich_top30(top30)
+
+    import os
+    watch, board = [], None
+    if not os.environ.get("SKIP_ENRICH"):
+        wl = load_watchlist()
+        if wl:
+            print(f"[watch] 워치리스트 {len(wl)}종목 분석...")
+            watch = build_watch_entries(wl)
+        board = build_scoreboard(date)
+    save_top30_history(date, top30)
 
     fear = calc_fear(raw.get("indices", {}), top30, pure)
 
     result = {"date": date, "time": raw.get("time", ""), "timezone": "KST",
               "top30": top30, "etf_top": etf_top,
-              "foreign_top": raw.get("foreign_top", []),
+              "watchlist": watch, "scoreboard": board,
               "indices": raw.get("indices", {}), "fear": fear,
               "today_sectors": today_sectors, "filtered_risky": filtered_cnt,
               "history_days": len(history) + 1}
