@@ -118,5 +118,80 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-07-10",
+    "sectors": {
+      "기타": {
+        "count": 108,
+        "top_gainer": "금호타이어",
+        "avg_change_pct": 15.38,
+        "leader": "",
+        "streak_days": 3
+      },
+      "바이오/제약": {
+        "count": 2,
+        "top_gainer": "신테카바이오",
+        "avg_change_pct": 19.87,
+        "leader": "신테카바이오",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 8,
+        "top_gainer": "피에스케이",
+        "avg_change_pct": 14.3,
+        "leader": "제주반도체",
+        "streak_days": 2
+      },
+      "에너지/원전": {
+        "count": 5,
+        "top_gainer": "대원전선",
+        "avg_change_pct": 11.45,
+        "leader": "대원전선",
+        "streak_days": 1
+      },
+      "조선/방산": {
+        "count": 3,
+        "top_gainer": "현대로템",
+        "avg_change_pct": 10.91,
+        "leader": "현대로템",
+        "streak_days": 1
+      },
+      "2차전지": {
+        "count": 2,
+        "top_gainer": "에코프로에이치엔",
+        "avg_change_pct": 12.29,
+        "leader": "엘앤에프",
+        "streak_days": 1
+      },
+      "우주/항공": {
+        "count": 2,
+        "top_gainer": "AP위성",
+        "avg_change_pct": 12.36,
+        "leader": "쎄트렉아이",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 4,
+        "top_gainer": "계룡건설",
+        "avg_change_pct": 10.38,
+        "leader": "대우건설",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 1,
+        "top_gainer": "SKAI",
+        "avg_change_pct": 11.26,
+        "leader": "SKAI",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 3,
+        "top_gainer": "한화손해보험",
+        "avg_change_pct": 9.87,
+        "leader": "SK증권",
+        "streak_days": 1
+      }
+    }
   }
 ]
