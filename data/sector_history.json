@@ -200,5 +200,59 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-07-13",
+    "sectors": {
+      "기타": {
+        "count": 63,
+        "top_gainer": "콘텐트리중앙",
+        "avg_change_pct": 8.53,
+        "leader": "",
+        "streak_days": 4
+      },
+      "로봇/AI": {
+        "count": 2,
+        "top_gainer": "앤로보틱스",
+        "avg_change_pct": 6.66,
+        "leader": "앤로보틱스",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 2,
+        "top_gainer": "JB금융지주",
+        "avg_change_pct": 6.9,
+        "leader": "JB금융지주",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 2,
+        "top_gainer": "흥구석유",
+        "avg_change_pct": 6.32,
+        "leader": "흥구석유",
+        "streak_days": 1
+      },
+      "바이오/제약": {
+        "count": 6,
+        "top_gainer": "레메디",
+        "avg_change_pct": 2.58,
+        "leader": "레메디",
+        "streak_days": 4
+      },
+      "철강/화학": {
+        "count": 1,
+        "top_gainer": "효성화학",
+        "avg_change_pct": 6.11,
+        "leader": "효성화학",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 2,
+        "top_gainer": "피에스케이홀딩스",
+        "avg_change_pct": 2.42,
+        "leader": "피에스케이홀딩스",
+        "streak_days": 1
+      }
+    }
   }
 ]
