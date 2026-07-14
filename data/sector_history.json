@@ -254,5 +254,73 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-07-14",
+    "sectors": {
+      "기타": {
+        "count": 73,
+        "top_gainer": "한탑",
+        "avg_change_pct": 9.67,
+        "leader": "",
+        "streak_days": 5
+      },
+      "조선/방산": {
+        "count": 1,
+        "top_gainer": "STX그린로지스",
+        "avg_change_pct": 29.92,
+        "leader": "STX그린로지스",
+        "streak_days": 1
+      },
+      "바이오/제약": {
+        "count": 9,
+        "top_gainer": "로킷헬스케어",
+        "avg_change_pct": 8.1,
+        "leader": "로킷헬스케어",
+        "streak_days": 5
+      },
+      "에너지/원전": {
+        "count": 3,
+        "top_gainer": "대원전선",
+        "avg_change_pct": 12.97,
+        "leader": "대원전선",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 2,
+        "top_gainer": "LSK아이로봇",
+        "avg_change_pct": 8.48,
+        "leader": "SKAI",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 7,
+        "top_gainer": "테크윙",
+        "avg_change_pct": 6.14,
+        "leader": "SK하이닉스",
+        "streak_days": 1
+      },
+      "우주/항공": {
+        "count": 1,
+        "top_gainer": "우주일렉트로",
+        "avg_change_pct": 7.97,
+        "leader": "우주일렉트로",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 1,
+        "top_gainer": "롯데손해보험",
+        "avg_change_pct": 3.3,
+        "leader": "롯데손해보험",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 1,
+        "top_gainer": "남해화학",
+        "avg_change_pct": 3.13,
+        "leader": "남해화학",
+        "streak_days": 1
+      }
+    }
   }
 ]
