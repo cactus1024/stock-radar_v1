@@ -90,27 +90,36 @@ def fetch_risers(market):
     return stocks
 
 def fetch_indices():
+    """지수: API 값과 자체 계산값을 대조해 신뢰도 높은 쪽 사용"""
+    import ast
     out = {}
     for code in ("KOSPI", "KOSDAQ"):
+        api_pct, close = None, 0
         try:
             data = _get_json(f"https://m.stock.naver.com/api/index/{code}/basic")
             if isinstance(data, dict):
-                pct = float(_num(_pick(data, "fluctuationsRatio", "changeRate")))
-                if abs(pct) > 15:   # 비정상 값 방어
-                    pct = 0.0
-                out[code] = {"close": _num(_pick(data, "closePrice", "currentPrice", "now")),
-                             "change_pct": pct}
+                close = _num(_pick(data, "closePrice", "currentPrice", "now"))
+                api_pct = float(_num(_pick(data, "fluctuationsRatio", "changeRate")))
         except Exception as e:
-            print(f"  [WARN] {code} 지수 실패: {e}")
+            print(f"  [WARN] {code} 지수 API 실패: {e}")
+        calc_pct = None
+        try:
+            r = requests.get(f"https://api.finance.naver.com/siseJson.naver?symbol={code}"
+                             f"&requestType=1&startTime=20200101&endTime=20991231&timeframe=day&count=10",
+                             headers=HEADERS, timeout=12)
+            rows = [x for x in ast.literal_eval(r.text.strip()) if isinstance(x, list) and len(x) >= 5
+                    and not isinstance(x[1], str)]
+            if len(rows) >= 2 and rows[-2][4]:
+                calc_pct = round((rows[-1][4] - rows[-2][4]) / rows[-2][4] * 100, 2)
+                if not close:
+                    close = rows[-1][4]
+        except Exception as e:
+            print(f"  [WARN] {code} 지수 검산 실패: {e}")
+        pct = calc_pct if calc_pct is not None else api_pct
+        print(f"  [지수] {code}: API {api_pct}% / 자체계산 {calc_pct}% → 채택 {pct}%")
+        if pct is not None:
+            out[code] = {"close": close, "change_pct": pct}
     return out
-
-def _read_tables(url):
-    """네이버 데스크톱 HTML(euc-kr) 표 파싱"""
-    import pandas as pd
-    r = requests.get(url, headers=HEADERS, timeout=15)
-    r.raise_for_status()
-    r.encoding = "euc-kr"
-    return pd.read_html(io.StringIO(r.text))
 
 def fetch_popular(sosok, market_name, top_n=40):
     """인기 = 거래량 상위 (finance.naver.com 고전 페이지, 안정적)"""

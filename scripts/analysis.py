@@ -98,6 +98,11 @@ def analyze_history(s, hist):
     s["swing_high"] = round(max(h["high"] for h in recent))
     s["swing_low"] = round(min(h["low"] for h in recent))
     s["fibonacci"] = calc_fibonacci(s["swing_high"], s["swing_low"])   # 스윙 기반 피보 (실전 기준)
+    prev_vol = completed[-1].get("volume", 0)
+    if prev_vol and s.get("volume"):
+        s["vol_ratio"] = round(s["volume"] / prev_vol, 1)               # 거래량 전일比 배율
+    if s.get("close", 0) > s["swing_high"]:
+        s["new_high20"] = True                                          # 20일 신고가 돌파
     prev = completed[-1]
     o, c, lo = s.get("open", 0), s.get("close", 0), s.get("low", 0)
     patterns = []
@@ -124,6 +129,20 @@ def _find_shares(obj):
         for v in obj:
             r = _find_shares(v)
             if r: return r
+    return None
+
+def fetch_shares_from_page(ticker):
+    """finance.naver.com 종목 메인에서 상장주식수 추출"""
+    import re
+    try:
+        r = requests.get(f"https://finance.naver.com/item/main.naver?code={ticker}",
+                         headers=HEADERS, timeout=10)
+        r.encoding = "euc-kr"
+        m = re.search(r"상장주식수[^0-9]{0,80}([0-9][0-9,]{3,})", r.text)
+        if m:
+            return float(m.group(1).replace(",", ""))
+    except Exception as e:
+        print(f"  [WARN] {ticker} 상장주식수 페이지 실패: {e}")
     return None
 
 def fetch_alerts_and_shares(ticker):
@@ -159,12 +178,16 @@ def enrich_top30(top30):
             print(f"  [WARN] {t} 히스토리 실패: {e}")
         tags, shares = fetch_alerts_and_shares(t)
         if tags: s["alerts"] = tags
+        if not shares:
+            shares = fetch_shares_from_page(t)
         tv = s.get("value", 0) or s.get("close", 0) * s.get("volume", 0)
         s["trading_value"] = int(tv)
         s["big_money"] = tv >= 100_000_000_000        # 거래대금 1,000억+
         if shares:
             s["turnover_pct"] = round(s.get("volume", 0) / shares * 100, 1)
             s["high_turnover"] = s["turnover_pct"] >= 100
+            cap_bn = s.get("close", 0) * shares / 100_000_000        # 억 단위 시총
+            s["cap_str"] = f"{cap_bn/10000:.1f}조" if cap_bn >= 10000 else f"{cap_bn:,.0f}억"
         time.sleep(0.3)
 
 # ---------- 워치리스트 & 전일 Top30 성적표 ----------
@@ -181,10 +204,22 @@ def load_watchlist():
         line = line.strip()
         if not line or line.startswith("#"):
             continue
+        import re as _re
         parts = line.split()
         code = parts[0]
-        if code.isdigit() and len(code) == 6:
-            out.append({"ticker": code, "name": " ".join(parts[1:]) or code})
+        if not (code.isdigit() and len(code) == 6):
+            continue
+        entry_price, entry_date, name_parts = None, None, []
+        for p in parts[1:]:
+            if p.startswith("@"):
+                try: entry_price = float(p[1:].replace(",", ""))
+                except ValueError: pass
+            elif _re.fullmatch(r"\d{4}-\d{2}-\d{2}", p):
+                entry_date = p
+            else:
+                name_parts.append(p)
+        out.append({"ticker": code, "name": " ".join(name_parts) or code,
+                    "entry_price": entry_price, "entry_date": entry_date})
     return out[:20]
 
 def build_watch_entries(items):
@@ -206,6 +241,16 @@ def build_watch_entries(items):
             analyze_history(s, hist)
             tags, shares = fetch_alerts_and_shares(it["ticker"])
             if tags: s["alerts"] = tags
+            if it.get("entry_price"):
+                s["entry_price"] = it["entry_price"]
+                s["pnl_pct"] = round((s["close"] - it["entry_price"]) / it["entry_price"] * 100, 2)
+            if it.get("entry_date"):
+                s["entry_date"] = it["entry_date"]
+                try:
+                    d0 = datetime.strptime(it["entry_date"], "%Y-%m-%d").date()
+                    s["holding_days"] = (datetime.now(KST).date() - d0).days + 1
+                except ValueError:
+                    pass
             entries.append(s)
             time.sleep(0.3)
         except Exception as e:
@@ -388,7 +433,9 @@ def main():
 
     fear = calc_fear(raw.get("indices", {}), top30, pure)
 
-    result = {"date": date, "time": raw.get("time", ""), "timezone": "KST",
+    t_str = raw.get("time", "16:10")
+    session = "장중" if t_str < "15:31" else "마감"
+    result = {"date": date, "time": t_str, "session": session, "timezone": "KST",
               "top30": top30, "etf_top": etf_top,
               "watchlist": watch, "scoreboard": board,
               "indices": raw.get("indices", {}), "fear": fear,

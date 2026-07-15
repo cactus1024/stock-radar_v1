@@ -84,7 +84,7 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
 <body><div class="wrap">
 <header>
   <h1>📡 주식레이더</h1>
-  <div class="meta">데이터 기준: {{ date }} {{ time }} KST (확정 종가){% if filtered_risky %} · 위험종목 {{ filtered_risky }}개 자동 제외{% endif %}</div>
+  <div class="meta">데이터 기준: {{ date }} {{ time }} KST {% if session == '장중' %}<b style="color:var(--gold)">(장중 스냅샷 — 마감 후 확정치로 갱신)</b>{% else %}(확정 종가){% endif %}{% if filtered_risky %} · 위험종목 {{ filtered_risky }}개 자동 제외{% endif %}</div>
   <div class="badges">
     {% if feed_status != 'ok' %}<span class="chip warn">⚠️ AI 피드 생성 실패 — 시세만 표시</span>
     {% else %}<span class="chip">🤖 {{ feed_model }} · {{ feed_generated_at }}</span>{% endif %}
@@ -111,6 +111,9 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
   {% if s.theme_streak and s.theme_streak > 1 %}<span class="tag t-theme">테마 D+{{ s.theme_streak }}</span>{% endif %}
   {% if s.big_money %}<span class="tag t-money">💰 대금 {{ (s.trading_value // 100000000) }}억</span>{% endif %}
   {% if s.high_turnover %}<span class="tag t-turn">🔥 회전율 {{ s.turnover_pct }}%</span>{% endif %}
+  {% if s.change_pct >= 29.5 %}<span class="tag t-alert" style="background:#B91C1C">🔒 상한가</span>{% endif %}
+  {% if s.new_high20 %}<span class="tag t-money">🚀 20일 신고가</span>{% endif %}
+  {% if s.vol_ratio and s.vol_ratio >= 3 %}<span class="tag t-turn">🌊 거래량 전일比 {{ s.vol_ratio }}배</span>{% endif %}
   {% for p in s.patterns or [] %}<span class="tag t-pattern">📐 {{ p }}</span>{% endfor %}
   {% for a in s.alerts or [] %}<span class="tag t-alert">⚠️ {{ a }}</span>{% endfor %}
 {% endmacro %}
@@ -145,7 +148,7 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
     <div class="s-head">
       <span class="rank">{{ s.rank }}</span><span class="s-name">{{ s.name }}</span>
       <span class="pct">+{{ s.change_pct }}%</span>{{ tags(s) }}
-      <span class="s-sub">종가 {{ "{:,}".format(s.close) }}원 · 거래량 {{ "{:,}".format(s.volume) }} · 거래대금 {{ "{:,}".format((s.trading_value or 0) // 100000000) }}억</span>
+      <span class="s-sub">{% if session == '장중' %}현재가{% else %}종가{% endif %} {{ "{:,}".format(s.close) }}원 · 거래대금 {{ "{:,}".format((s.trading_value or 0) // 100000000) }}억{% if s.turnover_pct is defined and s.turnover_pct is not none %} · <b>회전율 {{ s.turnover_pct }}%</b>{% endif %}{% if s.cap_str %} · 시총 {{ s.cap_str }}{% endif %}</span>
     </div>
     {{ body(s) }}
   </div>
@@ -155,13 +158,15 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
 <div id="tab-rest" class="tab-content">
   {% for s in rest %}
   <details{% if s.big_money %} class="hot"{% endif %}>
-    <summary><span class="rank">{{ s.rank }}</span><span>{{ s.name }}</span><span class="pct">+{{ s.change_pct }}%</span>{{ tags(s) }}</summary>
+    <summary><span class="rank">{{ s.rank }}</span><span>{{ s.name }}</span><span class="pct">+{{ s.change_pct }}%</span>{{ tags(s) }}
+      <span class="s-sub">{% if session == '장중' %}현재가{% else %}종가{% endif %} {{ "{:,}".format(s.close) }}원 · 대금 {{ "{:,}".format((s.trading_value or 0) // 100000000) }}억{% if s.turnover_pct is defined and s.turnover_pct is not none %} · 회전율 {{ s.turnover_pct }}%{% endif %}{% if s.vol_ratio %} · 전일比 {{ s.vol_ratio }}배{% endif %}</span></summary>
     <div class="inner">{{ body(s) }}</div>
   </details>
   {% else %}<div class="empty">데이터 없음</div>{% endfor %}
 </div>
 
 <div id="tab-etf" class="tab-content">
+  {% if etf_comment %}<div class="card" style="background:linear-gradient(135deg,#F0FDF4,#FFF);border-color:#BBE5C8"><b>💼 ETF 흐름 코멘트 (퇴직연금 참고용)</b><div class="summary-box" style="margin-top:6px">{{ etf_comment }}</div></div>{% endif %}
   <div class="card"><h3>📦 오늘 상승 ETF/ETN Top {{ etf_top|length }}</h3>
   {% if etf_top %}<table><tr><th>#</th><th>이름</th><th class="num">종가</th><th class="num">등락률</th></tr>
   {% for e in etf_top %}<tr><td>{{ loop.index }}</td><td>{{ e.name }}</td><td class="num">{{ "{:,}".format(e.close) }}</td><td class="num pct">+{{ e.change_pct }}%</td></tr>{% endfor %}</table>
@@ -175,20 +180,37 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
       <span class="s-name">{{ s.name }}</span>
       <span class="pct" {% if s.change_pct < 0 %}style="color:var(--down)"{% endif %}>{{ "%+.2f"|format(s.change_pct) }}%</span>
       {{ tags(s) }}
-      <span class="s-sub">종가 {{ "{:,}".format(s.close) }}원 · 거래량 {{ "{:,}".format(s.volume) }} (기준일 {{ s.quote_date }})</span>
+      {% if s.holding_days %}<span class="tag t-theme">보유 D+{{ s.holding_days }}</span>{% endif %}
+      <span class="s-sub">종가 {{ "{:,}".format(s.close) }}원 · 거래량 {{ "{:,}".format(s.volume) }} (기준일 {{ s.quote_date }})
+      {% if s.entry_price %}<br>진입가 {{ "{:,}".format(s.entry_price|int) }}원 → <b {% if s.pnl_pct >= 0 %}style="color:var(--up)"{% else %}style="color:var(--down)"{% endif %}>{{ "%+.2f"|format(s.pnl_pct) }}%</b>{% if s.entry_date %} ({{ s.entry_date }} 진입){% endif %}{% endif %}</span>
     </div>
+    {% if s.strategy %}<div class="insight"><b>🧭 보유 전략</b><br>{{ s.strategy }}</div>{% endif %}
     {{ levels(s) }}
   </div>
   {% else %}
   <div class="card"><div class="empty">워치리스트가 비어 있습니다.<br><br>
   저장소 루트에 <b>watchlist.txt</b> 파일을 만들고 한 줄에 하나씩:<br>
-  <code>005930 삼성전자</code><br><code>247540 에코프로비엠</code><br><br>
+  <code>005930 삼성전자 @86000 2026-07-01</code><br><code>247540 에코프로비엠</code><br>
+  (@뒤는 진입가, 날짜는 진입일 — 둘 다 선택사항)<br><br>
   형식으로 넣으면 다음 업데이트부터 여기에 스윙·패턴·경고 분석이 자동 표시됩니다.</div></div>
   {% endfor %}
 </div>
 
 <div id="tab-sector" class="tab-content">
   <div class="card"><h3>📌 오늘의 섹터 흐름</h3><div class="summary-box">{{ today_sector_summary }}</div>
+    {% if sector_chart %}
+    <div style="margin-top:14px">
+      {% for c in sector_chart %}
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:.8rem">
+        <span style="width:92px;flex-shrink:0;font-weight:600">{{ c.name }}</span>
+        <div style="flex:1;background:#EEF1F7;border-radius:6px;height:18px;overflow:hidden">
+          <div style="width:{{ c.width }}%;height:100%;background:linear-gradient(90deg,#F87171,#E5484D);border-radius:6px"></div>
+        </div>
+        <span style="width:120px;flex-shrink:0;color:var(--sub)">+{{ c.avg }}% · {{ c.count }}종목</span>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
     {% if today_sectors %}<div class="sec-grid">
     {% for name, d in today_sectors.items() %}<div class="sec-item"><b>{{ name }}{% if d.streak_days and d.streak_days > 1 %} · D+{{ d.streak_days }}{% endif %}</b>{{ d.count }}종목 · 평균 +{{ d.avg_change_pct }}%<br>👑 {{ d.leader or d.top_gainer }}</div>{% endfor %}
     </div>{% endif %}
@@ -217,6 +239,17 @@ def main():
         try: feed = json.load(open(fp, encoding="utf-8"))
         except Exception: feed = {}
     fmap = {s.get("rank"): s for s in feed.get("stocks", []) if isinstance(s, dict)}
+    wmap = {s.get("ticker"): s for s in feed.get("watchlist", []) if isinstance(s, dict)}
+    watch_entries = []
+    for w in data.get("watchlist", []):
+        f = wmap.get(w.get("ticker"), {})
+        watch_entries.append({**w, "strategy": f.get("strategy", "")})
+    sectors = data.get("today_sectors", {})
+    chart_src = sorted([(k, v) for k, v in sectors.items() if k != "기타"],
+                       key=lambda x: x[1].get("avg_change_pct", 0), reverse=True)[:10]
+    max_avg = max((v.get("avg_change_pct", 0) for _, v in chart_src), default=1) or 1
+    sector_chart = [{"name": k, "avg": v.get("avg_change_pct", 0), "count": v.get("count", 0),
+                     "width": max(4, round(v.get("avg_change_pct", 0) / max_avg * 100))} for k, v in chart_src]
 
     merged = []
     for i, s in enumerate(data.get("top30", []), 1):
@@ -226,10 +259,11 @@ def main():
                        "news_source": f.get("news_source", "")})
 
     html = TPL.render(
-        date=data.get("date", ""), time=data.get("time", ""),
+        date=data.get("date", ""), time=data.get("time", ""), session=data.get("session", "마감"),
         top10=merged[:10], rest=merged[10:30],
         etf_top=data.get("etf_top", []),
-        watchlist=data.get("watchlist", []), scoreboard=data.get("scoreboard"),
+        watchlist=watch_entries, scoreboard=data.get("scoreboard"),
+        etf_comment=feed.get("etf_comment", ""), sector_chart=sector_chart,
         indices=data.get("indices", {}), fear=data.get("fear"),
         filtered_risky=data.get("filtered_risky", 0),
         today_sectors=data.get("today_sectors", {}),
