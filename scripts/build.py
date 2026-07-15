@@ -148,7 +148,7 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
     <div class="s-head">
       <span class="rank">{{ s.rank }}</span><span class="s-name">{{ s.name }}</span>
       <span class="pct">+{{ s.change_pct }}%</span>{{ tags(s) }}
-      <span class="s-sub">{% if session == '장중' %}현재가{% else %}종가{% endif %} {{ "{:,}".format(s.close) }}원 · 거래대금 {{ "{:,}".format((s.trading_value or 0) // 100000000) }}억{% if s.turnover_pct is defined and s.turnover_pct is not none %} · <b>회전율 {{ s.turnover_pct }}%</b>{% endif %}{% if s.cap_str %} · 시총 {{ s.cap_str }}{% endif %}</span>
+      <span class="s-sub">{% if session == '장중' %}현재가{% else %}종가{% endif %} {{ "{:,}".format(s.close) }}원 · 거래량 {{ "{:,}".format(s.volume) }}{% if s.turnover_pct is defined and s.turnover_pct is not none %} (<b>회전율 {{ s.turnover_pct }}%</b>){% endif %} · 대금 {{ "{:,}".format((s.trading_value or 0) // 100000000) }}억{% if s.vol_ratio and s.vol_ratio != 1.0 %} · 전일比 <b>{{ s.vol_ratio }}배</b>{% endif %}{% if s.cap_str %} · 시총 {{ s.cap_str }}{% endif %}</span>
     </div>
     {{ body(s) }}
   </div>
@@ -159,7 +159,7 @@ footer{text-align:center;color:var(--sub);font-size:.78rem;margin-top:40px;line-
   {% for s in rest %}
   <details{% if s.big_money %} class="hot"{% endif %}>
     <summary><span class="rank">{{ s.rank }}</span><span>{{ s.name }}</span><span class="pct">+{{ s.change_pct }}%</span>{{ tags(s) }}
-      <span class="s-sub">{% if session == '장중' %}현재가{% else %}종가{% endif %} {{ "{:,}".format(s.close) }}원 · 대금 {{ "{:,}".format((s.trading_value or 0) // 100000000) }}억{% if s.turnover_pct is defined and s.turnover_pct is not none %} · 회전율 {{ s.turnover_pct }}%{% endif %}{% if s.vol_ratio %} · 전일比 {{ s.vol_ratio }}배{% endif %}</span></summary>
+      <span class="s-sub">{% if session == '장중' %}현재가{% else %}종가{% endif %} {{ "{:,}".format(s.close) }}원 · 거래량 {{ "{:,}".format(s.volume) }}{% if s.turnover_pct is defined and s.turnover_pct is not none %} (<b>회전율 {{ s.turnover_pct }}%</b>){% endif %} · 대금 {{ "{:,}".format((s.trading_value or 0) // 100000000) }}억{% if s.vol_ratio and s.vol_ratio != 1.0 %} · 전일比 <b>{{ s.vol_ratio }}배</b>{% endif %}</span></summary>
     <div class="inner">{{ body(s) }}</div>
   </details>
   {% else %}<div class="empty">데이터 없음</div>{% endfor %}

@@ -186,8 +186,19 @@ def enrich_top30(top30):
         if shares:
             s["turnover_pct"] = round(s.get("volume", 0) / shares * 100, 1)
             s["high_turnover"] = s["turnover_pct"] >= 100
-            cap_bn = s.get("close", 0) * shares / 100_000_000        # 억 단위 시총
+            cap_bn = s.get("close", 0) * shares / 100_000_000
             s["cap_str"] = f"{cap_bn/10000:.1f}조" if cap_bn >= 10000 else f"{cap_bn:,.0f}억"
+        # vol_ratio: 히스토리에서 직접 계산 (analyze_history보다 정확 — 전일 확정 거래량 기준)
+        try:
+            hist = fetch_history(t, days=10)
+            today_str = datetime.now(KST).strftime("%Y%m%d")
+            completed = [h for h in hist if h["date"].strip() != today_str and h.get("volume",0) > 0]
+            if completed and s.get("volume", 0) > 0:
+                prev_vol = completed[-1]["volume"]
+                if prev_vol > 0:
+                    s["vol_ratio"] = round(s["volume"] / prev_vol, 1)
+        except Exception:
+            pass
         time.sleep(0.3)
 
 # ---------- 워치리스트 & 전일 Top30 성적표 ----------
