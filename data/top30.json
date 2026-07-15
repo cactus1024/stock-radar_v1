@@ -1,15 +1,16 @@
 {
-  "date": "2026-07-15",
-  "time": "18:19",
+  "date": "2026-07-16",
+  "time": "02:05",
+  "session": "장중",
   "timezone": "KST",
   "top30": [
     {
       "ticker": "005360",
       "name": "모나미",
       "market": "KOSPI",
-      "open": 3125,
-      "high": 3445,
-      "low": 3100,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 3445,
       "change": 795,
       "change_pct": 30.0,
@@ -19,15 +20,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 1065,
-        "38.2%": 1720,
-        "50.0%": 1922,
-        "61.8%": 2125,
-        "고점": 2780
+        "38.2%": 1974,
+        "50.0%": 2255,
+        "61.8%": 2536,
+        "고점": 3445
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 2780,
+      "swing_high": 3445,
       "swing_low": 1065,
+      "vol_ratio": 1.0,
       "alerts": [
         "투자경고"
       ],
@@ -38,9 +40,9 @@
       "ticker": "413630",
       "name": "씨피시스템",
       "market": "KOSDAQ",
-      "open": 2335,
-      "high": 2990,
-      "low": 2280,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 2990,
       "change": 690,
       "change_pct": 30.0,
@@ -59,9 +61,7 @@
       "theme_leader": "",
       "swing_high": 3800,
       "swing_low": 1938,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 12567000000,
       "big_money": false
     },
@@ -69,9 +69,9 @@
       "ticker": "115450",
       "name": "HLB테라퓨틱스",
       "market": "KOSDAQ",
-      "open": 1653,
-      "high": 1976,
-      "low": 1635,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 1976,
       "change": 456,
       "change_pct": 30.0,
@@ -81,15 +81,16 @@
       "sector": "바이오/제약",
       "fibonacci": {
         "저점": 1342,
-        "38.2%": 1884,
-        "50.0%": 2051,
-        "61.8%": 2218,
-        "고점": 2760
+        "38.2%": 1880,
+        "50.0%": 2046,
+        "61.8%": 2212,
+        "고점": 2750
       },
-      "theme_streak": 6,
+      "theme_streak": 7,
       "theme_leader": "펩트론",
-      "swing_high": 2760,
+      "swing_high": 2750,
       "swing_low": 1342,
+      "vol_ratio": 1.0,
       "trading_value": 4202000000,
       "big_money": false
     },
@@ -97,9 +98,9 @@
       "ticker": "047920",
       "name": "HLB제약",
       "market": "KOSDAQ",
-      "open": 7600,
-      "high": 8580,
-      "low": 7510,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 8580,
       "change": 1980,
       "change_pct": 30.0,
@@ -109,15 +110,16 @@
       "sector": "바이오/제약",
       "fibonacci": {
         "저점": 6000,
-        "38.2%": 9037,
-        "50.0%": 9975,
-        "61.8%": 10913,
-        "고점": 13950
+        "38.2%": 8953,
+        "50.0%": 9865,
+        "61.8%": 10777,
+        "고점": 13730
       },
-      "theme_streak": 6,
+      "theme_streak": 7,
       "theme_leader": "펩트론",
-      "swing_high": 13950,
+      "swing_high": 13730,
       "swing_low": 6000,
+      "vol_ratio": 1.0,
       "trading_value": 3594000000,
       "big_money": false
     },
@@ -125,9 +127,9 @@
       "ticker": "046210",
       "name": "HLB파나진",
       "market": "KOSDAQ",
-      "open": 1199,
-      "high": 1430,
-      "low": 1175,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 1430,
       "change": 330,
       "change_pct": 30.0,
@@ -146,6 +148,7 @@
       "theme_leader": "",
       "swing_high": 1650,
       "swing_low": 1000,
+      "vol_ratio": 1.0,
       "trading_value": 6729000000,
       "big_money": false
     },
@@ -153,9 +156,9 @@
       "ticker": "024850",
       "name": "HLB이노베이션",
       "market": "KOSDAQ",
-      "open": 9700,
-      "high": 11960,
-      "low": 9690,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 11960,
       "change": 2760,
       "change_pct": 30.0,
@@ -165,18 +168,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 8440,
-        "38.2%": 10927,
-        "50.0%": 11695,
-        "61.8%": 12463,
-        "고점": 14950
+        "38.2%": 10866,
+        "50.0%": 11615,
+        "61.8%": 12364,
+        "고점": 14790
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 14950,
+      "swing_high": 14790,
       "swing_low": 8440,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 11253000000,
       "big_money": false
     },
@@ -184,9 +185,9 @@
       "ticker": "003680",
       "name": "한성기업",
       "market": "KOSPI",
-      "open": 12220,
-      "high": 14520,
-      "low": 11800,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 14520,
       "change": 3350,
       "change_pct": 29.99,
@@ -196,15 +197,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 3915,
-        "38.2%": 7003,
-        "50.0%": 7958,
-        "61.8%": 8912,
-        "고점": 12000
+        "38.2%": 7966,
+        "50.0%": 9218,
+        "61.8%": 10469,
+        "고점": 14520
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 12000,
+      "swing_high": 14520,
       "swing_low": 3915,
+      "vol_ratio": 1.0,
       "alerts": [
         "투자경고"
       ],
@@ -215,9 +217,9 @@
       "ticker": "003580",
       "name": "HLB글로벌",
       "market": "KOSPI",
-      "open": 1189,
-      "high": 1439,
-      "low": 1170,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 1439,
       "change": 332,
       "change_pct": 29.99,
@@ -236,6 +238,7 @@
       "theme_leader": "",
       "swing_high": 1675,
       "swing_low": 1000,
+      "vol_ratio": 1.0,
       "trading_value": 2808000000,
       "big_money": false
     },
@@ -243,9 +246,9 @@
       "ticker": "002070",
       "name": "비비안",
       "market": "KOSPI",
-      "open": 9000,
-      "high": 10620,
-      "low": 9000,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 10620,
       "change": 2450,
       "change_pct": 29.99,
@@ -264,6 +267,7 @@
       "theme_leader": "",
       "swing_high": 14270,
       "swing_low": 5950,
+      "vol_ratio": 1.0,
       "trading_value": 7317000000,
       "big_money": false
     },
@@ -271,9 +275,9 @@
       "ticker": "011090",
       "name": "에넥스",
       "market": "KOSPI",
-      "open": 2000,
-      "high": 2120,
-      "low": 1925,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 2120,
       "change": 489,
       "change_pct": 29.98,
@@ -283,15 +287,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 908,
-        "38.2%": 1222,
-        "50.0%": 1318,
-        "61.8%": 1415,
-        "고점": 1729
+        "38.2%": 1371,
+        "50.0%": 1514,
+        "61.8%": 1657,
+        "고점": 2120
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 1729,
+      "swing_high": 2120,
       "swing_low": 908,
+      "vol_ratio": 1.0,
       "trading_value": 1388000000,
       "big_money": false
     },
@@ -299,9 +304,9 @@
       "ticker": "196300",
       "name": "HLB펩",
       "market": "KOSDAQ",
-      "open": 4085,
-      "high": 4900,
-      "low": 4060,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 4900,
       "change": 1130,
       "change_pct": 29.97,
@@ -311,18 +316,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 3605,
-        "38.2%": 4298,
-        "50.0%": 4512,
-        "61.8%": 4727,
-        "고점": 5420
+        "38.2%": 4249,
+        "50.0%": 4448,
+        "61.8%": 4646,
+        "고점": 5290
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 5420,
+      "swing_high": 5290,
       "swing_low": 3605,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 1190000000,
       "big_money": false
     },
@@ -330,9 +333,9 @@
       "ticker": "187420",
       "name": "HLB제넥스",
       "market": "KOSDAQ",
-      "open": 1503,
-      "high": 1900,
-      "low": 1503,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 1900,
       "change": 438,
       "change_pct": 29.96,
@@ -342,18 +345,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 1323,
-        "38.2%": 1796,
-        "50.0%": 1942,
-        "61.8%": 2087,
-        "고점": 2560
+        "38.2%": 1725,
+        "50.0%": 1849,
+        "61.8%": 1973,
+        "고점": 2375
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 2560,
+      "swing_high": 2375,
       "swing_low": 1323,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "alerts": [
         "투자주의"
       ],
@@ -364,9 +365,9 @@
       "ticker": "028300",
       "name": "HLB",
       "market": "KOSDAQ",
-      "open": 30700,
-      "high": 34700,
-      "low": 29900,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 34700,
       "change": 8000,
       "change_pct": 29.96,
@@ -385,6 +386,7 @@
       "theme_leader": "",
       "swing_high": 54900,
       "swing_low": 24150,
+      "vol_ratio": 1.0,
       "trading_value": 34963000000,
       "big_money": false
     },
@@ -392,9 +394,9 @@
       "ticker": "067290",
       "name": "JW신약",
       "market": "KOSDAQ",
-      "open": 1475,
-      "high": 1870,
-      "low": 1475,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 1870,
       "change": 431,
       "change_pct": 29.95,
@@ -409,10 +411,11 @@
         "61.8%": 2646,
         "고점": 3465
       },
-      "theme_streak": 6,
+      "theme_streak": 7,
       "theme_leader": "펩트론",
       "swing_high": 3465,
       "swing_low": 1320,
+      "vol_ratio": 1.0,
       "trading_value": 49965000000,
       "big_money": false
     },
@@ -420,9 +423,9 @@
       "ticker": "049080",
       "name": "기가레인",
       "market": "KOSDAQ",
-      "open": 9520,
-      "high": 11730,
-      "low": 9450,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 11730,
       "change": 2700,
       "change_pct": 29.9,
@@ -432,15 +435,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 4360,
-        "38.2%": 6488,
-        "50.0%": 7145,
-        "61.8%": 7802,
-        "고점": 9930
+        "38.2%": 7175,
+        "50.0%": 8045,
+        "61.8%": 8915,
+        "고점": 11730
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 9930,
+      "swing_high": 11730,
       "swing_low": 4360,
+      "vol_ratio": 1.0,
       "trading_value": 31161000000,
       "big_money": false
     },
@@ -448,9 +452,9 @@
       "ticker": "042700",
       "name": "한미반도체",
       "market": "KOSPI",
-      "open": 225500,
-      "high": 269500,
-      "low": 224000,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 269500,
       "change": 62000,
       "change_pct": 29.88,
@@ -465,10 +469,11 @@
         "61.8%": 286328,
         "고점": 345500
       },
-      "theme_streak": 2,
+      "theme_streak": 3,
       "theme_leader": "한미반도체",
       "swing_high": 345500,
       "swing_low": 190600,
+      "vol_ratio": 1.0,
       "trading_value": 608070000000,
       "big_money": true
     },
@@ -476,9 +481,9 @@
       "ticker": "033250",
       "name": "체시스",
       "market": "KOSPI",
-      "open": 2935,
-      "high": 3740,
-      "low": 2840,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 3740,
       "change": 860,
       "change_pct": 29.86,
@@ -488,18 +493,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 2660,
-        "38.2%": 3350,
-        "50.0%": 3562,
-        "61.8%": 3775,
-        "고점": 4465
+        "38.2%": 3323,
+        "50.0%": 3528,
+        "61.8%": 3732,
+        "고점": 4395
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 4465,
+      "swing_high": 4395,
       "swing_low": 2660,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 1908000000,
       "big_money": false
     },
@@ -507,9 +510,9 @@
       "ticker": "278650",
       "name": "HLB바이오스텝",
       "market": "KOSDAQ",
-      "open": 1977,
-      "high": 2405,
-      "low": 1924,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 2405,
       "change": 553,
       "change_pct": 29.86,
@@ -519,18 +522,16 @@
       "sector": "바이오/제약",
       "fibonacci": {
         "저점": 1788,
-        "38.2%": 2499,
-        "50.0%": 2719,
-        "61.8%": 2939,
-        "고점": 3650
+        "38.2%": 2457,
+        "50.0%": 2664,
+        "61.8%": 2871,
+        "고점": 3540
       },
-      "theme_streak": 6,
+      "theme_streak": 7,
       "theme_leader": "펩트론",
-      "swing_high": 3650,
+      "swing_high": 3540,
       "swing_low": 1788,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 1209000000,
       "big_money": false
     },
@@ -538,9 +539,9 @@
       "ticker": "067630",
       "name": "HLB생명과학",
       "market": "KOSDAQ",
-      "open": 1969,
-      "high": 2325,
-      "low": 1969,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 2325,
       "change": 534,
       "change_pct": 29.82,
@@ -559,6 +560,7 @@
       "theme_leader": "",
       "swing_high": 3670,
       "swing_low": 1608,
+      "vol_ratio": 1.0,
       "trading_value": 2476000000,
       "big_money": false
     },
@@ -566,9 +568,9 @@
       "ticker": "065060",
       "name": "지엔코",
       "market": "KOSDAQ",
-      "open": 2745,
-      "high": 3320,
-      "low": 2575,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 3250,
       "change": 680,
       "change_pct": 26.46,
@@ -578,18 +580,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 2410,
-        "38.2%": 2914,
-        "50.0%": 3070,
-        "61.8%": 3226,
-        "고점": 3730
+        "38.2%": 2874,
+        "50.0%": 3018,
+        "61.8%": 3161,
+        "고점": 3625
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 3730,
+      "swing_high": 3625,
       "swing_low": 2410,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 521000000,
       "big_money": false
     },
@@ -597,9 +597,9 @@
       "ticker": "159010",
       "name": "아스플로",
       "market": "KOSDAQ",
-      "open": 13560,
-      "high": 16860,
-      "low": 13560,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 16380,
       "change": 3150,
       "change_pct": 23.81,
@@ -618,6 +618,7 @@
       "theme_leader": "",
       "swing_high": 24000,
       "swing_low": 12020,
+      "vol_ratio": 1.0,
       "trading_value": 4215000000,
       "big_money": false
     },
@@ -625,9 +626,9 @@
       "ticker": "004710",
       "name": "한솔테크닉스",
       "market": "KOSPI",
-      "open": 8700,
-      "high": 10500,
-      "low": 8520,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 10340,
       "change": 1980,
       "change_pct": 23.68,
@@ -646,9 +647,7 @@
       "theme_leader": "",
       "swing_high": 16430,
       "swing_low": 7860,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 27408000000,
       "big_money": false
     },
@@ -656,9 +655,9 @@
       "ticker": "457600",
       "name": "벡트",
       "market": "KOSDAQ",
-      "open": 2330,
-      "high": 2920,
-      "low": 2305,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 2855,
       "change": 545,
       "change_pct": 23.59,
@@ -677,9 +676,7 @@
       "theme_leader": "",
       "swing_high": 3050,
       "swing_low": 1650,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 1860000000,
       "big_money": false
     },
@@ -687,9 +684,9 @@
       "ticker": "036710",
       "name": "심텍홀딩스",
       "market": "KOSDAQ",
-      "open": 3450,
-      "high": 4185,
-      "low": 3450,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 4120,
       "change": 750,
       "change_pct": 22.26,
@@ -708,6 +705,7 @@
       "theme_leader": "",
       "swing_high": 5100,
       "swing_low": 3155,
+      "vol_ratio": 1.0,
       "trading_value": 2873000000,
       "big_money": false
     },
@@ -715,9 +713,9 @@
       "ticker": "303360",
       "name": "프로티아",
       "market": "KOSDAQ",
-      "open": 3985,
-      "high": 5170,
-      "low": 3985,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 4870,
       "change": 885,
       "change_pct": 22.21,
@@ -727,18 +725,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 3700,
-        "38.2%": 4013,
-        "50.0%": 4110,
-        "61.8%": 4207,
-        "고점": 4520
+        "38.2%": 4262,
+        "50.0%": 4435,
+        "61.8%": 4608,
+        "고점": 5170
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 4520,
+      "swing_high": 5170,
       "swing_low": 3700,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 1198000000,
       "big_money": false
     },
@@ -746,9 +742,9 @@
       "ticker": "353200",
       "name": "대덕전자",
       "market": "KOSPI",
-      "open": 124700,
-      "high": 145700,
-      "low": 121300,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 143200,
       "change": 25800,
       "change_pct": 21.98,
@@ -758,15 +754,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 104100,
-        "38.2%": 134087,
-        "50.0%": 143350,
-        "61.8%": 152613,
-        "고점": 182600
+        "38.2%": 131566,
+        "50.0%": 140050,
+        "61.8%": 148534,
+        "고점": 176000
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 182600,
+      "swing_high": 176000,
       "swing_low": 104100,
+      "vol_ratio": 1.0,
       "trading_value": 254150000000,
       "big_money": true
     },
@@ -774,9 +771,9 @@
       "ticker": "065950",
       "name": "웰크론",
       "market": "KOSDAQ",
-      "open": 1016,
-      "high": 1288,
-      "low": 991,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 1237,
       "change": 222,
       "change_pct": 21.87,
@@ -795,6 +792,7 @@
       "theme_leader": "",
       "swing_high": 1305,
       "swing_low": 950,
+      "vol_ratio": 1.0,
       "trading_value": 2188000000,
       "big_money": false
     },
@@ -802,9 +800,9 @@
       "ticker": "080220",
       "name": "제주반도체",
       "market": "KOSDAQ",
-      "open": 80000,
-      "high": 90600,
-      "low": 78800,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 89100,
       "change": 15400,
       "change_pct": 20.9,
@@ -819,13 +817,11 @@
         "61.8%": 111871,
         "고점": 138000
       },
-      "theme_streak": 2,
+      "theme_streak": 3,
       "theme_leader": "한미반도체",
       "swing_high": 138000,
       "swing_low": 69600,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 350842000000,
       "big_money": true
     },
@@ -833,9 +829,9 @@
       "ticker": "252990",
       "name": "샘씨엔에스",
       "market": "KOSDAQ",
-      "open": 13140,
-      "high": 15800,
-      "low": 13140,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 15690,
       "change": 2710,
       "change_pct": 20.88,
@@ -845,15 +841,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 10340,
-        "38.2%": 12231,
-        "50.0%": 12815,
-        "61.8%": 13399,
-        "고점": 15290
+        "38.2%": 12426,
+        "50.0%": 13070,
+        "61.8%": 13714,
+        "고점": 15800
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 15290,
+      "swing_high": 15800,
       "swing_low": 10340,
+      "vol_ratio": 1.0,
       "trading_value": 30235000000,
       "big_money": false
     },
@@ -861,9 +858,9 @@
       "ticker": "052710",
       "name": "아모텍",
       "market": "KOSDAQ",
-      "open": 16860,
-      "high": 19900,
-      "low": 16450,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 19110,
       "change": 3290,
       "change_pct": 20.8,
@@ -882,9 +879,7 @@
       "theme_leader": "",
       "swing_high": 35566,
       "swing_low": 14500,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 16444000000,
       "big_money": false
     }
@@ -1122,38 +1117,18 @@
         "50.0%": 310750,
         "61.8%": 325795,
         "고점": 374500
-      }
-    },
-    {
-      "ticker": "199820",
-      "name": "제일일렉트릭",
-      "market": "",
-      "open": 7100,
-      "high": 7380,
-      "low": 7100,
-      "close": 7300,
-      "volume": 102853,
-      "change_pct": 4.73,
-      "quote_date": "20260715",
-      "sector": "기타",
-      "swing_high": 10630,
-      "swing_low": 6530,
-      "fibonacci": {
-        "저점": 6530,
-        "38.2%": 8096,
-        "50.0%": 8580,
-        "61.8%": 9064,
-        "고점": 10630
       },
-      "patterns": [
-        "양음양(음봉 장악)"
-      ]
+      "vol_ratio": 1.0,
+      "entry_price": 86000.0,
+      "pnl_pct": 225.0,
+      "entry_date": "2026-07-01",
+      "holding_days": 16
     }
   ],
   "scoreboard": {
-    "prev_date": "2026-07-14",
-    "avg": 8.51,
-    "up": 25,
+    "prev_date": "2026-07-15",
+    "avg": 27.25,
+    "up": 30,
     "n": 30,
     "verdict": "연속성 장 — 주도주 눌림 공략 유효"
   },
@@ -1178,28 +1153,28 @@
       "top_gainer": "모나미",
       "avg_change_pct": 16.59,
       "leader": "",
-      "streak_days": 6
+      "streak_days": 7
     },
     "바이오/제약": {
       "count": 9,
       "top_gainer": "HLB테라퓨틱스",
       "avg_change_pct": 21.56,
       "leader": "펩트론",
-      "streak_days": 6
+      "streak_days": 7
     },
     "반도체": {
       "count": 8,
       "top_gainer": "한미반도체",
       "avg_change_pct": 15.57,
       "leader": "한미반도체",
-      "streak_days": 2
+      "streak_days": 3
     },
     "조선/방산": {
       "count": 3,
       "top_gainer": "LIG아큐버",
       "avg_change_pct": 15.89,
       "leader": "LIG디펜스앤에어로스페이스",
-      "streak_days": 1
+      "streak_days": 2
     },
     "로봇/AI": {
       "count": 1,
@@ -1231,5 +1206,5 @@
     }
   },
   "filtered_risky": 32,
-  "history_days": 6
+  "history_days": 7
 }

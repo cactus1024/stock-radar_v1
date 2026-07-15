@@ -383,5 +383,66 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-07-16",
+    "sectors": {
+      "기타": {
+        "count": 101,
+        "top_gainer": "모나미",
+        "avg_change_pct": 16.59,
+        "leader": "",
+        "streak_days": 7
+      },
+      "바이오/제약": {
+        "count": 9,
+        "top_gainer": "HLB테라퓨틱스",
+        "avg_change_pct": 21.56,
+        "leader": "펩트론",
+        "streak_days": 7
+      },
+      "반도체": {
+        "count": 8,
+        "top_gainer": "한미반도체",
+        "avg_change_pct": 15.57,
+        "leader": "한미반도체",
+        "streak_days": 3
+      },
+      "조선/방산": {
+        "count": 3,
+        "top_gainer": "LIG아큐버",
+        "avg_change_pct": 15.89,
+        "leader": "LIG디펜스앤에어로스페이스",
+        "streak_days": 2
+      },
+      "로봇/AI": {
+        "count": 1,
+        "top_gainer": "로보티즈",
+        "avg_change_pct": 13.81,
+        "leader": "로보티즈",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 2,
+        "top_gainer": "롯데손해보험",
+        "avg_change_pct": 11.32,
+        "leader": "롯데손해보험",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 2,
+        "top_gainer": "HD현대에너지솔루션",
+        "avg_change_pct": 10.46,
+        "leader": "HD현대에너지솔루션",
+        "streak_days": 1
+      },
+      "2차전지": {
+        "count": 1,
+        "top_gainer": "하이드로리튬",
+        "avg_change_pct": 10.74,
+        "leader": "하이드로리튬",
+        "streak_days": 1
+      }
+    }
   }
 ]
