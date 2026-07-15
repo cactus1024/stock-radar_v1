@@ -20,7 +20,7 @@ def write_fallback(reason):
                "weekly_sector_summary": ""},
               open(FEED_OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
-def build_prompt(top30, history, watch=None, etfs=None):
+def build_prompt(top30, history):
     return f"""너는 10년차 한국 단타/스윙 트레이더 출신 애널리스트다. 뜬구름 없는 실전 브리핑만 쓴다.
 
 [입력 1: 오늘 상승률 Top30 — 정량 데이터 포함]
@@ -31,12 +31,6 @@ trading_value(당일 거래대금), big_money(대금 1000억+), theme_streak(테
 [입력 2: 최근 거래일 섹터 히스토리]
 {json.dumps(history, ensure_ascii=False)}
 
-[입력 3: 사용자 보유종목 — entry_price(진입가), pnl_pct(현재 손익%), holding_days(보유일) 포함 가능]
-{json.dumps(watch or [], ensure_ascii=False)}
-
-[입력 4: 오늘 상승 ETF (레버리지 제외)]
-{json.dumps(etfs or [], ensure_ascii=False)}
-
 [작업] 순수 JSON만 응답 (코드블록 금지):
 {{
   "stocks": [
@@ -46,10 +40,6 @@ trading_value(당일 거래대금), big_money(대금 1000억+), theme_streak(테
       "insight": "실전 코멘트 2~3줄. 예: '추격 금지, 스윙로우 {{swing_low}}원 지지 확인 후 눌림목 대기. 이탈 시 손절 엄수.' / '3일차 순환 막바지 — 대장주 꺾이면 동반 급락 주의.' 구체적 가격 레벨(스윙/피보나치)을 반드시 언급.",
       "news_source": "URL 또는 '미확인'"}}
   ],
-  "watchlist": [
-    {{"ticker": "코드", "strategy": "보유종목별 전략 3~5줄. 반드시 손익 상태를 기준으로: 손실 중(물림)이면 → 의미 있는 반등 저항선(피보/스윙)과 리스크 관리 시나리오, 추가 하락 시 방어선. 수익 중이면 → 부분 정리/트레일링 기준가(구체적 가격), 추세 유지 조건. 보유 D+n일차 맥락과 오늘 패턴·경고 딱지 반영. '~시나리오/~고려' 화법, 매수·매도 단정 금지."}}
-  ],
-  "etf_comment": "오늘 상승 ETF 흐름 3~5줄 — 어떤 자산군/테마로 자금이 향했는지와 퇴직연금(DC) 장기 관점의 참고 코멘트. 단기 매매 조언 금지, 참고용 어조.",
   "today_sector_summary": "오늘의 섹터 흐름 5줄: 주도 섹터, 자금 이동, 대장주 동향",
   "weekly_sector_summary": "입력2의 날짜별 데이터를 비교해 순환매 패턴 분석. 오늘 요약과 다른 관점(여러 날의 흐름)이어야 함."
 }}
@@ -66,11 +56,6 @@ def main():
 
     data = json.load(open(TOP30_FILE, encoding="utf-8"))
     top30 = data.get("top30", [])
-    watch = data.get("watchlist", [])
-    wkeep = ("ticker", "name", "close", "change_pct", "sector", "entry_price", "pnl_pct",
-             "holding_days", "swing_high", "swing_low", "fibonacci", "patterns", "alerts")
-    watch_slim = [{k: w[k] for k in wkeep if k in w} for w in watch]
-    etf_slim = [{"name": e.get("name"), "change_pct": e.get("change_pct")} for e in data.get("etf_top", [])[:10]]
     keep = ("ticker", "name", "market", "close", "change_pct", "volume", "sector",
             "swing_high", "swing_low", "patterns", "trading_value", "big_money",
             "turnover_pct", "vol_ratio", "new_high20", "cap_str",
@@ -94,7 +79,7 @@ def main():
     except Exception as e:
         print(f"[INFO] 모델 목록 조회 실패: {type(e).__name__}: {e}")
 
-    prompt = build_prompt(slim, history, watch_slim, etf_slim)
+    prompt = build_prompt(slim, history)
     raw_text, last_err = None, None
     for model in MODEL_CHAIN:
         for use_search, mode in ((True, "검색 그라운딩 ON"), (False, "검색 없이 재시도")):
@@ -121,11 +106,7 @@ def main():
                         f"3거래일치가 쌓이는 시점부터 요일별 순환매 흐름 분석이 자동으로 시작됩니다.")
 
                 if not use_search:
-                    feed["today_sector_summary"] = "(오늘은 뉴스 검색 없이 생성됨 — 급등 사유는 데이터 기반 추정)\n" + feed.get("today_sector_summary", "")
-                    for st in feed.get("stocks", []):
-                        if st.get("headline") and not st["headline"].startswith("(추정)"):
-                            st["headline"] = "(추정) " + st["headline"]
-                        st["news_source"] = "미확인"
+                    feed["today_sector_summary"] = "(오늘은 뉴스 검색 없이 생성됨)\n" + feed.get("today_sector_summary", "")
 
                 feed.update({"date": datetime.now(KST).strftime("%Y-%m-%d"), "status": "ok",
                              "model": model + ("" if use_search else " (검색 OFF)"),

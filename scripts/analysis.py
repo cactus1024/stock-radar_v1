@@ -204,22 +204,10 @@ def load_watchlist():
         line = line.strip()
         if not line or line.startswith("#"):
             continue
-        import re as _re
         parts = line.split()
         code = parts[0]
-        if not (code.isdigit() and len(code) == 6):
-            continue
-        entry_price, entry_date, name_parts = None, None, []
-        for p in parts[1:]:
-            if p.startswith("@"):
-                try: entry_price = float(p[1:].replace(",", ""))
-                except ValueError: pass
-            elif _re.fullmatch(r"\d{4}-\d{2}-\d{2}", p):
-                entry_date = p
-            else:
-                name_parts.append(p)
-        out.append({"ticker": code, "name": " ".join(name_parts) or code,
-                    "entry_price": entry_price, "entry_date": entry_date})
+        if code.isdigit() and len(code) == 6:
+            out.append({"ticker": code, "name": " ".join(parts[1:]) or code})
     return out[:20]
 
 def build_watch_entries(items):
@@ -241,16 +229,6 @@ def build_watch_entries(items):
             analyze_history(s, hist)
             tags, shares = fetch_alerts_and_shares(it["ticker"])
             if tags: s["alerts"] = tags
-            if it.get("entry_price"):
-                s["entry_price"] = it["entry_price"]
-                s["pnl_pct"] = round((s["close"] - it["entry_price"]) / it["entry_price"] * 100, 2)
-            if it.get("entry_date"):
-                s["entry_date"] = it["entry_date"]
-                try:
-                    d0 = datetime.strptime(it["entry_date"], "%Y-%m-%d").date()
-                    s["holding_days"] = (datetime.now(KST).date() - d0).days + 1
-                except ValueError:
-                    pass
             entries.append(s)
             time.sleep(0.3)
         except Exception as e:
