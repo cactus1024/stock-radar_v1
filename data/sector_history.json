@@ -388,59 +388,66 @@
     "date": "2026-07-16",
     "sectors": {
       "기타": {
-        "count": 101,
-        "top_gainer": "모나미",
-        "avg_change_pct": 16.59,
+        "count": 76,
+        "top_gainer": "멤레이비티",
+        "avg_change_pct": 11.1,
         "leader": "",
         "streak_days": 7
       },
       "바이오/제약": {
-        "count": 9,
-        "top_gainer": "HLB테라퓨틱스",
-        "avg_change_pct": 21.56,
-        "leader": "펩트론",
+        "count": 7,
+        "top_gainer": "삼익제약",
+        "avg_change_pct": 11.28,
+        "leader": "JW신약",
         "streak_days": 7
       },
       "반도체": {
-        "count": 8,
-        "top_gainer": "한미반도체",
-        "avg_change_pct": 15.57,
-        "leader": "한미반도체",
-        "streak_days": 3
-      },
-      "조선/방산": {
-        "count": 3,
-        "top_gainer": "LIG아큐버",
-        "avg_change_pct": 15.89,
-        "leader": "LIG디펜스앤에어로스페이스",
-        "streak_days": 2
-      },
-      "로봇/AI": {
         "count": 1,
-        "top_gainer": "로보티즈",
-        "avg_change_pct": 13.81,
-        "leader": "로보티즈",
+        "top_gainer": "한울반도체",
+        "avg_change_pct": 10.75,
+        "leader": "한울반도체",
         "streak_days": 1
       },
-      "금융": {
+      "IT/게임/엔터": {
         "count": 2,
-        "top_gainer": "롯데손해보험",
-        "avg_change_pct": 11.32,
-        "leader": "롯데손해보험",
+        "top_gainer": "화승엔터프라이즈",
+        "avg_change_pct": 5.91,
+        "leader": "크래프톤",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "세진중공업",
+        "avg_change_pct": 6.2,
+        "leader": "세진중공업",
+        "streak_days": 1
+      },
+      "조선/방산": {
+        "count": 2,
+        "top_gainer": "한화오션",
+        "avg_change_pct": 5.7,
+        "leader": "한화오션",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 2,
+        "top_gainer": "SKAI",
+        "avg_change_pct": 5.59,
+        "leader": "제닉스로보틱스",
         "streak_days": 1
       },
       "에너지/원전": {
         "count": 2,
-        "top_gainer": "HD현대에너지솔루션",
-        "avg_change_pct": 10.46,
-        "leader": "HD현대에너지솔루션",
+        "top_gainer": "지엔씨에너지",
+        "avg_change_pct": 5.23,
+        "leader": "지엔씨에너지",
         "streak_days": 1
       },
-      "2차전지": {
+      "철강/화학": {
         "count": 1,
-        "top_gainer": "하이드로리튬",
-        "avg_change_pct": 10.74,
-        "leader": "하이드로리튬",
+        "top_gainer": "국도화학",
+        "avg_change_pct": 4.53,
+        "leader": "국도화학",
         "streak_days": 1
       }
     }
