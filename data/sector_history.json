@@ -451,5 +451,73 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-07-17",
+    "sectors": {
+      "기타": {
+        "count": 76,
+        "top_gainer": "멤레이비티",
+        "avg_change_pct": 11.1,
+        "leader": "",
+        "streak_days": 8
+      },
+      "바이오/제약": {
+        "count": 7,
+        "top_gainer": "삼익제약",
+        "avg_change_pct": 11.28,
+        "leader": "JW신약",
+        "streak_days": 8
+      },
+      "반도체": {
+        "count": 1,
+        "top_gainer": "한울반도체",
+        "avg_change_pct": 10.75,
+        "leader": "한울반도체",
+        "streak_days": 1
+      },
+      "IT/게임/엔터": {
+        "count": 2,
+        "top_gainer": "화승엔터프라이즈",
+        "avg_change_pct": 5.91,
+        "leader": "크래프톤",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "세진중공업",
+        "avg_change_pct": 6.2,
+        "leader": "세진중공업",
+        "streak_days": 1
+      },
+      "조선/방산": {
+        "count": 2,
+        "top_gainer": "한화오션",
+        "avg_change_pct": 5.7,
+        "leader": "한화오션",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 2,
+        "top_gainer": "SKAI",
+        "avg_change_pct": 5.59,
+        "leader": "제닉스로보틱스",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 2,
+        "top_gainer": "지엔씨에너지",
+        "avg_change_pct": 5.23,
+        "leader": "지엔씨에너지",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 1,
+        "top_gainer": "국도화학",
+        "avg_change_pct": 4.53,
+        "leader": "국도화학",
+        "streak_days": 1
+      }
+    }
   }
 ]
