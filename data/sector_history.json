@@ -573,5 +573,59 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-07-21",
+    "sectors": {
+      "로봇/AI": {
+        "count": 14,
+        "top_gainer": "코스모로보틱스",
+        "avg_change_pct": 11.58,
+        "leader": "레인보우로보틱스",
+        "streak_days": 1
+      },
+      "기타": {
+        "count": 79,
+        "top_gainer": "에브리봇",
+        "avg_change_pct": 11.49,
+        "leader": "",
+        "streak_days": 10
+      },
+      "바이오/제약": {
+        "count": 5,
+        "top_gainer": "비엘팜텍",
+        "avg_change_pct": 12.25,
+        "leader": "JW신약",
+        "streak_days": 10
+      },
+      "에너지/원전": {
+        "count": 3,
+        "top_gainer": "HD현대에너지솔루션",
+        "avg_change_pct": 8.08,
+        "leader": "대원전선",
+        "streak_days": 2
+      },
+      "조선/방산": {
+        "count": 1,
+        "top_gainer": "HD현대마린엔진",
+        "avg_change_pct": 10.02,
+        "leader": "HD현대마린엔진",
+        "streak_days": 1
+      },
+      "IT/게임/엔터": {
+        "count": 2,
+        "top_gainer": "SAMG엔터",
+        "avg_change_pct": 6.34,
+        "leader": "크래프톤",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 1,
+        "top_gainer": "삼성전자",
+        "avg_change_pct": 6.15,
+        "leader": "삼성전자",
+        "streak_days": 1
+      }
+    }
   }
 ]
