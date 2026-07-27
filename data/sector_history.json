@@ -831,5 +831,52 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-07-27",
+    "sectors": {
+      "기타": {
+        "count": 94,
+        "top_gainer": "오브젠",
+        "avg_change_pct": 10.3,
+        "leader": "",
+        "streak_days": 14
+      },
+      "반도체": {
+        "count": 4,
+        "top_gainer": "가온칩스",
+        "avg_change_pct": 12.58,
+        "leader": "주성엔지니어링",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 10,
+        "top_gainer": "뉴엔AI",
+        "avg_change_pct": 10.17,
+        "leader": "레인보우로보틱스",
+        "streak_days": 1
+      },
+      "바이오/제약": {
+        "count": 5,
+        "top_gainer": "펩트론",
+        "avg_change_pct": 7.93,
+        "leader": "펩트론",
+        "streak_days": 14
+      },
+      "IT/게임/엔터": {
+        "count": 3,
+        "top_gainer": "NHN",
+        "avg_change_pct": 7.7,
+        "leader": "하이브",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 2,
+        "top_gainer": "우리금융지주",
+        "avg_change_pct": 7.08,
+        "leader": "우리금융지주",
+        "streak_days": 1
+      }
+    }
   }
 ]
