@@ -878,5 +878,38 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-07-28",
+    "sectors": {
+      "기타": {
+        "count": 41,
+        "top_gainer": "포톤",
+        "avg_change_pct": 10.05,
+        "leader": "",
+        "streak_days": 15
+      },
+      "로봇/AI": {
+        "count": 6,
+        "top_gainer": "뉴엔AI",
+        "avg_change_pct": 13.66,
+        "leader": "코스모로보틱스",
+        "streak_days": 2
+      },
+      "바이오/제약": {
+        "count": 3,
+        "top_gainer": "펩트론",
+        "avg_change_pct": 5.29,
+        "leader": "펩트론",
+        "streak_days": 15
+      },
+      "IT/게임/엔터": {
+        "count": 1,
+        "top_gainer": "지어소프트",
+        "avg_change_pct": 1.05,
+        "leader": "지어소프트",
+        "streak_days": 1
+      }
+    }
   }
 ]
