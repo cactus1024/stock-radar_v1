@@ -911,5 +911,52 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-07-29",
+    "sectors": {
+      "로봇/AI": {
+        "count": 9,
+        "top_gainer": "엔젤로보틱스",
+        "avg_change_pct": 11.42,
+        "leader": "코스모로보틱스",
+        "streak_days": 3
+      },
+      "기타": {
+        "count": 48,
+        "top_gainer": "매드업",
+        "avg_change_pct": 6.31,
+        "leader": "",
+        "streak_days": 16
+      },
+      "바이오/제약": {
+        "count": 5,
+        "top_gainer": "티앤알바이오팹",
+        "avg_change_pct": 3.77,
+        "leader": "레몬헬스케어",
+        "streak_days": 16
+      },
+      "에너지/원전": {
+        "count": 3,
+        "top_gainer": "흥구석유",
+        "avg_change_pct": 2.56,
+        "leader": "흥구석유",
+        "streak_days": 1
+      },
+      "조선/방산": {
+        "count": 1,
+        "top_gainer": "STX그린로지스",
+        "avg_change_pct": 5.1,
+        "leader": "STX그린로지스",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "서희건설",
+        "avg_change_pct": 1.04,
+        "leader": "서희건설",
+        "streak_days": 1
+      }
+    }
   }
 ]
