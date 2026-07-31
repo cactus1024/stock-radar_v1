@@ -1033,5 +1033,52 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-07-31",
+    "sectors": {
+      "기타": {
+        "count": 109,
+        "top_gainer": "두산",
+        "avg_change_pct": 23.89,
+        "leader": "",
+        "streak_days": 18
+      },
+      "반도체": {
+        "count": 15,
+        "top_gainer": "SK하이닉스",
+        "avg_change_pct": 25.89,
+        "leader": "SK하이닉스",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "효성중공업",
+        "avg_change_pct": 27.61,
+        "leader": "효성중공업",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 2,
+        "top_gainer": "대원전선",
+        "avg_change_pct": 24.5,
+        "leader": "대원전선",
+        "streak_days": 1
+      },
+      "바이오/제약": {
+        "count": 1,
+        "top_gainer": "로킷헬스케어",
+        "avg_change_pct": 20.41,
+        "leader": "로킷헬스케어",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 1,
+        "top_gainer": "로보스타",
+        "avg_change_pct": 19.46,
+        "leader": "로보스타",
+        "streak_days": 1
+      }
+    }
   }
 ]
