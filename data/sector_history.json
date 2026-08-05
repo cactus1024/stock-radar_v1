@@ -1223,5 +1223,66 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-08-05",
+    "sectors": {
+      "기타": {
+        "count": 103,
+        "top_gainer": "유티아이",
+        "avg_change_pct": 12.95,
+        "leader": "",
+        "streak_days": 21
+      },
+      "로봇/AI": {
+        "count": 5,
+        "top_gainer": "비큐AI",
+        "avg_change_pct": 15.53,
+        "leader": "뉴엔AI",
+        "streak_days": 1
+      },
+      "바이오/제약": {
+        "count": 5,
+        "top_gainer": "오리엔트바이오",
+        "avg_change_pct": 14.07,
+        "leader": "삼익제약",
+        "streak_days": 3
+      },
+      "조선/방산": {
+        "count": 4,
+        "top_gainer": "STX엔진",
+        "avg_change_pct": 12.5,
+        "leader": "HD현대일렉트릭",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 4,
+        "top_gainer": "효성중공업",
+        "avg_change_pct": 10.22,
+        "leader": "효성중공업",
+        "streak_days": 2
+      },
+      "에너지/원전": {
+        "count": 5,
+        "top_gainer": "대명에너지",
+        "avg_change_pct": 10.48,
+        "leader": "대원전선",
+        "streak_days": 3
+      },
+      "철강/화학": {
+        "count": 1,
+        "top_gainer": "한일철강",
+        "avg_change_pct": 8.18,
+        "leader": "한일철강",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 1,
+        "top_gainer": "세아베스틸지주",
+        "avg_change_pct": 7.79,
+        "leader": "세아베스틸지주",
+        "streak_days": 1
+      }
+    }
   }
 ]
