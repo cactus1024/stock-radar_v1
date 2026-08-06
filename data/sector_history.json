@@ -1284,5 +1284,73 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-08-06",
+    "sectors": {
+      "로봇/AI": {
+        "count": 6,
+        "top_gainer": "비큐AI",
+        "avg_change_pct": 12.05,
+        "leader": "뉴엔AI",
+        "streak_days": 2
+      },
+      "기타": {
+        "count": 110,
+        "top_gainer": "본느",
+        "avg_change_pct": 8.48,
+        "leader": "",
+        "streak_days": 22
+      },
+      "바이오/제약": {
+        "count": 17,
+        "top_gainer": "온코닉테라퓨틱스",
+        "avg_change_pct": 7.92,
+        "leader": "레몬헬스케어",
+        "streak_days": 4
+      },
+      "조선/방산": {
+        "count": 3,
+        "top_gainer": "STX그린로지스",
+        "avg_change_pct": 6.02,
+        "leader": "한화에어로스페이스",
+        "streak_days": 2
+      },
+      "IT/게임/엔터": {
+        "count": 1,
+        "top_gainer": "지어소프트",
+        "avg_change_pct": 9.5,
+        "leader": "지어소프트",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 1,
+        "top_gainer": "실리콘투",
+        "avg_change_pct": 6.06,
+        "leader": "실리콘투",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 4,
+        "top_gainer": "세아제강지주",
+        "avg_change_pct": 4.39,
+        "leader": "메리츠금융지주",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 2,
+        "top_gainer": "GS건설",
+        "avg_change_pct": 4.29,
+        "leader": "GS건설",
+        "streak_days": 1
+      },
+      "2차전지": {
+        "count": 1,
+        "top_gainer": "에코프로머티",
+        "avg_change_pct": 4.57,
+        "leader": "에코프로머티",
+        "streak_days": 1
+      }
+    }
   }
 ]
