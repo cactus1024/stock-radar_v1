@@ -1352,5 +1352,80 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-08-07",
+    "sectors": {
+      "기타": {
+        "count": 85,
+        "top_gainer": "동화기업",
+        "avg_change_pct": 9.91,
+        "leader": "",
+        "streak_days": 23
+      },
+      "금융": {
+        "count": 1,
+        "top_gainer": "상상인증권",
+        "avg_change_pct": 29.91,
+        "leader": "상상인증권",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 5,
+        "top_gainer": "강원에너지",
+        "avg_change_pct": 7.99,
+        "leader": "LG에너지솔루션",
+        "streak_days": 1
+      },
+      "2차전지": {
+        "count": 3,
+        "top_gainer": "엘앤에프",
+        "avg_change_pct": 7.68,
+        "leader": "포스코퓨처엠",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 7,
+        "top_gainer": "금강철강",
+        "avg_change_pct": 5.98,
+        "leader": "LG화학",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 3,
+        "top_gainer": "폴라리스AI",
+        "avg_change_pct": 7.57,
+        "leader": "뉴엔AI",
+        "streak_days": 3
+      },
+      "바이오/제약": {
+        "count": 8,
+        "top_gainer": "아리바이오랩",
+        "avg_change_pct": 6.71,
+        "leader": "레메디",
+        "streak_days": 5
+      },
+      "조선/방산": {
+        "count": 2,
+        "top_gainer": "LIG디펜스앤에어로스페이스",
+        "avg_change_pct": 4.82,
+        "leader": "한화에어로스페이스",
+        "streak_days": 1
+      },
+      "IT/게임/엔터": {
+        "count": 5,
+        "top_gainer": "크래프톤",
+        "avg_change_pct": 4.52,
+        "leader": "카카오",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "효성중공업",
+        "avg_change_pct": 4.58,
+        "leader": "효성중공업",
+        "streak_days": 1
+      }
+    }
   }
 ]
