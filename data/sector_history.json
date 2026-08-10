@@ -1427,5 +1427,73 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-08-10",
+    "sectors": {
+      "기타": {
+        "count": 112,
+        "top_gainer": "윙입푸드",
+        "avg_change_pct": 14.98,
+        "leader": "",
+        "streak_days": 24
+      },
+      "바이오/제약": {
+        "count": 16,
+        "top_gainer": "프롬바이오",
+        "avg_change_pct": 14.34,
+        "leader": "삼천당제약",
+        "streak_days": 6
+      },
+      "반도체": {
+        "count": 5,
+        "top_gainer": "제주반도체",
+        "avg_change_pct": 12.99,
+        "leader": "제주반도체",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 3,
+        "top_gainer": "엠엑스로보틱스",
+        "avg_change_pct": 13.05,
+        "leader": "피앤에스로보틱스",
+        "streak_days": 4
+      },
+      "2차전지": {
+        "count": 3,
+        "top_gainer": "엘앤에프",
+        "avg_change_pct": 9.42,
+        "leader": "엘앤에프",
+        "streak_days": 2
+      },
+      "우주/항공": {
+        "count": 1,
+        "top_gainer": "켄코아에어로스페이스",
+        "avg_change_pct": 11.12,
+        "leader": "켄코아에어로스페이스",
+        "streak_days": 1
+      },
+      "조선/방산": {
+        "count": 2,
+        "top_gainer": "LIG디펜스앤에어로스페이스",
+        "avg_change_pct": 10.34,
+        "leader": "LIG디펜스앤에어로스페이스",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "GS건설",
+        "avg_change_pct": 10.27,
+        "leader": "GS건설",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 2,
+        "top_gainer": "대원전선",
+        "avg_change_pct": 7.96,
+        "leader": "대원전선",
+        "streak_days": 1
+      }
+    }
   }
 ]
