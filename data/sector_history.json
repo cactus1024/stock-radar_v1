@@ -1495,5 +1495,73 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-08-11",
+    "sectors": {
+      "기타": {
+        "count": 121,
+        "top_gainer": "본느",
+        "avg_change_pct": 10.58,
+        "leader": "",
+        "streak_days": 25
+      },
+      "건설/기계": {
+        "count": 2,
+        "top_gainer": "금호건설",
+        "avg_change_pct": 18.76,
+        "leader": "금호건설",
+        "streak_days": 1
+      },
+      "IT/게임/엔터": {
+        "count": 2,
+        "top_gainer": "NHN",
+        "avg_change_pct": 18.25,
+        "leader": "NHN",
+        "streak_days": 1
+      },
+      "바이오/제약": {
+        "count": 5,
+        "top_gainer": "엔젠바이오",
+        "avg_change_pct": 9.09,
+        "leader": "셀트리온",
+        "streak_days": 7
+      },
+      "로봇/AI": {
+        "count": 1,
+        "top_gainer": "비큐AI",
+        "avg_change_pct": 13.46,
+        "leader": "비큐AI",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 5,
+        "top_gainer": "주성엔지니어링",
+        "avg_change_pct": 7.33,
+        "leader": "삼성전자",
+        "streak_days": 2
+      },
+      "우주/항공": {
+        "count": 1,
+        "top_gainer": "케이피항공산업",
+        "avg_change_pct": 8.56,
+        "leader": "케이피항공산업",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 2,
+        "top_gainer": "금강철강",
+        "avg_change_pct": 5.77,
+        "leader": "금강철강",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 1,
+        "top_gainer": "SK가스",
+        "avg_change_pct": 3.7,
+        "leader": "SK가스",
+        "streak_days": 1
+      }
+    }
   }
 ]
