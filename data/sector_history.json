@@ -1563,5 +1563,87 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-08-12",
+    "sectors": {
+      "건설/기계": {
+        "count": 2,
+        "top_gainer": "금호건설",
+        "avg_change_pct": 17.65,
+        "leader": "금호건설",
+        "streak_days": 1
+      },
+      "기타": {
+        "count": 103,
+        "top_gainer": "코이즈",
+        "avg_change_pct": 10.46,
+        "leader": "",
+        "streak_days": 26
+      },
+      "로봇/AI": {
+        "count": 1,
+        "top_gainer": "엠엑스로보틱스",
+        "avg_change_pct": 29.93,
+        "leader": "엠엑스로보틱스",
+        "streak_days": 1
+      },
+      "바이오/제약": {
+        "count": 6,
+        "top_gainer": "JW중외제약",
+        "avg_change_pct": 8.09,
+        "leader": "온코닉테라퓨틱스",
+        "streak_days": 8
+      },
+      "IT/게임/엔터": {
+        "count": 1,
+        "top_gainer": "NHN",
+        "avg_change_pct": 13.1,
+        "leader": "NHN",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 4,
+        "top_gainer": "실리콘투",
+        "avg_change_pct": 8.09,
+        "leader": "삼성전자",
+        "streak_days": 3
+      },
+      "에너지/원전": {
+        "count": 1,
+        "top_gainer": "대원전선",
+        "avg_change_pct": 10.4,
+        "leader": "대원전선",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 1,
+        "top_gainer": "부국철강",
+        "avg_change_pct": 10.29,
+        "leader": "부국철강",
+        "streak_days": 1
+      },
+      "우주/항공": {
+        "count": 1,
+        "top_gainer": "한국항공우주",
+        "avg_change_pct": 6.35,
+        "leader": "한국항공우주",
+        "streak_days": 1
+      },
+      "조선/방산": {
+        "count": 2,
+        "top_gainer": "HD현대일렉트릭",
+        "avg_change_pct": 5.55,
+        "leader": "한화에어로스페이스",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 1,
+        "top_gainer": "대신증권",
+        "avg_change_pct": 5.51,
+        "leader": "대신증권",
+        "streak_days": 1
+      }
+    }
   }
 ]
