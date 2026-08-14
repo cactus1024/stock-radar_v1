@@ -1727,5 +1727,101 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-08-14",
+    "sectors": {
+      "기타": {
+        "count": 123,
+        "top_gainer": "알트",
+        "avg_change_pct": 10.36,
+        "leader": "",
+        "streak_days": 28
+      },
+      "바이오/제약": {
+        "count": 5,
+        "top_gainer": "큐리옥스바이오시스템즈",
+        "avg_change_pct": 12.41,
+        "leader": "레메디",
+        "streak_days": 10
+      },
+      "로봇/AI": {
+        "count": 5,
+        "top_gainer": "아이로보틱스",
+        "avg_change_pct": 9.72,
+        "leader": "로보티즈",
+        "streak_days": 1
+      },
+      "자동차/부품": {
+        "count": 3,
+        "top_gainer": "삼보모터스",
+        "avg_change_pct": 9.1,
+        "leader": "현대차",
+        "streak_days": 1
+      },
+      "IT/게임/엔터": {
+        "count": 1,
+        "top_gainer": "NHN",
+        "avg_change_pct": 11.99,
+        "leader": "NHN",
+        "streak_days": 1
+      },
+      "우주/항공": {
+        "count": 1,
+        "top_gainer": "우주일렉트로",
+        "avg_change_pct": 9.27,
+        "leader": "우주일렉트로",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 3,
+        "top_gainer": "한화손해보험",
+        "avg_change_pct": 6.84,
+        "leader": "DB손해보험",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "동부건설",
+        "avg_change_pct": 8.52,
+        "leader": "동부건설",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 1,
+        "top_gainer": "효성화학",
+        "avg_change_pct": 8.23,
+        "leader": "효성화학",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 1,
+        "top_gainer": "SK가스",
+        "avg_change_pct": 7.02,
+        "leader": "SK가스",
+        "streak_days": 1
+      },
+      "2차전지": {
+        "count": 1,
+        "top_gainer": "엘앤에프",
+        "avg_change_pct": 6.92,
+        "leader": "엘앤에프",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 2,
+        "top_gainer": "이오테크닉스",
+        "avg_change_pct": 6.22,
+        "leader": "이오테크닉스",
+        "streak_days": 1
+      },
+      "조선/방산": {
+        "count": 2,
+        "top_gainer": "한화오션",
+        "avg_change_pct": 5.61,
+        "leader": "한화오션",
+        "streak_days": 1
+      }
+    }
   }
 ]
