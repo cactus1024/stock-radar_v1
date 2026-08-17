@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-14",
-  "time": "17:35",
+  "date": "2026-08-17",
+  "time": "16:58",
   "session": "마감",
   "timezone": "KST",
   "top30": [
@@ -8,9 +8,9 @@
       "ticker": "459550",
       "name": "알트",
       "market": "KOSDAQ",
-      "open": 1995,
-      "high": 2575,
-      "low": 1930,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 2575,
       "change": 594,
       "change_pct": 29.98,
@@ -20,21 +20,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 992,
-        "38.2%": 1473,
-        "50.0%": 1621,
-        "61.8%": 1769,
-        "고점": 2250
+        "38.2%": 1597,
+        "50.0%": 1784,
+        "61.8%": 1970,
+        "고점": 2575
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 2250,
+      "swing_high": 2575,
       "swing_low": 992,
-      "vol_ratio": 5.0,
-      "new_high20": true,
-      "patterns": [
-        "양음양(음봉 장악)",
-        "트랩 반등(전저 이탈 후 회복)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 56819000000,
       "big_money": false
     },
@@ -42,9 +37,9 @@
       "ticker": "179900",
       "name": "유티아이",
       "market": "KOSDAQ",
-      "open": 2140,
-      "high": 2775,
-      "low": 2140,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 2775,
       "change": 640,
       "change_pct": 29.98,
@@ -54,19 +49,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 1680,
-        "38.2%": 2293,
-        "50.0%": 2482,
-        "61.8%": 2672,
-        "고점": 3285
+        "38.2%": 2272,
+        "50.0%": 2455,
+        "61.8%": 2638,
+        "고점": 3230
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 3285,
+      "swing_high": 3230,
       "swing_low": 1680,
-      "vol_ratio": 3.1,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 3299000000,
       "big_money": false
     },
@@ -74,9 +66,9 @@
       "ticker": "107600",
       "name": "새빗켐",
       "market": "KOSDAQ",
-      "open": 15700,
-      "high": 19180,
-      "low": 15360,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 19180,
       "change": 4420,
       "change_pct": 29.95,
@@ -86,20 +78,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 9300,
-        "38.2%": 11802,
-        "50.0%": 12575,
-        "61.8%": 13348,
-        "고점": 15850
+        "38.2%": 13074,
+        "50.0%": 14240,
+        "61.8%": 15406,
+        "고점": 19180
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 15850,
+      "swing_high": 19180,
       "swing_low": 9300,
-      "vol_ratio": 14.3,
-      "new_high20": true,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 3590000000,
       "big_money": false
     },
@@ -107,9 +95,9 @@
       "ticker": "049630",
       "name": "재영솔루텍",
       "market": "KOSDAQ",
-      "open": 9030,
-      "high": 9030,
-      "low": 7800,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 9030,
       "change": 2080,
       "change_pct": 29.93,
@@ -119,17 +107,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 4600,
-        "38.2%": 5517,
-        "50.0%": 5800,
-        "61.8%": 6083,
-        "고점": 7000
+        "38.2%": 6292,
+        "50.0%": 6815,
+        "61.8%": 7338,
+        "고점": 9030
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 7000,
+      "swing_high": 9030,
       "swing_low": 4600,
-      "vol_ratio": 14.4,
-      "new_high20": true,
+      "vol_ratio": 1.0,
       "trading_value": 25957000000,
       "big_money": false
     },
@@ -137,9 +124,9 @@
       "ticker": "445680",
       "name": "큐리옥스바이오시스템즈",
       "market": "KOSDAQ",
-      "open": 42050,
-      "high": 50600,
-      "low": 41650,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 50600,
       "change": 11650,
       "change_pct": 29.91,
@@ -149,20 +136,16 @@
       "sector": "바이오/제약",
       "fibonacci": {
         "저점": 31650,
-        "38.2%": 37380,
-        "50.0%": 39150,
-        "61.8%": 40920,
-        "고점": 46650
+        "38.2%": 38889,
+        "50.0%": 41125,
+        "61.8%": 43361,
+        "고점": 50600
       },
-      "theme_streak": 10,
+      "theme_streak": 11,
       "theme_leader": "레메디",
-      "swing_high": 46650,
+      "swing_high": 50600,
       "swing_low": 31650,
-      "vol_ratio": 1.1,
-      "new_high20": true,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 8520000000,
       "big_money": false
     },
@@ -170,9 +153,9 @@
       "ticker": "003010",
       "name": "혜인",
       "market": "KOSPI",
-      "open": 7550,
-      "high": 9690,
-      "low": 7550,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 9690,
       "change": 2230,
       "change_pct": 29.89,
@@ -182,17 +165,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 3925,
-        "38.2%": 5367,
-        "50.0%": 5812,
-        "61.8%": 6258,
-        "고점": 7700
+        "38.2%": 6127,
+        "50.0%": 6808,
+        "61.8%": 7488,
+        "고점": 9690
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 7700,
+      "swing_high": 9690,
       "swing_low": 3925,
-      "vol_ratio": 1.9,
-      "new_high20": true,
+      "vol_ratio": 1.0,
       "alerts": [
         "투자주의"
       ],
@@ -203,9 +185,9 @@
       "ticker": "372170",
       "name": "윤성에프앤씨",
       "market": "KOSDAQ",
-      "open": 18250,
-      "high": 23300,
-      "low": 17840,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 23300,
       "change": 5340,
       "change_pct": 29.73,
@@ -224,11 +206,7 @@
       "theme_leader": "",
       "swing_high": 23400,
       "swing_low": 11230,
-      "vol_ratio": 8.7,
-      "patterns": [
-        "양음양(음봉 장악)",
-        "트랩 반등(전저 이탈 후 회복)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 4559000000,
       "big_money": false
     },
@@ -236,9 +214,9 @@
       "ticker": "092200",
       "name": "디아이씨",
       "market": "KOSPI",
-      "open": 5600,
-      "high": 6820,
-      "low": 5530,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 6580,
       "change": 1330,
       "change_pct": 25.33,
@@ -248,17 +226,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 3790,
-        "38.2%": 4478,
-        "50.0%": 4690,
-        "61.8%": 4902,
-        "고점": 5590
+        "38.2%": 4947,
+        "50.0%": 5305,
+        "61.8%": 5663,
+        "고점": 6820
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 5590,
+      "swing_high": 6820,
       "swing_low": 3790,
-      "vol_ratio": 27.2,
-      "new_high20": true,
+      "vol_ratio": 1.0,
       "trading_value": 43011000000,
       "big_money": false
     },
@@ -266,9 +243,9 @@
       "ticker": "237880",
       "name": "클리오",
       "market": "KOSDAQ",
-      "open": 13650,
-      "high": 14800,
-      "low": 13180,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 14230,
       "change": 2730,
       "change_pct": 23.74,
@@ -278,20 +255,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 9600,
-        "38.2%": 10700,
-        "50.0%": 11040,
-        "61.8%": 11380,
-        "고점": 12480
+        "38.2%": 11586,
+        "50.0%": 12200,
+        "61.8%": 12814,
+        "고점": 14800
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 12480,
+      "swing_high": 14800,
       "swing_low": 9600,
-      "vol_ratio": 13.2,
-      "new_high20": true,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 24653000000,
       "big_money": false
     },
@@ -299,9 +272,9 @@
       "ticker": "296640",
       "name": "이노에이엑스",
       "market": "KOSDAQ",
-      "open": 4795,
-      "high": 5970,
-      "low": 4795,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 5880,
       "change": 1090,
       "change_pct": 22.76,
@@ -311,17 +284,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 3510,
-        "38.2%": 4178,
-        "50.0%": 4385,
-        "61.8%": 4592,
-        "고점": 5260
+        "38.2%": 4450,
+        "50.0%": 4740,
+        "61.8%": 5030,
+        "고점": 5970
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 5260,
+      "swing_high": 5970,
       "swing_low": 3510,
-      "vol_ratio": 6.4,
-      "new_high20": true,
+      "vol_ratio": 1.0,
       "trading_value": 527000000,
       "big_money": false
     },
@@ -329,9 +301,9 @@
       "ticker": "212560",
       "name": "네오오토",
       "market": "KOSDAQ",
-      "open": 10540,
-      "high": 13050,
-      "low": 10520,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 12330,
       "change": 2070,
       "change_pct": 20.18,
@@ -341,19 +313,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 8490,
-        "38.2%": 10022,
-        "50.0%": 10495,
-        "61.8%": 10968,
-        "고점": 12500
+        "38.2%": 10232,
+        "50.0%": 10770,
+        "61.8%": 11308,
+        "고점": 13050
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 12500,
+      "swing_high": 13050,
       "swing_low": 8490,
-      "vol_ratio": 45.6,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 44266000000,
       "big_money": false
     },
@@ -361,9 +330,9 @@
       "ticker": "005180",
       "name": "빙그레",
       "market": "KOSPI",
-      "open": 69900,
-      "high": 85100,
-      "low": 68600,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 82400,
       "change": 13700,
       "change_pct": 19.94,
@@ -373,20 +342,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 63500,
-        "38.2%": 66785,
-        "50.0%": 67800,
-        "61.8%": 68815,
-        "고점": 72100
+        "38.2%": 71751,
+        "50.0%": 74300,
+        "61.8%": 76849,
+        "고점": 85100
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 72100,
+      "swing_high": 85100,
       "swing_low": 63500,
-      "vol_ratio": 37.0,
-      "new_high20": true,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 84244000000,
       "big_money": false
     },
@@ -394,9 +359,9 @@
       "ticker": "007340",
       "name": "DN오토모티브",
       "market": "KOSPI",
-      "open": 49150,
-      "high": 61300,
-      "low": 49150,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 58900,
       "change": 9450,
       "change_pct": 19.11,
@@ -406,17 +371,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 34300,
-        "38.2%": 40488,
-        "50.0%": 42400,
-        "61.8%": 44312,
-        "고점": 50500
+        "38.2%": 44614,
+        "50.0%": 47800,
+        "61.8%": 50986,
+        "고점": 61300
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 50500,
+      "swing_high": 61300,
       "swing_low": 34300,
-      "vol_ratio": 3.9,
-      "new_high20": true,
+      "vol_ratio": 1.0,
       "trading_value": 50811000000,
       "big_money": false
     },
@@ -424,9 +388,9 @@
       "ticker": "134580",
       "name": "탑코미디어",
       "market": "KOSDAQ",
-      "open": 1689,
-      "high": 2170,
-      "low": 1632,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 1989,
       "change": 300,
       "change_pct": 17.76,
@@ -436,17 +400,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 850,
-        "38.2%": 1207,
-        "50.0%": 1317,
-        "61.8%": 1427,
-        "고점": 1784
+        "38.2%": 1354,
+        "50.0%": 1510,
+        "61.8%": 1666,
+        "고점": 2170
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 1784,
+      "swing_high": 2170,
       "swing_low": 850,
-      "vol_ratio": 1.7,
-      "new_high20": true,
+      "vol_ratio": 1.0,
       "trading_value": 4861000000,
       "big_money": false
     },
@@ -454,9 +417,9 @@
       "ticker": "038880",
       "name": "아이에이",
       "market": "KOSDAQ",
-      "open": 3690,
-      "high": 4775,
-      "low": 3690,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 4285,
       "change": 610,
       "change_pct": 16.6,
@@ -466,16 +429,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 3005,
-        "38.2%": 3668,
-        "50.0%": 3872,
-        "61.8%": 4077,
-        "고점": 4740
+        "38.2%": 3681,
+        "50.0%": 3890,
+        "61.8%": 4099,
+        "고점": 4775
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 4740,
+      "swing_high": 4775,
       "swing_low": 3005,
-      "vol_ratio": 7.1,
+      "vol_ratio": 1.0,
       "trading_value": 1012000000,
       "big_money": false
     },
@@ -483,9 +446,9 @@
       "ticker": "125490",
       "name": "한라캐스트",
       "market": "KOSDAQ",
-      "open": 11190,
-      "high": 13640,
-      "low": 10610,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 12590,
       "change": 1760,
       "change_pct": 16.25,
@@ -495,17 +458,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 6060,
-        "38.2%": 8077,
-        "50.0%": 8700,
-        "61.8%": 9323,
-        "고점": 11340
+        "38.2%": 8956,
+        "50.0%": 9850,
+        "61.8%": 10744,
+        "고점": 13640
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 11340,
+      "swing_high": 13640,
       "swing_low": 6060,
-      "vol_ratio": 2.8,
-      "new_high20": true,
+      "vol_ratio": 1.0,
       "trading_value": 234467000000,
       "big_money": true
     },
@@ -513,9 +475,9 @@
       "ticker": "199550",
       "name": "레이저옵텍",
       "market": "KOSDAQ",
-      "open": 2495,
-      "high": 2850,
-      "low": 2450,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 2790,
       "change": 385,
       "change_pct": 16.01,
@@ -525,19 +487,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 1900,
-        "38.2%": 2301,
-        "50.0%": 2425,
-        "61.8%": 2549,
-        "고점": 2950
+        "38.2%": 2263,
+        "50.0%": 2375,
+        "61.8%": 2487,
+        "고점": 2850
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 2950,
+      "swing_high": 2850,
       "swing_low": 1900,
-      "vol_ratio": 13.3,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 1201000000,
       "big_money": false
     },
@@ -545,9 +504,9 @@
       "ticker": "396300",
       "name": "세아메카닉스",
       "market": "KOSDAQ",
-      "open": 4180,
-      "high": 5200,
-      "low": 4180,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 4825,
       "change": 660,
       "change_pct": 15.85,
@@ -557,20 +516,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 2650,
-        "38.2%": 3341,
-        "50.0%": 3555,
-        "61.8%": 3769,
-        "고점": 4460
+        "38.2%": 3624,
+        "50.0%": 3925,
+        "61.8%": 4226,
+        "고점": 5200
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 4460,
+      "swing_high": 5200,
       "swing_low": 2650,
-      "vol_ratio": 22.7,
-      "new_high20": true,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 55660000000,
       "big_money": false
     },
@@ -578,9 +533,9 @@
       "ticker": "018000",
       "name": "유니슨",
       "market": "KOSDAQ",
-      "open": 879,
-      "high": 1017,
-      "low": 872,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 1000,
       "change": 134,
       "change_pct": 15.47,
@@ -590,16 +545,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 681,
-        "38.2%": 805,
-        "50.0%": 843,
-        "61.8%": 881,
-        "고점": 1005
+        "38.2%": 809,
+        "50.0%": 849,
+        "61.8%": 889,
+        "고점": 1017
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 1005,
+      "swing_high": 1017,
       "swing_low": 681,
-      "vol_ratio": 8.4,
+      "vol_ratio": 1.0,
       "trading_value": 9880000000,
       "big_money": false
     },
@@ -607,9 +562,9 @@
       "ticker": "448900",
       "name": "한국피아이엠",
       "market": "KOSDAQ",
-      "open": 64200,
-      "high": 74700,
-      "low": 63500,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 72600,
       "change": 9600,
       "change_pct": 15.24,
@@ -619,20 +574,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 38550,
-        "38.2%": 50793,
-        "50.0%": 54575,
-        "61.8%": 58357,
-        "고점": 70600
+        "38.2%": 52359,
+        "50.0%": 56625,
+        "61.8%": 60891,
+        "고점": 74700
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 70600,
+      "swing_high": 74700,
       "swing_low": 38550,
-      "vol_ratio": 3.9,
-      "new_high20": true,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 18783000000,
       "big_money": false
     },
@@ -640,9 +591,9 @@
       "ticker": "061970",
       "name": "LB세미콘",
       "market": "KOSDAQ",
-      "open": 4100,
-      "high": 4865,
-      "low": 3900,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 4655,
       "change": 605,
       "change_pct": 14.94,
@@ -652,20 +603,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 2885,
-        "38.2%": 3475,
-        "50.0%": 3658,
-        "61.8%": 3840,
-        "고점": 4430
+        "38.2%": 3641,
+        "50.0%": 3875,
+        "61.8%": 4109,
+        "고점": 4865
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 4430,
+      "swing_high": 4865,
       "swing_low": 2885,
-      "vol_ratio": 3.4,
-      "new_high20": true,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 4636000000,
       "big_money": false
     },
@@ -673,9 +620,9 @@
       "ticker": "036010",
       "name": "아비코전자",
       "market": "KOSDAQ",
-      "open": 6800,
-      "high": 8610,
-      "low": 6500,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 7610,
       "change": 980,
       "change_pct": 14.78,
@@ -685,21 +632,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 4360,
-        "38.2%": 5342,
-        "50.0%": 5645,
-        "61.8%": 5948,
-        "고점": 6930
+        "38.2%": 5984,
+        "50.0%": 6485,
+        "61.8%": 6986,
+        "고점": 8610
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 6930,
+      "swing_high": 8610,
       "swing_low": 4360,
-      "vol_ratio": 6.5,
-      "new_high20": true,
-      "patterns": [
-        "양음양(음봉 장악)",
-        "트랩 반등(전저 이탈 후 회복)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 5779000000,
       "big_money": false
     },
@@ -707,9 +649,9 @@
       "ticker": "226340",
       "name": "본느",
       "market": "KOSDAQ",
-      "open": 6490,
-      "high": 7450,
-      "low": 6080,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 7450,
       "change": 920,
       "change_pct": 14.09,
@@ -722,11 +664,7 @@
       "theme_leader": "",
       "swing_high": 9680,
       "swing_low": 0,
-      "vol_ratio": 0.8,
-      "patterns": [
-        "양음양(음봉 장악)",
-        "트랩 반등(전저 이탈 후 회복)"
-      ],
+      "vol_ratio": 1.0,
       "alerts": [
         "투자경고"
       ],
@@ -737,9 +675,9 @@
       "ticker": "285130",
       "name": "SK케미칼",
       "market": "KOSPI",
-      "open": 44650,
-      "high": 50500,
-      "low": 44650,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 50000,
       "change": 6150,
       "change_pct": 14.03,
@@ -749,20 +687,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 35850,
-        "38.2%": 39574,
-        "50.0%": 40725,
-        "61.8%": 41876,
-        "고점": 45600
+        "38.2%": 41446,
+        "50.0%": 43175,
+        "61.8%": 44904,
+        "고점": 50500
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 45600,
+      "swing_high": 50500,
       "swing_low": 35850,
-      "vol_ratio": 6.5,
-      "new_high20": true,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 16796000000,
       "big_money": false
     },
@@ -770,9 +704,9 @@
       "ticker": "066430",
       "name": "아이로보틱스",
       "market": "KOSDAQ",
-      "open": 2245,
-      "high": 2845,
-      "low": 2235,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 2495,
       "change": 305,
       "change_pct": 13.93,
@@ -782,19 +716,16 @@
       "sector": "로봇/AI",
       "fibonacci": {
         "저점": 1730,
-        "38.2%": 2053,
-        "50.0%": 2152,
-        "61.8%": 2252,
-        "고점": 2575
+        "38.2%": 2156,
+        "50.0%": 2288,
+        "61.8%": 2419,
+        "고점": 2845
       },
-      "theme_streak": 1,
+      "theme_streak": 2,
       "theme_leader": "로보티즈",
-      "swing_high": 2575,
+      "swing_high": 2845,
       "swing_low": 1730,
-      "vol_ratio": 25.8,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 46122000000,
       "big_money": false
     },
@@ -802,9 +733,9 @@
       "ticker": "466100",
       "name": "클로봇",
       "market": "KOSDAQ",
-      "open": 29250,
-      "high": 34750,
-      "low": 28900,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 32700,
       "change": 3950,
       "change_pct": 13.74,
@@ -814,19 +745,16 @@
       "sector": "로봇/AI",
       "fibonacci": {
         "저점": 20050,
-        "38.2%": 25627,
-        "50.0%": 27350,
-        "61.8%": 29073,
-        "고점": 34650
+        "38.2%": 25665,
+        "50.0%": 27400,
+        "61.8%": 29135,
+        "고점": 34750
       },
-      "theme_streak": 1,
+      "theme_streak": 2,
       "theme_leader": "로보티즈",
-      "swing_high": 34650,
+      "swing_high": 34750,
       "swing_low": 20050,
-      "vol_ratio": 7.9,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 88307000000,
       "big_money": false
     },
@@ -834,9 +762,9 @@
       "ticker": "475560",
       "name": "더본코리아",
       "market": "KOSPI",
-      "open": 16620,
-      "high": 17760,
-      "low": 15830,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 15890,
       "change": 1800,
       "change_pct": 12.78,
@@ -846,17 +774,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 12130,
-        "38.2%": 13074,
-        "50.0%": 13365,
-        "61.8%": 13656,
-        "고점": 14600
+        "38.2%": 14281,
+        "50.0%": 14945,
+        "61.8%": 15609,
+        "고점": 17760
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 14600,
+      "swing_high": 17760,
       "swing_low": 12130,
-      "vol_ratio": 34.6,
-      "new_high20": true,
+      "vol_ratio": 1.0,
       "trading_value": 4214000000,
       "big_money": false
     },
@@ -864,9 +791,9 @@
       "ticker": "0004V0",
       "name": "엔비알모션",
       "market": "KOSDAQ",
-      "open": 6270,
-      "high": 7420,
-      "low": 6250,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 6960,
       "change": 770,
       "change_pct": 12.44,
@@ -876,17 +803,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 4445,
-        "38.2%": 5177,
-        "50.0%": 5402,
-        "61.8%": 5628,
-        "고점": 6360
+        "38.2%": 5581,
+        "50.0%": 5932,
+        "61.8%": 6284,
+        "고점": 7420
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 6360,
+      "swing_high": 7420,
       "swing_low": 4445,
-      "vol_ratio": 7.2,
-      "new_high20": true,
+      "vol_ratio": 1.0,
       "trading_value": 8775000000,
       "big_money": false
     },
@@ -894,9 +820,9 @@
       "ticker": "445090",
       "name": "에이직랜드",
       "market": "KOSDAQ",
-      "open": 21550,
-      "high": 24700,
-      "low": 21100,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 23550,
       "change": 2600,
       "change_pct": 12.41,
@@ -906,17 +832,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 13910,
-        "38.2%": 17535,
-        "50.0%": 18655,
-        "61.8%": 19775,
-        "고점": 23400
+        "38.2%": 18032,
+        "50.0%": 19305,
+        "61.8%": 20578,
+        "고점": 24700
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 23400,
+      "swing_high": 24700,
       "swing_low": 13910,
-      "vol_ratio": 5.2,
-      "new_high20": true,
+      "vol_ratio": 1.0,
       "trading_value": 7141000000,
       "big_money": false
     },
@@ -924,9 +849,9 @@
       "ticker": "004370",
       "name": "농심",
       "market": "KOSPI",
-      "open": 388000,
-      "high": 440000,
-      "low": 387000,
+      "open": 0,
+      "high": 0,
+      "low": 0,
       "close": 437500,
       "change": 48000,
       "change_pct": 12.32,
@@ -936,20 +861,16 @@
       "sector": "기타",
       "fibonacci": {
         "저점": 337000,
-        "38.2%": 363549,
-        "50.0%": 371750,
-        "61.8%": 379951,
-        "고점": 406500
+        "38.2%": 376346,
+        "50.0%": 388500,
+        "61.8%": 400654,
+        "고점": 440000
       },
       "theme_streak": 1,
       "theme_leader": "",
-      "swing_high": 406500,
+      "swing_high": 440000,
       "swing_low": 337000,
-      "vol_ratio": 5.8,
-      "new_high20": true,
-      "patterns": [
-        "양음양(음봉 장악)"
-      ],
+      "vol_ratio": 1.0,
       "trading_value": 66058000000,
       "big_money": false
     }
@@ -1090,19 +1011,19 @@
         "61.8%": 242842,
         "고점": 276000
       },
-      "vol_ratio": 0.6,
+      "vol_ratio": 1.0,
       "entry_price": 86000.0,
       "pnl_pct": 219.19,
       "entry_date": "2026-07-01",
-      "holding_days": 45
+      "holding_days": 48
     }
   ],
   "scoreboard": {
-    "prev_date": "2026-08-13",
-    "avg": -0.7,
-    "up": 13,
+    "prev_date": "2026-08-14",
+    "avg": 19.64,
+    "up": 30,
     "n": 30,
-    "verdict": "혼조 — 종목별 선별 대응"
+    "verdict": "연속성 장 — 주도주 눌림 공략 유효"
   },
   "indices": {
     "KOSPI": {
@@ -1125,28 +1046,28 @@
       "top_gainer": "알트",
       "avg_change_pct": 10.36,
       "leader": "",
-      "streak_days": 28
+      "streak_days": 29
     },
     "바이오/제약": {
       "count": 5,
       "top_gainer": "큐리옥스바이오시스템즈",
       "avg_change_pct": 12.41,
       "leader": "레메디",
-      "streak_days": 10
+      "streak_days": 11
     },
     "로봇/AI": {
       "count": 5,
       "top_gainer": "아이로보틱스",
       "avg_change_pct": 9.72,
       "leader": "로보티즈",
-      "streak_days": 1
+      "streak_days": 2
     },
     "자동차/부품": {
       "count": 3,
       "top_gainer": "삼보모터스",
       "avg_change_pct": 9.1,
       "leader": "현대차",
-      "streak_days": 1
+      "streak_days": 2
     },
     "IT/게임/엔터": {
       "count": 1,
@@ -1167,7 +1088,7 @@
       "top_gainer": "한화손해보험",
       "avg_change_pct": 6.84,
       "leader": "DB손해보험",
-      "streak_days": 1
+      "streak_days": 2
     },
     "건설/기계": {
       "count": 1,
@@ -1213,5 +1134,5 @@
     }
   },
   "filtered_risky": 46,
-  "history_days": 28
+  "history_days": 29
 }
