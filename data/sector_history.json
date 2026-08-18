@@ -1919,5 +1919,73 @@
         "streak_days": 1
       }
     }
+  },
+  {
+    "date": "2026-08-18",
+    "sectors": {
+      "바이오/제약": {
+        "count": 8,
+        "top_gainer": "인제니아테라퓨틱스(Reg.S)",
+        "avg_change_pct": 17.3,
+        "leader": "인제니아테라퓨틱스(Reg.S)",
+        "streak_days": 12
+      },
+      "기타": {
+        "count": 94,
+        "top_gainer": "코데즈컴바인",
+        "avg_change_pct": 10.64,
+        "leader": "",
+        "streak_days": 30
+      },
+      "자동차/부품": {
+        "count": 1,
+        "top_gainer": "KR모터스",
+        "avg_change_pct": 29.98,
+        "leader": "KR모터스",
+        "streak_days": 1
+      },
+      "조선/방산": {
+        "count": 2,
+        "top_gainer": "STX그린로지스",
+        "avg_change_pct": 16.79,
+        "leader": "HD현대마린솔루션",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 2,
+        "top_gainer": "계룡건설",
+        "avg_change_pct": 5.52,
+        "leader": "금호건설",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 2,
+        "top_gainer": "흥구석유",
+        "avg_change_pct": 5.12,
+        "leader": "흥구석유",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 1,
+        "top_gainer": "HPSP",
+        "avg_change_pct": 5.57,
+        "leader": "HPSP",
+        "streak_days": 1
+      },
+      "우주/항공": {
+        "count": 2,
+        "top_gainer": "우주일렉트로",
+        "avg_change_pct": 4.66,
+        "leader": "케이피항공산업",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 2,
+        "top_gainer": "국도화학",
+        "avg_change_pct": 3.85,
+        "leader": "율촌화학",
+        "streak_days": 1
+      }
+    }
   }
 ]
