@@ -1,80 +1,5 @@
 [
   {
-    "date": "2026-07-09",
-    "sectors": {
-      "기타": {
-        "count": 99,
-        "top_gainer": "웰킵스하이텍",
-        "avg_change_pct": 9.93,
-        "leader": "SK스퀘어",
-        "streak_days": 2
-      },
-      "반도체": {
-        "count": 8,
-        "top_gainer": "가온칩스",
-        "avg_change_pct": 10.05,
-        "leader": "SK하이닉스",
-        "streak_days": 1
-      },
-      "바이오/제약": {
-        "count": 6,
-        "top_gainer": "비엘팜텍",
-        "avg_change_pct": 12.57,
-        "leader": "비엘팜텍",
-        "streak_days": 2
-      },
-      "건설/기계": {
-        "count": 1,
-        "top_gainer": "금호건설",
-        "avg_change_pct": 23.64,
-        "leader": "금호건설",
-        "streak_days": 1
-      },
-      "로봇/AI": {
-        "count": 2,
-        "top_gainer": "LSK아이로봇",
-        "avg_change_pct": 7.79,
-        "leader": "유일로보틱스",
-        "streak_days": 1
-      },
-      "IT/게임/엔터": {
-        "count": 1,
-        "top_gainer": "SAMG엔터",
-        "avg_change_pct": 6.5,
-        "leader": "SAMG엔터",
-        "streak_days": 1
-      },
-      "에너지/원전": {
-        "count": 1,
-        "top_gainer": "강원에너지",
-        "avg_change_pct": 6.36,
-        "leader": "강원에너지",
-        "streak_days": 1
-      },
-      "우주/항공": {
-        "count": 2,
-        "top_gainer": "쎄트렉아이",
-        "avg_change_pct": 5.75,
-        "leader": "한국항공우주",
-        "streak_days": 1
-      },
-      "금융": {
-        "count": 1,
-        "top_gainer": "삼성카드",
-        "avg_change_pct": 5.83,
-        "leader": "삼성카드",
-        "streak_days": 1
-      },
-      "2차전지": {
-        "count": 1,
-        "top_gainer": "코스모신소재",
-        "avg_change_pct": 5.18,
-        "leader": "코스모신소재",
-        "streak_days": 1
-      }
-    }
-  },
-  {
     "date": "2026-07-10",
     "sectors": {
       "기타": {
@@ -2014,6 +1939,67 @@
         "top_gainer": "남해화학",
         "avg_change_pct": 2.7,
         "leader": "남해화학",
+        "streak_days": 1
+      }
+    }
+  },
+  {
+    "date": "2026-08-20",
+    "sectors": {
+      "바이오/제약": {
+        "count": 11,
+        "top_gainer": "인제니아테라퓨틱스(Reg.S)",
+        "avg_change_pct": 15.13,
+        "leader": "인제니아테라퓨틱스(Reg.S)",
+        "streak_days": 14
+      },
+      "기타": {
+        "count": 89,
+        "top_gainer": "소마젠",
+        "avg_change_pct": 11.23,
+        "leader": "",
+        "streak_days": 31
+      },
+      "금융": {
+        "count": 4,
+        "top_gainer": "SK증권",
+        "avg_change_pct": 13.71,
+        "leader": "삼성증권",
+        "streak_days": 2
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "금호건설",
+        "avg_change_pct": 24.21,
+        "leader": "금호건설",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 4,
+        "top_gainer": "SK하이닉스",
+        "avg_change_pct": 8.5,
+        "leader": "SK하이닉스",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 1,
+        "top_gainer": "금강철강",
+        "avg_change_pct": 10.33,
+        "leader": "금강철강",
+        "streak_days": 1
+      },
+      "IT/게임/엔터": {
+        "count": 2,
+        "top_gainer": "NHN KCP",
+        "avg_change_pct": 9.07,
+        "leader": "카카오페이",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 1,
+        "top_gainer": "HD현대에너지솔루션",
+        "avg_change_pct": 7.5,
+        "leader": "HD현대에너지솔루션",
         "streak_days": 1
       }
     }
