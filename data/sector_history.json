@@ -1,80 +1,5 @@
 [
   {
-    "date": "2026-07-22",
-    "sectors": {
-      "기타": {
-        "count": 87,
-        "top_gainer": "카티스",
-        "avg_change_pct": 9.69,
-        "leader": "",
-        "streak_days": 11
-      },
-      "로봇/AI": {
-        "count": 15,
-        "top_gainer": "코스모로보틱스",
-        "avg_change_pct": 12.97,
-        "leader": "레인보우로보틱스",
-        "streak_days": 2
-      },
-      "바이오/제약": {
-        "count": 4,
-        "top_gainer": "엔젠바이오",
-        "avg_change_pct": 14.54,
-        "leader": "삼익제약",
-        "streak_days": 11
-      },
-      "조선/방산": {
-        "count": 6,
-        "top_gainer": "STX그린로지스",
-        "avg_change_pct": 10.02,
-        "leader": "HD한국조선해양",
-        "streak_days": 1
-      },
-      "건설/기계": {
-        "count": 3,
-        "top_gainer": "GS건설",
-        "avg_change_pct": 7.6,
-        "leader": "GS건설",
-        "streak_days": 1
-      },
-      "에너지/원전": {
-        "count": 5,
-        "top_gainer": "SGC에너지",
-        "avg_change_pct": 8.51,
-        "leader": "흥구석유",
-        "streak_days": 3
-      },
-      "철강/화학": {
-        "count": 3,
-        "top_gainer": "포스코DX",
-        "avg_change_pct": 6.18,
-        "leader": "포스코DX",
-        "streak_days": 1
-      },
-      "자동차/부품": {
-        "count": 2,
-        "top_gainer": "현대모비스",
-        "avg_change_pct": 5.88,
-        "leader": "현대차",
-        "streak_days": 1
-      },
-      "금융": {
-        "count": 2,
-        "top_gainer": "롯데손해보험",
-        "avg_change_pct": 5.4,
-        "leader": "세아베스틸지주",
-        "streak_days": 1
-      },
-      "우주/항공": {
-        "count": 2,
-        "top_gainer": "쎄트렉아이",
-        "avg_change_pct": 5.08,
-        "leader": "한국항공우주",
-        "streak_days": 1
-      }
-    }
-  },
-  {
     "date": "2026-07-23",
     "sectors": {
       "기타": {
@@ -2070,6 +1995,95 @@
         "top_gainer": "포스코퓨처엠",
         "avg_change_pct": 4.43,
         "leader": "포스코퓨처엠",
+        "streak_days": 1
+      }
+    }
+  },
+  {
+    "date": "2026-09-04",
+    "sectors": {
+      "기타": {
+        "count": 108,
+        "top_gainer": "스카이랩스",
+        "avg_change_pct": 10.99,
+        "leader": "",
+        "streak_days": 31
+      },
+      "로봇/AI": {
+        "count": 7,
+        "top_gainer": "TPC로보틱스",
+        "avg_change_pct": 13.31,
+        "leader": "로보티즈",
+        "streak_days": 1
+      },
+      "바이오/제약": {
+        "count": 6,
+        "top_gainer": "삼익제약",
+        "avg_change_pct": 10.34,
+        "leader": "삼익제약",
+        "streak_days": 23
+      },
+      "반도체": {
+        "count": 7,
+        "top_gainer": "사피엔반도체",
+        "avg_change_pct": 8.14,
+        "leader": "한미반도체",
+        "streak_days": 2
+      },
+      "조선/방산": {
+        "count": 1,
+        "top_gainer": "HD현대",
+        "avg_change_pct": 12.65,
+        "leader": "HD현대",
+        "streak_days": 1
+      },
+      "IT/게임/엔터": {
+        "count": 4,
+        "top_gainer": "지어소프트",
+        "avg_change_pct": 8.15,
+        "leader": "카카오페이",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 2,
+        "top_gainer": "한화투자증권",
+        "avg_change_pct": 6.9,
+        "leader": "한화투자증권",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 5,
+        "top_gainer": "지엔씨에너지",
+        "avg_change_pct": 6.12,
+        "leader": "HD현대에너지솔루션",
+        "streak_days": 3
+      },
+      "자동차/부품": {
+        "count": 1,
+        "top_gainer": "모비스",
+        "avg_change_pct": 6.57,
+        "leader": "모비스",
+        "streak_days": 1
+      },
+      "우주/항공": {
+        "count": 1,
+        "top_gainer": "제주항공",
+        "avg_change_pct": 5.72,
+        "leader": "제주항공",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 1,
+        "top_gainer": "이수화학",
+        "avg_change_pct": 5.56,
+        "leader": "이수화학",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "화천기계",
+        "avg_change_pct": 5.19,
+        "leader": "화천기계",
         "streak_days": 1
       }
     }
