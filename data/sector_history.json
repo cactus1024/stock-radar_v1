@@ -1,52 +1,5 @@
 [
   {
-    "date": "2026-07-29",
-    "sectors": {
-      "로봇/AI": {
-        "count": 9,
-        "top_gainer": "엔젤로보틱스",
-        "avg_change_pct": 11.42,
-        "leader": "코스모로보틱스",
-        "streak_days": 3
-      },
-      "기타": {
-        "count": 48,
-        "top_gainer": "매드업",
-        "avg_change_pct": 6.31,
-        "leader": "",
-        "streak_days": 16
-      },
-      "바이오/제약": {
-        "count": 5,
-        "top_gainer": "티앤알바이오팹",
-        "avg_change_pct": 3.77,
-        "leader": "레몬헬스케어",
-        "streak_days": 16
-      },
-      "에너지/원전": {
-        "count": 3,
-        "top_gainer": "흥구석유",
-        "avg_change_pct": 2.56,
-        "leader": "흥구석유",
-        "streak_days": 1
-      },
-      "조선/방산": {
-        "count": 1,
-        "top_gainer": "STX그린로지스",
-        "avg_change_pct": 5.1,
-        "leader": "STX그린로지스",
-        "streak_days": 1
-      },
-      "건설/기계": {
-        "count": 1,
-        "top_gainer": "서희건설",
-        "avg_change_pct": 1.04,
-        "leader": "서희건설",
-        "streak_days": 1
-      }
-    }
-  },
-  {
     "date": "2026-07-30",
     "sectors": {
       "건설/기계": {
@@ -2161,6 +2114,67 @@
         "top_gainer": "한국항공우주",
         "avg_change_pct": 3.1,
         "leader": "한국항공우주",
+        "streak_days": 1
+      }
+    }
+  },
+  {
+    "date": "2026-09-11",
+    "sectors": {
+      "IT/게임/엔터": {
+        "count": 2,
+        "top_gainer": "에스피소프트",
+        "avg_change_pct": 16.68,
+        "leader": "에스피소프트",
+        "streak_days": 1
+      },
+      "기타": {
+        "count": 95,
+        "top_gainer": "아모텍",
+        "avg_change_pct": 9.97,
+        "leader": "",
+        "streak_days": 31
+      },
+      "반도체": {
+        "count": 2,
+        "top_gainer": "알파칩스",
+        "avg_change_pct": 16.8,
+        "leader": "한울반도체",
+        "streak_days": 1
+      },
+      "바이오/제약": {
+        "count": 9,
+        "top_gainer": "비엘팜텍",
+        "avg_change_pct": 10.08,
+        "leader": "바이오니아",
+        "streak_days": 28
+      },
+      "로봇/AI": {
+        "count": 3,
+        "top_gainer": "나우로보틱스",
+        "avg_change_pct": 9.93,
+        "leader": "나우로보틱스",
+        "streak_days": 2
+      },
+      "조선/방산": {
+        "count": 2,
+        "top_gainer": "HD현대마린솔루션",
+        "avg_change_pct": 5.8,
+        "leader": "HD현대마린솔루션",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 2,
+        "top_gainer": "HD현대중공업",
+        "avg_change_pct": 4.49,
+        "leader": "HD현대중공업",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 2,
+        "top_gainer": "한전기술",
+        "avg_change_pct": 4.37,
+        "leader": "한전기술",
         "streak_days": 1
       }
     }
