@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-24",
-  "time": "21:41",
+  "date": "2026-09-25",
+  "time": "21:44",
   "session": "마감",
   "timezone": "KST",
   "top30": [
@@ -168,7 +168,7 @@
         "61.8%": 2272,
         "고점": 2750
       },
-      "theme_streak": 3,
+      "theme_streak": 4,
       "theme_leader": "삼기에너지솔루션즈",
       "swing_high": 2750,
       "swing_low": 1500,
@@ -255,7 +255,7 @@
         "61.8%": 16333,
         "고점": 19630
       },
-      "theme_streak": 4,
+      "theme_streak": 5,
       "theme_leader": "레메디",
       "swing_high": 19630,
       "swing_low": 11000,
@@ -313,7 +313,7 @@
         "61.8%": 1824,
         "고점": 2030
       },
-      "theme_streak": 3,
+      "theme_streak": 4,
       "theme_leader": "삼기에너지솔루션즈",
       "swing_high": 2030,
       "swing_low": 1492,
@@ -510,7 +510,7 @@
         "61.8%": 32074,
         "고점": 34500
       },
-      "theme_streak": 4,
+      "theme_streak": 5,
       "theme_leader": "레메디",
       "swing_high": 34500,
       "swing_low": 28150,
@@ -658,7 +658,7 @@
         "61.8%": 2621,
         "고점": 2925
       },
-      "theme_streak": 4,
+      "theme_streak": 5,
       "theme_leader": "레메디",
       "swing_high": 2925,
       "swing_low": 2130,
@@ -1111,11 +1111,11 @@
       "entry_price": 86000.0,
       "pnl_pct": 233.14,
       "entry_date": "2026-07-01",
-      "holding_days": 86
+      "holding_days": 87
     }
   ],
   "scoreboard": {
-    "prev_date": "2026-09-23",
+    "prev_date": "2026-09-24",
     "avg": 16.64,
     "up": 29,
     "n": 29,
@@ -1156,14 +1156,14 @@
       "top_gainer": "SH에너지화학",
       "avg_change_pct": 16.07,
       "leader": "삼기에너지솔루션즈",
-      "streak_days": 3
+      "streak_days": 4
     },
     "바이오/제약": {
       "count": 7,
       "top_gainer": "레메디",
       "avg_change_pct": 10.32,
       "leader": "레메디",
-      "streak_days": 4
+      "streak_days": 5
     },
     "반도체": {
       "count": 2,
