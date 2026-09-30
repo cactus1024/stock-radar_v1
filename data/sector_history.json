@@ -1,101 +1,5 @@
 [
   {
-    "date": "2026-08-14",
-    "sectors": {
-      "기타": {
-        "count": 123,
-        "top_gainer": "알트",
-        "avg_change_pct": 10.36,
-        "leader": "",
-        "streak_days": 28
-      },
-      "바이오/제약": {
-        "count": 5,
-        "top_gainer": "큐리옥스바이오시스템즈",
-        "avg_change_pct": 12.41,
-        "leader": "레메디",
-        "streak_days": 10
-      },
-      "로봇/AI": {
-        "count": 5,
-        "top_gainer": "아이로보틱스",
-        "avg_change_pct": 9.72,
-        "leader": "로보티즈",
-        "streak_days": 1
-      },
-      "자동차/부품": {
-        "count": 3,
-        "top_gainer": "삼보모터스",
-        "avg_change_pct": 9.1,
-        "leader": "현대차",
-        "streak_days": 1
-      },
-      "IT/게임/엔터": {
-        "count": 1,
-        "top_gainer": "NHN",
-        "avg_change_pct": 11.99,
-        "leader": "NHN",
-        "streak_days": 1
-      },
-      "우주/항공": {
-        "count": 1,
-        "top_gainer": "우주일렉트로",
-        "avg_change_pct": 9.27,
-        "leader": "우주일렉트로",
-        "streak_days": 1
-      },
-      "금융": {
-        "count": 3,
-        "top_gainer": "한화손해보험",
-        "avg_change_pct": 6.84,
-        "leader": "DB손해보험",
-        "streak_days": 1
-      },
-      "건설/기계": {
-        "count": 1,
-        "top_gainer": "동부건설",
-        "avg_change_pct": 8.52,
-        "leader": "동부건설",
-        "streak_days": 1
-      },
-      "철강/화학": {
-        "count": 1,
-        "top_gainer": "효성화학",
-        "avg_change_pct": 8.23,
-        "leader": "효성화학",
-        "streak_days": 1
-      },
-      "에너지/원전": {
-        "count": 1,
-        "top_gainer": "SK가스",
-        "avg_change_pct": 7.02,
-        "leader": "SK가스",
-        "streak_days": 1
-      },
-      "2차전지": {
-        "count": 1,
-        "top_gainer": "엘앤에프",
-        "avg_change_pct": 6.92,
-        "leader": "엘앤에프",
-        "streak_days": 1
-      },
-      "반도체": {
-        "count": 2,
-        "top_gainer": "이오테크닉스",
-        "avg_change_pct": 6.22,
-        "leader": "이오테크닉스",
-        "streak_days": 1
-      },
-      "조선/방산": {
-        "count": 2,
-        "top_gainer": "한화오션",
-        "avg_change_pct": 5.61,
-        "leader": "한화오션",
-        "streak_days": 1
-      }
-    }
-  },
-  {
     "date": "2026-08-17",
     "sectors": {
       "기타": {
@@ -2070,6 +1974,88 @@
         "top_gainer": "제주항공",
         "avg_change_pct": 2.66,
         "leader": "제주항공",
+        "streak_days": 1
+      }
+    }
+  },
+  {
+    "date": "2026-09-30",
+    "sectors": {
+      "기타": {
+        "count": 103,
+        "top_gainer": "동일스틸럭스",
+        "avg_change_pct": 9.04,
+        "leader": "",
+        "streak_days": 31
+      },
+      "로봇/AI": {
+        "count": 1,
+        "top_gainer": "빅웨이브로보틱스",
+        "avg_change_pct": 29.93,
+        "leader": "빅웨이브로보틱스",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 5,
+        "top_gainer": "금강철강",
+        "avg_change_pct": 9.53,
+        "leader": "금강철강",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 2,
+        "top_gainer": "한선엔지니어링",
+        "avg_change_pct": 7.45,
+        "leader": "한선엔지니어링",
+        "streak_days": 1
+      },
+      "바이오/제약": {
+        "count": 8,
+        "top_gainer": "엘앤씨바이오",
+        "avg_change_pct": 6.92,
+        "leader": "엘앤씨바이오",
+        "streak_days": 7
+      },
+      "금융": {
+        "count": 1,
+        "top_gainer": "세아제강지주",
+        "avg_change_pct": 7.91,
+        "leader": "세아제강지주",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 4,
+        "top_gainer": "HD현대에너지솔루션",
+        "avg_change_pct": 3.9,
+        "leader": "두산에너빌리티",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 2,
+        "top_gainer": "어보브반도체",
+        "avg_change_pct": 5.19,
+        "leader": "주성엔지니어링",
+        "streak_days": 1
+      },
+      "자동차/부품": {
+        "count": 1,
+        "top_gainer": "현대모비스",
+        "avg_change_pct": 4.77,
+        "leader": "현대모비스",
+        "streak_days": 1
+      },
+      "조선/방산": {
+        "count": 2,
+        "top_gainer": "STX엔진",
+        "avg_change_pct": 3.58,
+        "leader": "HD현대마린엔진",
+        "streak_days": 1
+      },
+      "2차전지": {
+        "count": 1,
+        "top_gainer": "엘앤에프",
+        "avg_change_pct": 2.75,
+        "leader": "엘앤에프",
         "streak_days": 1
       }
     }
