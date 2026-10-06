@@ -1947,66 +1947,59 @@
     "date": "2026-10-06",
     "sectors": {
       "기타": {
-        "count": 121,
-        "top_gainer": "에스제이그룹",
-        "avg_change_pct": 9.49,
+        "count": 115,
+        "top_gainer": "샌즈랩",
+        "avg_change_pct": 12.2,
         "leader": "",
-        "streak_days": 31
-      },
-      "에너지/원전": {
-        "count": 4,
-        "top_gainer": "롯데에너지머티리얼즈",
-        "avg_change_pct": 8.87,
-        "leader": "대한전선",
-        "streak_days": 2
-      },
-      "2차전지": {
-        "count": 3,
-        "top_gainer": "리튬포어스",
-        "avg_change_pct": 9.06,
-        "leader": "에코프로머티",
-        "streak_days": 2
+        "streak_days": 30
       },
       "바이오/제약": {
-        "count": 3,
-        "top_gainer": "애드바이오텍",
-        "avg_change_pct": 8.28,
-        "leader": "한미사이언스",
+        "count": 9,
+        "top_gainer": "HLB제약",
+        "avg_change_pct": 15.57,
+        "leader": "삼천당제약",
         "streak_days": 10
       },
-      "IT/게임/엔터": {
+      "반도체": {
         "count": 1,
-        "top_gainer": "지어소프트",
-        "avg_change_pct": 8.65,
-        "leader": "지어소프트",
+        "top_gainer": "주성엔지니어링",
+        "avg_change_pct": 19.41,
+        "leader": "주성엔지니어링",
         "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 1,
+        "top_gainer": "파수AI",
+        "avg_change_pct": 16.37,
+        "leader": "파수AI",
+        "streak_days": 1
+      },
+      "IT/게임/엔터": {
+        "count": 3,
+        "top_gainer": "에스피소프트",
+        "avg_change_pct": 12.14,
+        "leader": "에스피소프트",
+        "streak_days": 1
+      },
+      "2차전지": {
+        "count": 6,
+        "top_gainer": "에코프로비엠",
+        "avg_change_pct": 9.2,
+        "leader": "에코프로",
+        "streak_days": 2
+      },
+      "에너지/원전": {
+        "count": 3,
+        "top_gainer": "HD현대에너지솔루션",
+        "avg_change_pct": 7.78,
+        "leader": "HD현대에너지솔루션",
+        "streak_days": 2
       },
       "철강/화학": {
-        "count": 1,
+        "count": 4,
         "top_gainer": "코스모화학",
-        "avg_change_pct": 6.55,
-        "leader": "코스모화학",
-        "streak_days": 1
-      },
-      "금융": {
-        "count": 2,
-        "top_gainer": "롯데손해보험",
-        "avg_change_pct": 4.53,
-        "leader": "세아제강지주",
-        "streak_days": 1
-      },
-      "우주/항공": {
-        "count": 1,
-        "top_gainer": "한국항공우주",
-        "avg_change_pct": 4.88,
-        "leader": "한국항공우주",
-        "streak_days": 1
-      },
-      "조선/방산": {
-        "count": 2,
-        "top_gainer": "LIG디펜스앤에어로스페이스",
-        "avg_change_pct": 4.11,
-        "leader": "한화에어로스페이스",
+        "avg_change_pct": 6.46,
+        "leader": "LG화학",
         "streak_days": 1
       }
     }
