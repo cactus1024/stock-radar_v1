@@ -1,80 +1,5 @@
 [
   {
-    "date": "2026-08-24",
-    "sectors": {
-      "기타": {
-        "count": 106,
-        "top_gainer": "골드앤에스",
-        "avg_change_pct": 9.88,
-        "leader": "",
-        "streak_days": 31
-      },
-      "바이오/제약": {
-        "count": 18,
-        "top_gainer": "신풍제약",
-        "avg_change_pct": 10.48,
-        "leader": "한미사이언스",
-        "streak_days": 16
-      },
-      "2차전지": {
-        "count": 7,
-        "top_gainer": "엘앤에프",
-        "avg_change_pct": 9.6,
-        "leader": "엘앤에프",
-        "streak_days": 1
-      },
-      "건설/기계": {
-        "count": 2,
-        "top_gainer": "HD건설기계",
-        "avg_change_pct": 7.64,
-        "leader": "HD건설기계",
-        "streak_days": 1
-      },
-      "에너지/원전": {
-        "count": 2,
-        "top_gainer": "롯데에너지머티리얼즈",
-        "avg_change_pct": 7.62,
-        "leader": "LG에너지솔루션",
-        "streak_days": 1
-      },
-      "철강/화학": {
-        "count": 5,
-        "top_gainer": "코스모화학",
-        "avg_change_pct": 7.05,
-        "leader": "LG화학",
-        "streak_days": 1
-      },
-      "IT/게임/엔터": {
-        "count": 2,
-        "top_gainer": "NHN KCP",
-        "avg_change_pct": 6.9,
-        "leader": "NHN KCP",
-        "streak_days": 1
-      },
-      "반도체": {
-        "count": 1,
-        "top_gainer": "알파칩스",
-        "avg_change_pct": 6.84,
-        "leader": "알파칩스",
-        "streak_days": 1
-      },
-      "금융": {
-        "count": 1,
-        "top_gainer": "세아베스틸지주",
-        "avg_change_pct": 6.23,
-        "leader": "세아베스틸지주",
-        "streak_days": 1
-      },
-      "조선/방산": {
-        "count": 1,
-        "top_gainer": "풍산",
-        "avg_change_pct": 5.66,
-        "leader": "풍산",
-        "streak_days": 1
-      }
-    }
-  },
-  {
     "date": "2026-08-25",
     "sectors": {
       "기타": {
@@ -1966,6 +1891,60 @@
         "avg_change_pct": 10.5,
         "leader": "LG에너지솔루션",
         "streak_days": 1
+      },
+      "반도체": {
+        "count": 2,
+        "top_gainer": "주성엔지니어링",
+        "avg_change_pct": 6.11,
+        "leader": "주성엔지니어링",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 1,
+        "top_gainer": "세아베스틸지주",
+        "avg_change_pct": 5.55,
+        "leader": "세아베스틸지주",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 1,
+        "top_gainer": "시선AI",
+        "avg_change_pct": 5.21,
+        "leader": "시선AI",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 1,
+        "top_gainer": "한일철강",
+        "avg_change_pct": 4.66,
+        "leader": "한일철강",
+        "streak_days": 1
+      }
+    }
+  },
+  {
+    "date": "2026-10-09",
+    "sectors": {
+      "기타": {
+        "count": 96,
+        "top_gainer": "유진테크놀로지",
+        "avg_change_pct": 9.62,
+        "leader": "",
+        "streak_days": 31
+      },
+      "바이오/제약": {
+        "count": 4,
+        "top_gainer": "HLB바이오스텝",
+        "avg_change_pct": 15.49,
+        "leader": "HLB바이오스텝",
+        "streak_days": 13
+      },
+      "에너지/원전": {
+        "count": 4,
+        "top_gainer": "삼기에너지솔루션즈",
+        "avg_change_pct": 10.5,
+        "leader": "LG에너지솔루션",
+        "streak_days": 2
       },
       "반도체": {
         "count": 2,
