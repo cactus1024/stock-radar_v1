@@ -1905,66 +1905,87 @@
     "date": "2026-10-13",
     "sectors": {
       "기타": {
-        "count": 61,
-        "top_gainer": "서산",
-        "avg_change_pct": 8.2,
+        "count": 69,
+        "top_gainer": "하이퍼코퍼레이션",
+        "avg_change_pct": 8.34,
         "leader": "",
-        "streak_days": 31
-      },
-      "건설/기계": {
-        "count": 2,
-        "top_gainer": "금호건설",
-        "avg_change_pct": 17.69,
-        "leader": "금호건설",
-        "streak_days": 1
+        "streak_days": 30
       },
       "바이오/제약": {
+        "count": 5,
+        "top_gainer": "HLB바이오스텝",
+        "avg_change_pct": 7.36,
+        "leader": "국제약품",
+        "streak_days": 14
+      },
+      "금융": {
+        "count": 1,
+        "top_gainer": "롯데손해보험",
+        "avg_change_pct": 9.66,
+        "leader": "롯데손해보험",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 3,
+        "top_gainer": "코스모로보틱스",
+        "avg_change_pct": 7.53,
+        "leader": "HT로보틱스",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 4,
+        "top_gainer": "피에스케이홀딩스",
+        "avg_change_pct": 6.28,
+        "leader": "주성엔지니어링",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "계룡건설",
+        "avg_change_pct": 3.9,
+        "leader": "계룡건설",
+        "streak_days": 1
+      },
+      "에너지/원전": {
         "count": 2,
-        "top_gainer": "엘앤씨바이오",
-        "avg_change_pct": 10.04,
-        "leader": "엘앤씨바이오",
+        "top_gainer": "LG에너지솔루션",
+        "avg_change_pct": 3.41,
+        "leader": "LG에너지솔루션",
+        "streak_days": 1
+      },
+      "IT/게임/엔터": {
+        "count": 1,
+        "top_gainer": "하이브",
+        "avg_change_pct": 3.64,
+        "leader": "하이브",
+        "streak_days": 1
+      },
+      "2차전지": {
+        "count": 1,
+        "top_gainer": "엘앤에프",
+        "avg_change_pct": 3.18,
+        "leader": "엘앤에프",
         "streak_days": 1
       },
       "조선/방산": {
         "count": 1,
-        "top_gainer": "STX그린로지스",
-        "avg_change_pct": 8.99,
-        "leader": "STX그린로지스",
+        "top_gainer": "HD현대마린솔루션",
+        "avg_change_pct": 2.49,
+        "leader": "HD현대마린솔루션",
+        "streak_days": 1
+      },
+      "우주/항공": {
+        "count": 1,
+        "top_gainer": "제주항공",
+        "avg_change_pct": 2.49,
+        "leader": "제주항공",
         "streak_days": 1
       },
       "철강/화학": {
         "count": 1,
-        "top_gainer": "진양화학",
-        "avg_change_pct": 6.24,
-        "leader": "진양화학",
-        "streak_days": 1
-      },
-      "반도체": {
-        "count": 1,
-        "top_gainer": "알파칩스",
-        "avg_change_pct": 6.15,
-        "leader": "알파칩스",
-        "streak_days": 1
-      },
-      "금융": {
-        "count": 2,
-        "top_gainer": "DB손해보험",
-        "avg_change_pct": 2.48,
-        "leader": "DB손해보험",
-        "streak_days": 1
-      },
-      "IT/게임/엔터": {
-        "count": 2,
-        "top_gainer": "넥슨게임즈",
-        "avg_change_pct": 3.0,
-        "leader": "카카오게임즈",
-        "streak_days": 1
-      },
-      "로봇/AI": {
-        "count": 1,
-        "top_gainer": "HT로보틱스",
-        "avg_change_pct": 2.86,
-        "leader": "HT로보틱스",
+        "top_gainer": "포스코인터내셔널",
+        "avg_change_pct": 2.37,
+        "leader": "포스코인터내셔널",
         "streak_days": 1
       }
     }
