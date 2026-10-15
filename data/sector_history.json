@@ -1,87 +1,5 @@
 [
   {
-    "date": "2026-08-28",
-    "sectors": {
-      "기타": {
-        "count": 104,
-        "top_gainer": "파루",
-        "avg_change_pct": 10.39,
-        "leader": "",
-        "streak_days": 31
-      },
-      "바이오/제약": {
-        "count": 4,
-        "top_gainer": "신테카바이오",
-        "avg_change_pct": 9.19,
-        "leader": "비보존 제약",
-        "streak_days": 19
-      },
-      "우주/항공": {
-        "count": 1,
-        "top_gainer": "우주일렉트로",
-        "avg_change_pct": 12.37,
-        "leader": "우주일렉트로",
-        "streak_days": 1
-      },
-      "철강/화학": {
-        "count": 2,
-        "top_gainer": "진양화학",
-        "avg_change_pct": 8.41,
-        "leader": "코스모화학",
-        "streak_days": 1
-      },
-      "조선/방산": {
-        "count": 4,
-        "top_gainer": "HD현대일렉트릭",
-        "avg_change_pct": 7.31,
-        "leader": "HD현대일렉트릭",
-        "streak_days": 1
-      },
-      "건설/기계": {
-        "count": 2,
-        "top_gainer": "효성중공업",
-        "avg_change_pct": 7.39,
-        "leader": "대우건설",
-        "streak_days": 1
-      },
-      "에너지/원전": {
-        "count": 5,
-        "top_gainer": "LS에코에너지",
-        "avg_change_pct": 6.67,
-        "leader": "LG에너지솔루션",
-        "streak_days": 3
-      },
-      "2차전지": {
-        "count": 4,
-        "top_gainer": "포스코퓨처엠",
-        "avg_change_pct": 6.72,
-        "leader": "포스코퓨처엠",
-        "streak_days": 1
-      },
-      "IT/게임/엔터": {
-        "count": 1,
-        "top_gainer": "NHN",
-        "avg_change_pct": 7.35,
-        "leader": "NHN",
-        "streak_days": 1
-      },
-      "반도체": {
-        "count": 1,
-        "top_gainer": "피에스케이홀딩스",
-        "avg_change_pct": 6.54,
-        "leader": "피에스케이홀딩스",
-        "streak_days": 1
-      },
-      "로봇/AI": {
-        "count": 2,
-        "top_gainer": "셀바스AI",
-        "avg_change_pct": 5.52,
-        "leader": "레인보우로보틱스",
-        "streak_days": 1
-      }
-    }
-  },
-  {
     "date": "2026-08-29",
     "sectors": {
       "기타": {
@@ -2007,6 +1925,60 @@
         "top_gainer": "SAMG엔터",
         "avg_change_pct": 4.85,
         "leader": "NHN",
+        "streak_days": 1
+      }
+    }
+  },
+  {
+    "date": "2026-10-15",
+    "sectors": {
+      "기타": {
+        "count": 24,
+        "top_gainer": "멜콘",
+        "avg_change_pct": 9.42,
+        "leader": "",
+        "streak_days": 31
+      },
+      "바이오/제약": {
+        "count": 6,
+        "top_gainer": "듀켐바이오",
+        "avg_change_pct": 13.49,
+        "leader": "삼성바이오로직스",
+        "streak_days": 16
+      },
+      "우주/항공": {
+        "count": 1,
+        "top_gainer": "제주항공",
+        "avg_change_pct": 4.5,
+        "leader": "제주항공",
+        "streak_days": 1
+      },
+      "철강/화학": {
+        "count": 1,
+        "top_gainer": "한국철강",
+        "avg_change_pct": 4.37,
+        "leader": "한국철강",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 2,
+        "top_gainer": "HT로보틱스",
+        "avg_change_pct": 2.58,
+        "leader": "HT로보틱스",
+        "streak_days": 1
+      },
+      "IT/게임/엔터": {
+        "count": 2,
+        "top_gainer": "카카오게임즈",
+        "avg_change_pct": 1.77,
+        "leader": "카카오게임즈",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 1,
+        "top_gainer": "인카금융서비스",
+        "avg_change_pct": 1.05,
+        "leader": "인카금융서비스",
         "streak_days": 1
       }
     }
