@@ -1,87 +1,5 @@
 [
   {
-    "date": "2026-09-22",
-    "sectors": {
-      "기타": {
-        "count": 106,
-        "top_gainer": "토마토시스템",
-        "avg_change_pct": 8.85,
-        "leader": "",
-        "streak_days": 31
-      },
-      "에너지/원전": {
-        "count": 7,
-        "top_gainer": "SH에너지화학",
-        "avg_change_pct": 6.79,
-        "leader": "대한전선",
-        "streak_days": 1
-      },
-      "우주/항공": {
-        "count": 5,
-        "top_gainer": "우주일렉트로",
-        "avg_change_pct": 8.82,
-        "leader": "대한항공",
-        "streak_days": 1
-      },
-      "바이오/제약": {
-        "count": 4,
-        "top_gainer": "아이엠바이오로직스",
-        "avg_change_pct": 8.54,
-        "leader": "인제니아테라퓨틱스(Reg.S)",
-        "streak_days": 2
-      },
-      "건설/기계": {
-        "count": 4,
-        "top_gainer": "이삭엔지니어링",
-        "avg_change_pct": 5.5,
-        "leader": "대우건설",
-        "streak_days": 1
-      },
-      "반도체": {
-        "count": 2,
-        "top_gainer": "사피엔반도체",
-        "avg_change_pct": 7.06,
-        "leader": "가온칩스",
-        "streak_days": 1
-      },
-      "로봇/AI": {
-        "count": 2,
-        "top_gainer": "마음AI",
-        "avg_change_pct": 4.14,
-        "leader": "두산로보틱스",
-        "streak_days": 1
-      },
-      "2차전지": {
-        "count": 2,
-        "top_gainer": "포스코퓨처엠",
-        "avg_change_pct": 3.78,
-        "leader": "포스코퓨처엠",
-        "streak_days": 1
-      },
-      "금융": {
-        "count": 2,
-        "top_gainer": "세아베스틸지주",
-        "avg_change_pct": 3.41,
-        "leader": "미래에셋증권",
-        "streak_days": 1
-      },
-      "조선/방산": {
-        "count": 1,
-        "top_gainer": "HD현대마린솔루션",
-        "avg_change_pct": 3.85,
-        "leader": "HD현대마린솔루션",
-        "streak_days": 1
-      },
-      "IT/게임/엔터": {
-        "count": 2,
-        "top_gainer": "카카오",
-        "avg_change_pct": 2.9,
-        "leader": "카카오",
-        "streak_days": 1
-      }
-    }
-  },
-  {
     "date": "2026-09-23",
     "sectors": {
       "기타": {
@@ -1902,6 +1820,74 @@
         "top_gainer": "로보티즈",
         "avg_change_pct": 3.65,
         "leader": "로보티즈",
+        "streak_days": 1
+      }
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "sectors": {
+      "기타": {
+        "count": 72,
+        "top_gainer": "아시아나IDT",
+        "avg_change_pct": 9.67,
+        "leader": "",
+        "streak_days": 31
+      },
+      "바이오/제약": {
+        "count": 12,
+        "top_gainer": "박셀바이오",
+        "avg_change_pct": 10.39,
+        "leader": "삼익제약",
+        "streak_days": 7
+      },
+      "IT/게임/엔터": {
+        "count": 1,
+        "top_gainer": "에스피소프트",
+        "avg_change_pct": 21.63,
+        "leader": "에스피소프트",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "상지건설",
+        "avg_change_pct": 13.51,
+        "leader": "상지건설",
+        "streak_days": 1
+      },
+      "반도체": {
+        "count": 2,
+        "top_gainer": "SFA반도체",
+        "avg_change_pct": 10.1,
+        "leader": "SFA반도체",
+        "streak_days": 1
+      },
+      "조선/방산": {
+        "count": 1,
+        "top_gainer": "LIG아큐버",
+        "avg_change_pct": 9.94,
+        "leader": "LIG아큐버",
+        "streak_days": 1
+      },
+      "우주/항공": {
+        "count": 3,
+        "top_gainer": "제주항공",
+        "avg_change_pct": 8.9,
+        "leader": "제주항공",
+        "streak_days": 1
+      },
+      "에너지/원전": {
+        "count": 1,
+        "top_gainer": "대명에너지",
+        "avg_change_pct": 9.56,
+        "leader": "대명에너지",
+        "streak_days": 1
+      },
+      "로봇/AI": {
+        "count": 2,
+        "top_gainer": "벡트로보틱스",
+        "avg_change_pct": 7.44,
+        "leader": "SKAI",
         "streak_days": 1
       }
     }
