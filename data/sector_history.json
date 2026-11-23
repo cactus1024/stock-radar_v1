@@ -1,59 +1,5 @@
 [
   {
-    "date": "2026-10-08",
-    "sectors": {
-      "기타": {
-        "count": 96,
-        "top_gainer": "유진테크놀로지",
-        "avg_change_pct": 9.62,
-        "leader": "",
-        "streak_days": 31
-      },
-      "바이오/제약": {
-        "count": 4,
-        "top_gainer": "HLB바이오스텝",
-        "avg_change_pct": 15.49,
-        "leader": "HLB바이오스텝",
-        "streak_days": 12
-      },
-      "에너지/원전": {
-        "count": 4,
-        "top_gainer": "삼기에너지솔루션즈",
-        "avg_change_pct": 10.5,
-        "leader": "LG에너지솔루션",
-        "streak_days": 1
-      },
-      "반도체": {
-        "count": 2,
-        "top_gainer": "주성엔지니어링",
-        "avg_change_pct": 6.11,
-        "leader": "주성엔지니어링",
-        "streak_days": 1
-      },
-      "금융": {
-        "count": 1,
-        "top_gainer": "세아베스틸지주",
-        "avg_change_pct": 5.55,
-        "leader": "세아베스틸지주",
-        "streak_days": 1
-      },
-      "로봇/AI": {
-        "count": 1,
-        "top_gainer": "시선AI",
-        "avg_change_pct": 5.21,
-        "leader": "시선AI",
-        "streak_days": 1
-      },
-      "철강/화학": {
-        "count": 1,
-        "top_gainer": "한일철강",
-        "avg_change_pct": 4.66,
-        "leader": "한일철강",
-        "streak_days": 1
-      }
-    }
-  },
-  {
     "date": "2026-10-09",
     "sectors": {
       "기타": {
@@ -1902,6 +1848,53 @@
         "top_gainer": "카카오게임즈",
         "avg_change_pct": 2.76,
         "leader": "카카오게임즈",
+        "streak_days": 1
+      }
+    }
+  },
+  {
+    "date": "2026-11-24",
+    "sectors": {
+      "기타": {
+        "count": 57,
+        "top_gainer": "금양그린파워",
+        "avg_change_pct": 7.66,
+        "leader": "",
+        "streak_days": 31
+      },
+      "로봇/AI": {
+        "count": 16,
+        "top_gainer": "휴림로봇",
+        "avg_change_pct": 11.16,
+        "leader": "에이엘로봇",
+        "streak_days": 1
+      },
+      "바이오/제약": {
+        "count": 6,
+        "top_gainer": "아이엠바이오로직스",
+        "avg_change_pct": 8.24,
+        "leader": "지투지바이오",
+        "streak_days": 17
+      },
+      "반도체": {
+        "count": 4,
+        "top_gainer": "SFA반도체",
+        "avg_change_pct": 8.1,
+        "leader": "SFA반도체",
+        "streak_days": 1
+      },
+      "금융": {
+        "count": 1,
+        "top_gainer": "세아베스틸지주",
+        "avg_change_pct": 6.75,
+        "leader": "세아베스틸지주",
+        "streak_days": 1
+      },
+      "건설/기계": {
+        "count": 1,
+        "top_gainer": "화천기계",
+        "avg_change_pct": 4.15,
+        "leader": "화천기계",
         "streak_days": 1
       }
     }
